@@ -162,7 +162,7 @@ export default function SiggyPage() {
         { label: "Try Siggy", href: "https://siggy.dev", variant: "primary" },
         {
           label: "View Source",
-          href: "https://github.com/zachoelsner/siggy",
+          href: "https://github.com/zoelsner/siggy",
           variant: "outline",
         },
       ]}

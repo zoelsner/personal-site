@@ -61,7 +61,7 @@ export function ProjectLayout({
       </div>
 
       {/* Title section */}
-      <div className="mx-auto max-w-5xl px-12 pt-12">
+      <div className="mx-auto max-w-6xl px-12 pt-12">
         <div className="flex items-center gap-3">
           <span
             className="rounded-full px-3 py-1 text-xs font-medium text-white"
@@ -85,7 +85,7 @@ export function ProjectLayout({
         <div className="flex gap-10">
           {/* How it works */}
           <div className="flex-shrink-0" style={{ flexBasis: "340px" }}>
-            <h2 className="font-serif text-2xl font-normal italic">
+            <h2 className="font-serif text-3xl font-normal">
               How it works
             </h2>
             <div className="mt-8 flex flex-col gap-8">
@@ -111,14 +111,14 @@ export function ProjectLayout({
             </div>
           </div>
 
-          {/* Preview */}
-          <div className="min-w-0 flex-1">{preview}</div>
+          {/* Preview — top aligned with first step, not the heading */}
+          <div className="min-w-0 flex-1 pt-12">{preview}</div>
         </div>
       </div>
 
       {/* Built with */}
-      <div className="mx-auto max-w-5xl px-12 pt-16 pb-8">
-        <h2 className="font-serif text-2xl font-normal italic">Built with</h2>
+      <div className="mx-auto max-w-6xl px-12 pt-16 pb-8">
+        <h2 className="font-serif text-3xl font-normal">Built with</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {builtWith.map((tech) => (
             <span
@@ -132,7 +132,7 @@ export function ProjectLayout({
       </div>
 
       {/* CTAs */}
-      <div className="mx-auto max-w-5xl px-12 pb-20">
+      <div className="mx-auto max-w-6xl px-12 pb-20">
         <div className="flex gap-4">
           {ctas.map((cta) => (
             <a

@@ -28,7 +28,12 @@ const meals = [
 
 function FTPPreview() {
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow-lg">
+    <div className="relative overflow-hidden rounded-xl bg-white shadow-lg">
+      {/* Bottom-left accent — mirrors top-right coral */}
+      <div
+        className="absolute bottom-0 left-0 z-10 w-8 rounded-tr-xl"
+        style={{ backgroundColor: "#2D5A3D", opacity: 0.12, height: 48 }}
+      />
       {/* App header */}
       <div className="relative flex items-center justify-between border-b px-5 py-3">
         <span className="text-sm font-semibold text-[#2D5A3D]">
@@ -214,7 +219,7 @@ export default function FTPPage() {
         },
         {
           label: "View Source",
-          href: "https://github.com/zachoelsner/farmtopeople",
+          href: "https://github.com/zoelsner/farmtopeople",
           variant: "outline",
         },
       ]}

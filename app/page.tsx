@@ -30,7 +30,7 @@ export default function Page() {
         <Nav />
       </div>
 
-      {/* Arches */}
+      {/* Arches — staggered entrance */}
       {arches.map((arch, i) => (
         <div
           key={i}
@@ -45,23 +45,32 @@ export default function Page() {
               arch.rotate === 180
                 ? `0 0 ${arch.w}px ${arch.w}px`
                 : `${arch.w}px ${arch.w}px 0 0`,
+            opacity: 0,
+            animation: "arch-in 0.5s ease-out forwards",
+            animationDelay: `${i * 0.06}s`,
           }}
         />
       ))}
 
       {/* Name + tagline anchored bottom-left */}
-      <div className="absolute bottom-16 left-12">
+      <div
+        className="absolute bottom-16 left-12"
+        style={{
+          opacity: 0,
+          animation: "fade-up 0.6s ease-out forwards",
+          animationDelay: "0.7s",
+        }}
+      >
         <h1 className="font-serif text-6xl font-normal tracking-tight">
           Zach Oelsner
         </h1>
         <p className="mt-3 max-w-sm text-base leading-relaxed text-muted-foreground">
-          Developer &amp; Builder with a thing for food,
-          <br />
-          tools, and shipping software from New York
+          Developer &amp; Builder with a thing for food, tools, and shipping
+          software from New York
         </p>
         <div className="mt-5 flex gap-5 text-sm text-muted-foreground">
           <a
-            href="https://github.com/zachoelsner"
+            href="https://github.com/zoelsner"
             target="_blank"
             rel="noopener noreferrer"
             className="underline-offset-4 hover:text-foreground hover:underline"
@@ -69,7 +78,7 @@ export default function Page() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/zachoelsner"
+            href="https://linkedin.com/in/zoelsner"
             target="_blank"
             rel="noopener noreferrer"
             className="underline-offset-4 hover:text-foreground hover:underline"

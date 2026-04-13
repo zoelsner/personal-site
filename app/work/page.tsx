@@ -28,12 +28,12 @@ export default function WorkPage() {
   return (
     <div className="min-h-svh bg-background">
       {/* Nav */}
-      <div className="flex justify-end px-12 pt-10">
-        <Nav />
+      <div className="px-12 pt-10">
+        <Nav showHome />
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-4xl px-12 pt-12 pb-24">
+      <div className="mx-auto max-w-6xl px-12 pt-12 pb-24">
         <h1 className="font-serif text-5xl font-normal tracking-tight">
           Work
         </h1>
