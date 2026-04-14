@@ -82,9 +82,9 @@ export function ProjectLayout({
 
       {/* How it works + Preview */}
       <div className="mx-auto max-w-6xl px-12 pt-16">
-        <div className="flex gap-10">
+        <div className="flex flex-col gap-10 lg:flex-row">
           {/* How it works */}
-          <div className="flex-shrink-0" style={{ flexBasis: "340px" }}>
+          <div className="lg:flex-shrink-0" style={{ flexBasis: "340px" }}>
             <h2 className="font-serif text-3xl font-normal">
               How it works
             </h2>
@@ -111,8 +111,10 @@ export function ProjectLayout({
             </div>
           </div>
 
-          {/* Preview — top aligned with first step, not the heading */}
-          <div className="min-w-0 flex-1 pt-12">{preview}</div>
+          {/* Preview — desktop only, top aligned with first step */}
+          <div className="hidden min-w-0 flex-1 lg:block lg:pt-12">
+            {preview}
+          </div>
         </div>
       </div>
 
