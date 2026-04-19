@@ -126,15 +126,15 @@ export default function SiggyPage() {
     <ProjectLayout
       name="Siggy"
       year="2026"
-      description="A polished email signature builder. Pick a template, customize your details, and paste it into Gmail — no design skills needed. $49 lifetime."
-      bgColor="#F6F4FB"
+      description="A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime."
+      bgColor="#EFE8DA"
       accentColor="#6C5CE7"
       howItWorks={[
         {
           iconColor: "#6C5CE7",
           title: "Pick a template",
           description:
-            "Choose from 4 professionally designed layouts — Edge, Bold, Card, or Clean. Each renders beautifully in every email client.",
+            "Choose from 4 professionally designed layouts: Edge, Bold, Card, or Clean. Each renders beautifully in every email client.",
         },
         {
           iconColor: "#A29BFE",
@@ -146,7 +146,7 @@ export default function SiggyPage() {
           iconColor: "#E17055",
           title: "Paste into Gmail",
           description:
-            "One click to copy. Paste it into Gmail settings — done. No extensions, no fiddling with HTML. Works in every email client.",
+            "One click to copy. Paste it into Gmail settings. Done. No extensions, no fiddling with HTML. Works in every email client.",
         },
       ]}
       preview={<SiggyPreview />}
@@ -159,11 +159,10 @@ export default function SiggyPage() {
         "Vercel Blob",
       ]}
       ctas={[
-        { label: "Try Siggy", href: "https://siggy.dev", variant: "primary" },
         {
-          label: "View Source",
-          href: "https://github.com/zoelsner/siggy",
-          variant: "outline",
+          label: "Try Siggy",
+          href: "https://siggy-orpin.vercel.app",
+          variant: "primary",
         },
       ]}
     />

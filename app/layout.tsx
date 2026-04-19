@@ -1,4 +1,4 @@
-import { Geist_Mono, DM_Sans, DM_Serif_Display } from "next/font/google"
+import { Geist_Mono, DM_Sans, Instrument_Serif } from "next/font/google"
 import type { Metadata } from "next"
 
 import "./globals.css"
@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils"
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
 
-const dmSerif = DM_Serif_Display({
+const instrumentSerif = Instrument_Serif({
   weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-serif",
 })
@@ -34,7 +35,7 @@ export default function RootLayout({
       className={cn(
         "antialiased",
         dmSans.variable,
-        dmSerif.variable,
+        instrumentSerif.variable,
         geistMono.variable,
       )}
     >

@@ -177,16 +177,16 @@ export default function FTPPage() {
   return (
     <ProjectLayout
       name="Farm to People"
-      year="2025 — Present"
+      year="Since 2025"
       description="Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what's in your kitchen."
-      bgColor="#FAFAF5"
+      bgColor="#EFE8DA"
       accentColor="#2D5A3D"
       howItWorks={[
         {
           iconColor: "#2D5A3D",
           title: "Reads your cart",
           description:
-            "Logs into Farm to People, extracts your weekly box — every item, every category, with images.",
+            "Logs into Farm to People, extracts your weekly box. Every item, every category, with images.",
         },
         {
           iconColor: "#C8963E",
@@ -198,7 +198,7 @@ export default function FTPPage() {
           iconColor: "#C75B3B",
           title: "Your cooking assistant",
           description:
-            'Ask it anything — "what goes with the sea bass?" It knows your cart, your preferences, and what you\'ve already cooked.',
+            'Ask it anything. "What goes with the sea bass?" It knows your cart, your preferences, and what you\'ve already cooked.',
         },
       ]}
       preview={<FTPPreview />}
@@ -216,11 +216,6 @@ export default function FTPPage() {
           label: "View Live App",
           href: "https://farmtopeople-production.up.railway.app",
           variant: "primary",
-        },
-        {
-          label: "View Source",
-          href: "https://github.com/zoelsner/farmtopeople",
-          variant: "outline",
         },
       ]}
     />

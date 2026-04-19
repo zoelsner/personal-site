@@ -6,7 +6,7 @@ const projects = [
     slug: "ftp",
     name: "Farm to People",
     status: "Shipped",
-    year: "2025 — Present",
+    year: "Since 2025",
     description:
       "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what\u2019s in your kitchen.",
     tags: ["Python", "FastAPI", "Claude AI", "Playwright", "PWA"],
