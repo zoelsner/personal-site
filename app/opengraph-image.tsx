@@ -5,11 +5,11 @@ export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default async function Image() {
-  // Load Instrument Serif from @fontsource CDN (TTF — Satori-compatible)
+  // Load DM Serif Display from @fontsource CDN (TTF — Satori-compatible)
   let fontData: ArrayBuffer | null = null
   try {
     fontData = await fetch(
-      "https://cdn.jsdelivr.net/npm/@fontsource/instrument-serif@5.0.18/files/instrument-serif-latin-400-normal.ttf",
+      "https://cdn.jsdelivr.net/npm/@fontsource/dm-serif-display@5.0.18/files/dm-serif-display-latin-400-normal.ttf",
     ).then((res) => (res.ok ? res.arrayBuffer() : null))
   } catch {
     fontData = null
@@ -27,7 +27,7 @@ export default async function Image() {
           background: "#EFE8DA",
           padding: "72px 96px",
           color: "#1A1712",
-          fontFamily: "Instrument Serif, serif",
+          fontFamily: "DM Serif Display, serif",
         }}
       >
         {/* Top: eyebrow */}
@@ -117,7 +117,7 @@ export default async function Image() {
       fonts: fontData
         ? [
             {
-              name: "Instrument Serif",
+              name: "DM Serif Display",
               data: fontData,
               style: "normal",
               weight: 400,
