@@ -13,12 +13,22 @@ const projects = [
     accentColor: "#2D5A3D",
   },
   {
+    slug: "qook",
+    name: "Qook",
+    status: "In Progress",
+    year: "2026",
+    description:
+      "Generates a set of meal cards matched to your energy level and pulls ingredients through Instacart so checkout is one tap. Illustrated in watercolor.",
+    tags: ["Next.js", "Claude AI", "Instacart API", "Watercolor"],
+    accentColor: "#B85A3B",
+  },
+  {
     slug: "siggy",
     name: "Siggy",
     status: "Shipped",
     year: "2026",
     description:
-      "A polished email signature builder. Pick a template, customize your details, and paste it into Gmail \u2014 no design skills needed. $49 lifetime.",
+      "A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime.",
     tags: ["Next.js", "React", "Vercel", "Satori", "Lemon Squeezy"],
     accentColor: "#6C5CE7",
   },

@@ -19,6 +19,7 @@ interface ProjectLayoutProps {
   description: string
   bgColor: string
   accentColor: string
+  status?: string
   howItWorks: HowItWorksStep[]
   preview: React.ReactNode
   builtWith: string[]
@@ -31,6 +32,7 @@ export function ProjectLayout({
   description,
   bgColor,
   accentColor,
+  status = "Shipped",
   howItWorks,
   preview,
   builtWith,
@@ -68,7 +70,7 @@ export function ProjectLayout({
             className="rounded-full px-3 py-1 text-xs font-medium text-white"
             style={{ backgroundColor: accentColor }}
           >
-            Shipped
+            {status}
           </span>
           <span className="text-sm text-muted-foreground">{year}</span>
         </div>
