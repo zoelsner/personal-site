@@ -17,7 +17,8 @@ const sections: Section[] = [
     color: "#7A5A7F",
     body: (
       <>
-        <em>Does the Opposite</em> (sort of), and <em>The Phoenix Project</em>.
+        <em>Do the Opposite, Sort Of</em> by Paul Gottsagen, and{" "}
+        <em>The Phoenix Project</em>.
       </>
     ),
   },

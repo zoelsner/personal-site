@@ -39,23 +39,24 @@ export function ProjectLayout({
   return (
     <div className="min-h-svh" style={{ backgroundColor: bgColor }}>
       {/* Header */}
-      <div className="flex items-center justify-between px-12 pt-8">
-        <div className="flex items-center gap-2 text-sm">
+      <div className="flex items-center justify-between px-12 pt-10">
+        <div className="flex items-center gap-6 text-sm">
           <Link
-            href="/work"
-            className="flex items-center gap-1 text-muted-foreground hover:text-foreground"
+            href="/"
+            className="font-mono text-base tracking-wide hover:opacity-70"
           >
-            &larr; Back
+            ZO
           </Link>
-          <span className="text-muted-foreground">/</span>
-          <Link
-            href="/work"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Work
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="font-medium">{name}</span>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/work"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              Work
+            </Link>
+            <span className="text-muted-foreground">/</span>
+            <span className="font-medium">{name}</span>
+          </div>
         </div>
         <Nav />
       </div>
