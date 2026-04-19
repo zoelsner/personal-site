@@ -84,7 +84,7 @@ export default function Page() {
           New York
         </div>
         <h1
-          className="mt-4 text-6xl font-normal leading-[1.02] tracking-tight sm:mt-6 sm:text-7xl md:text-8xl xl:text-[140px] xl:leading-[1.05]"
+          className="mt-4 text-5xl font-normal leading-[1.05] tracking-tight sm:mt-6 sm:text-6xl md:text-7xl xl:text-[108px] xl:leading-[1.05]"
           style={{ fontFamily: "var(--font-display), serif" }}
         >
           Zach Oelsner
