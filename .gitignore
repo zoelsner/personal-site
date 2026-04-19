@@ -35,3 +35,6 @@ pnpm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 public/illustrations/
+
+# Claude Code local tooling
+.claude/
