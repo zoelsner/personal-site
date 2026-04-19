@@ -19,9 +19,27 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Zach Oelsner",
+  metadataBase: new URL("https://zachoelsner.com"),
+  title: {
+    default: "Zach Oelsner",
+    template: "%s · Zach Oelsner",
+  },
   description:
-    "Developer & Builder with a thing for food, tools, and shipping software from New York",
+    "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+  openGraph: {
+    title: "Zach Oelsner",
+    description:
+      "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+    url: "https://zachoelsner.com",
+    siteName: "Zach Oelsner",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zach Oelsner",
+    description:
+      "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+  },
 }
 
 export default function RootLayout({

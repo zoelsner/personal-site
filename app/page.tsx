@@ -86,13 +86,24 @@ export default function Page() {
         <h1 className="mt-4 font-serif text-6xl font-normal leading-[1.02] tracking-tight sm:mt-6 sm:text-7xl md:text-8xl xl:text-[140px] xl:leading-[1.05]">
           Zach Oelsner
         </h1>
-        <p
-          className="mt-6 max-w-2xl font-serif text-xl leading-[1.35] sm:mt-8 sm:text-2xl md:text-3xl xl:text-4xl"
-          style={{ color: "#3C362E" }}
-        >
-          I build software for the daily frictions I can&apos;t stop thinking
-          about. Mostly food. Sometimes tools. Based out of the Lower East Side.
-        </p>
+        <div className="mt-6 max-w-3xl sm:mt-8">
+          <p
+            className="font-serif text-xl leading-[1.35] sm:text-2xl md:text-[28px] xl:text-[34px] xl:leading-[1.3]"
+            style={{ color: "#3C362E" }}
+          >
+            I&apos;ve been focusing a lot recently on apps related to{" "}
+            <em>food</em>. One takes the weekly box I get from Farm to People
+            and turns it into meal ideas. The other generates meals based on
+            your energy level, using watercolor paintings to inspire people to
+            cook.
+          </p>
+          <p
+            className="mt-6 font-serif text-lg italic sm:text-xl md:text-2xl xl:text-[28px]"
+            style={{ color: "#3C362E" }}
+          >
+            Based in the Lower East Side.
+          </p>
+        </div>
       </div>
 
       {/* Mobile + tablet + small laptops: vertical project list */}
