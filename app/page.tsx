@@ -67,27 +67,27 @@ export default function Page() {
   return (
     <div
       className="relative flex min-h-svh flex-col"
-      style={{ backgroundColor: "#EFE8DA", color: "#1E1A16" }}
+      style={{ backgroundColor: "#EFE8DA", color: "#1A1712" }}
     >
       {/* Top nav */}
-      <div className="flex items-center justify-between px-12 pt-10">
-        <div className="font-mono text-base tracking-wide">ZO</div>
+      <div className="flex items-center justify-between px-6 pt-8 sm:px-12 sm:pt-10">
+        <div className="font-mono text-sm tracking-wide sm:text-base">ZO</div>
         <Nav />
       </div>
 
       {/* Hero */}
-      <div className="px-12 pt-14">
+      <div className="px-6 pt-10 sm:px-12 sm:pt-14">
         <div
-          className="font-mono text-sm uppercase tracking-[0.14em]"
+          className="font-mono text-xs uppercase tracking-[0.14em] sm:text-sm"
           style={{ color: "#8A8275" }}
         >
           New York
         </div>
-        <h1 className="mt-6 font-serif text-8xl font-normal tracking-tight sm:text-[140px] sm:leading-[1.05]">
+        <h1 className="mt-4 font-serif text-6xl font-normal leading-[1.02] tracking-tight sm:mt-6 sm:text-7xl md:text-8xl xl:text-[140px] xl:leading-[1.05]">
           Zach Oelsner
         </h1>
         <p
-          className="mt-8 max-w-2xl font-serif text-3xl leading-[1.3] sm:text-4xl"
+          className="mt-6 max-w-2xl font-serif text-xl leading-[1.35] sm:mt-8 sm:text-2xl md:text-3xl xl:text-4xl"
           style={{ color: "#3C362E" }}
         >
           I build software for the daily frictions I can&apos;t stop thinking
@@ -95,8 +95,51 @@ export default function Page() {
         </p>
       </div>
 
-      {/* Shelf */}
-      <div className="mt-auto px-12 pb-28">
+      {/* Mobile + tablet + small laptops: vertical project list */}
+      <div className="px-6 py-12 sm:px-12 sm:py-16 xl:hidden">
+        <div className="flex flex-col">
+          {projects.map((project) => (
+            <div
+              key={project.slug}
+              className="border-t py-7"
+              style={{ borderColor: "#C9C2B4" }}
+            >
+              <Link href={project.href} className="group block">
+                <div
+                  className="font-mono text-[11px] uppercase tracking-[0.14em]"
+                  style={{ color: "#8A8275" }}
+                >
+                  {project.meta}
+                </div>
+                <h2
+                  className="mt-2 inline font-serif text-4xl leading-tight tracking-tight sm:text-5xl"
+                  style={{
+                    textDecoration: "underline",
+                    textDecorationColor: project.color,
+                    textDecorationThickness: "3px",
+                    textUnderlineOffset: "6px",
+                  }}
+                >
+                  {project.name}
+                </h2>
+                <div
+                  className="mt-3 font-serif text-lg leading-snug sm:text-xl"
+                  style={{ color: "#3C362E" }}
+                >
+                  {project.shortDesc}
+                </div>
+              </Link>
+            </div>
+          ))}
+          <div
+            className="h-px w-full"
+            style={{ backgroundColor: "#C9C2B4" }}
+          />
+        </div>
+      </div>
+
+      {/* Desktop: shelf with hover preview */}
+      <div className="mt-auto hidden px-12 pb-28 xl:block">
         <div className="relative">
           <div
             className="flex items-end justify-between"
@@ -110,7 +153,6 @@ export default function Page() {
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
               >
-                {/* Hover preview card */}
                 {hovered === i && (
                   <HoverPreview project={project} index={i} />
                 )}
@@ -123,12 +165,14 @@ export default function Page() {
                     height: project.diameter / 2,
                     backgroundColor: project.color,
                     borderRadius: `${project.diameter}px ${project.diameter}px 0 0`,
-                    transform: hovered === i ? "translateY(-10px)" : "translateY(0)",
+                    transform:
+                      hovered === i ? "translateY(-10px)" : "translateY(0)",
                     boxShadow:
                       hovered === i
                         ? `0 16px 32px ${project.color}40`
                         : "0 0 0 rgba(0,0,0,0)",
-                    transition: "transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 260ms ease-out",
+                    transition:
+                      "transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 260ms ease-out",
                     opacity: 0,
                     animation: "fade-up 0.5s ease-out forwards",
                     animationDelay: `${0.15 + i * 0.08}s`,
@@ -138,13 +182,11 @@ export default function Page() {
             ))}
           </div>
 
-          {/* Shelf line */}
           <div
             className="h-px w-full"
             style={{ backgroundColor: "#C9C2B4" }}
           />
 
-          {/* Labels row */}
           <div className="mt-5 flex justify-between">
             {projects.map((project) => (
               <div
@@ -175,10 +217,10 @@ export default function Page() {
 
       {/* Footer */}
       <div
-        className="flex items-center justify-between px-12 pb-10 font-mono text-sm"
+        className="mt-auto flex items-center justify-between px-6 pb-8 pt-6 font-mono text-xs sm:px-12 sm:pb-10 sm:text-sm xl:mt-0"
         style={{ color: "#8A8275" }}
       >
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4 sm:gap-5">
           <a
             href="https://github.com/zoelsner"
             target="_blank"
@@ -206,7 +248,12 @@ export default function Page() {
             tiktok
           </a>
         </div>
-        <div>hover a half-circle to preview</div>
+        <div>
+          <span className="xl:hidden">© 2026</span>
+          <span className="hidden xl:inline">
+            hover a half-circle to preview
+          </span>
+        </div>
       </div>
     </div>
   )
