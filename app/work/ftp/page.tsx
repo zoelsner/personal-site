@@ -3,6 +3,9 @@ import Image from "next/image"
 import { ProjectLayout } from "@/components/project-layout"
 
 export const metadata: Metadata = {
+  title: "Farm to People",
+  description:
+    "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
   openGraph: {
     title: "Farm to People · Zach Oelsner",
     description:
@@ -127,7 +130,7 @@ function FTPPreview() {
                   Chicken Breast &middot; $9.99
                 </div>
                 <div className="text-[10px] text-muted-foreground">
-                  Great with the kale in your box &mdash; quick stir-fry
+                  Great with the kale in your box. Quick stir-fry.
                 </div>
               </div>
               <span className="flex-shrink-0 rounded bg-[#2D5A3D] px-2 py-0.5 text-[9px] font-medium text-white">
@@ -149,7 +152,7 @@ function FTPPreview() {
               </div>
               {/* AI response */}
               <div className="self-end rounded-lg bg-[#2D5A3D] px-3 py-2 text-[11px] text-white">
-                Pan-sear with lemon butter &mdash; 15 min. The pomelo from your
+                Pan-sear with lemon butter. 15 min. The pomelo from your
                 box adds bright citrus. Finish with kale.
               </div>
               {/* User */}
@@ -194,10 +197,10 @@ export default function FTPPage() {
       year="Since 2025"
       description="Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what's in your kitchen."
       bgColor="#EFE8DA"
-      accentColor="#2D5A3D"
+      accentColor="#3B5A6A"
       howItWorks={[
         {
-          iconColor: "#2D5A3D",
+          iconColor: "#3B5A6A",
           title: "Reads your cart",
           description:
             "Logs into Farm to People, extracts your weekly box. Every item, every category, with images.",

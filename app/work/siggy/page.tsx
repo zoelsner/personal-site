@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { ProjectLayout } from "@/components/project-layout"
 
 export const metadata: Metadata = {
+  title: "Siggy",
+  description:
+    "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
   openGraph: {
     title: "Siggy · Zach Oelsner",
     description:
@@ -142,10 +145,10 @@ export default function SiggyPage() {
       year="2026"
       description="A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime."
       bgColor="#EFE8DA"
-      accentColor="#6C5CE7"
+      accentColor="#7A5A7F"
       howItWorks={[
         {
-          iconColor: "#6C5CE7",
+          iconColor: "#7A5A7F",
           title: "Pick a template",
           description:
             "Choose from 4 professionally designed layouts: Edge, Bold, Card, or Clean. Each renders beautifully in every email client.",

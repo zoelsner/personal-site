@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Nav } from "@/components/nav"
 
 export const metadata: Metadata = {
+  title: "Work",
+  description: "Things I've built. Mostly about food. A few one-off tools.",
   openGraph: {
     title: "Work · Zach Oelsner",
     description: "Things I've built. Mostly about food. A few one-off tools.",
@@ -22,7 +24,7 @@ const projects = [
     description:
       "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what\u2019s in your kitchen.",
     tags: ["Python", "FastAPI", "Claude AI", "Playwright", "PWA"],
-    accentColor: "#2D5A3D",
+    accentColor: "#3B5A6A",
   },
   {
     slug: "qook",
@@ -42,7 +44,7 @@ const projects = [
     description:
       "A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime.",
     tags: ["Next.js", "React", "Vercel", "Satori", "Lemon Squeezy"],
-    accentColor: "#6C5CE7",
+    accentColor: "#7A5A7F",
   },
 ]
 

@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { Nav } from "@/components/nav"
 
 export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Software about food and daily frictions. Based in the Lower East Side.",
   openGraph: {
     title: "About · Zach Oelsner",
     description:

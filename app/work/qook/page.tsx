@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { ProjectLayout } from "@/components/project-layout"
 
 export const metadata: Metadata = {
+  title: "Qook",
+  description:
+    "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
   openGraph: {
     title: "Qook · Zach Oelsner",
     description:
