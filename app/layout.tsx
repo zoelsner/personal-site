@@ -5,6 +5,8 @@ import {
   Instrument_Serif,
 } from "next/font/google"
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
@@ -70,7 +72,11 @@ export default function RootLayout({
         geistMono.variable,
       )}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
