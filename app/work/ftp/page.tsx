@@ -1,5 +1,19 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import { ProjectLayout } from "@/components/project-layout"
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Farm to People · Zach Oelsner",
+    description:
+      "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
+  },
+  twitter: {
+    title: "Farm to People · Zach Oelsner",
+    description:
+      "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
+  },
+}
 
 const meals = [
   {

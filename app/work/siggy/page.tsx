@@ -1,4 +1,18 @@
+import type { Metadata } from "next"
 import { ProjectLayout } from "@/components/project-layout"
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Siggy · Zach Oelsner",
+    description:
+      "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
+  },
+  twitter: {
+    title: "Siggy · Zach Oelsner",
+    description:
+      "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
+  },
+}
 
 function SiggyPreview() {
   return (

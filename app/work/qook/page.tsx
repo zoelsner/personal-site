@@ -1,4 +1,18 @@
+import type { Metadata } from "next"
 import { ProjectLayout } from "@/components/project-layout"
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Qook · Zach Oelsner",
+    description:
+      "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+  },
+  twitter: {
+    title: "Qook · Zach Oelsner",
+    description:
+      "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+  },
+}
 
 const meals = [
   { name: "Butternut Soup", time: "25 min", color: "#C07A5A" },

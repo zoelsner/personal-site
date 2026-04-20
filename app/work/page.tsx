@@ -1,5 +1,17 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Nav } from "@/components/nav"
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Work · Zach Oelsner",
+    description: "Things I've built. Mostly about food. A few one-off tools.",
+  },
+  twitter: {
+    title: "Work · Zach Oelsner",
+    description: "Things I've built. Mostly about food. A few one-off tools.",
+  },
+}
 
 const projects = [
   {

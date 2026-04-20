@@ -1,4 +1,18 @@
+import type { Metadata } from "next"
 import { Nav } from "@/components/nav"
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "About · Zach Oelsner",
+    description:
+      "Software about food and daily frictions. Based in the Lower East Side.",
+  },
+  twitter: {
+    title: "About · Zach Oelsner",
+    description:
+      "Software about food and daily frictions. Based in the Lower East Side.",
+  },
+}
 
 type Section = {
   label: string
