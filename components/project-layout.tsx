@@ -20,6 +20,7 @@ interface ProjectLayoutProps {
   bgColor: string
   accentColor: string
   status?: string
+  sectionTitle?: string
   howItWorks: HowItWorksStep[]
   preview: React.ReactNode
   builtWith: string[]
@@ -33,6 +34,7 @@ export function ProjectLayout({
   bgColor,
   accentColor,
   status = "Shipped",
+  sectionTitle = "How it works",
   howItWorks,
   preview,
   builtWith,
@@ -89,7 +91,7 @@ export function ProjectLayout({
           {/* How it works */}
           <div className="lg:flex-shrink-0" style={{ flexBasis: "340px" }}>
             <h2 className="font-serif text-3xl font-normal">
-              How it works
+              {sectionTitle}
             </h2>
             <div className="mt-8 flex flex-col gap-8">
               {howItWorks.map((step, i) => (

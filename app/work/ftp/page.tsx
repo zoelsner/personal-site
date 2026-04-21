@@ -5,16 +5,16 @@ import { ProjectLayout } from "@/components/project-layout"
 export const metadata: Metadata = {
   title: "Farm to People",
   description:
-    "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
+    "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
   openGraph: {
     title: "Farm to People · Zach Oelsner",
     description:
-      "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
+      "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
   },
   twitter: {
     title: "Farm to People · Zach Oelsner",
     description:
-      "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows what's in your kitchen.",
+      "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
   },
 }
 
@@ -195,27 +195,28 @@ export default function FTPPage() {
     <ProjectLayout
       name="Farm to People"
       year="Since 2025"
-      description="Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what's in your kitchen."
+      description="People pay for a Farm to People box and still let half of it go soft. The box shows up Wednesday. By Sunday you're staring at kohlrabi wondering what to do with it. This reads your actual cart and gives you three meals to make with what's in there."
       bgColor="#EFE8DA"
       accentColor="#3B5A6A"
+      sectionTitle="The thinking"
       howItWorks={[
         {
           iconColor: "#3B5A6A",
-          title: "Reads your cart",
+          title: "Catalyst",
           description:
-            "Logs into Farm to People, extracts your weekly box. Every item, every category, with images.",
+            "People order the box because they want to cook more than they actually do. Wednesday it shows up. By the weekend they've made one of the proteins and the produce is looking sad. The gap isn't ingredients. It's the five minutes between opening the fridge and knowing what to make.",
         },
         {
           iconColor: "#C8963E",
-          title: "Plans your meals",
+          title: "Decision",
           description:
-            "AI generates 3 personalized recipes in seconds using what's actually in your box. Swap any ingredient with one tap.",
+            "Built it cart-first. Most meal apps tell you what to buy. This one starts from what you already bought and works from there. Also skipped the usual personalization onboarding. Preferences you set up once go stale fast. Better to learn what you like from what you actually cook.",
         },
         {
           iconColor: "#C75B3B",
-          title: "Your cooking assistant",
+          title: "Status",
           description:
-            'Ask it anything. "What goes with the sea bass?" It knows your cart, your preferences, and what you\'ve already cooked.',
+            "Live in production with a handful of real users. Sent Farm to People a proposal to turn it into a two-month paid engagement (waiting to hear back). The build part is mostly done. The open question is whether this ends up a standalone app, a feature they license, or a partnership.",
         },
       ]}
       preview={<FTPPreview />}
