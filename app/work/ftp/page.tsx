@@ -232,7 +232,7 @@ export default function FTPPage() {
       ctas={[
         {
           label: "View Live App",
-          href: "https://farmtopeople-production.up.railway.app",
+          href: "https://farmtopeople-demo.up.railway.app/",
           variant: "primary",
         },
       ]}
