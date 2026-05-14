@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Nav } from "@/components/nav"
 
 export const metadata: Metadata = {
@@ -59,19 +60,19 @@ export default function AboutPage() {
     >
       {/* Top nav */}
       <div className="flex items-center justify-between px-12 pt-10">
-        <a
+        <Link
           href="/"
           className="font-mono text-base tracking-wide hover:opacity-70"
         >
           ZO
-        </a>
+        </Link>
         <Nav />
       </div>
 
       {/* Hero */}
       <div className="px-12 pt-20">
         <div
-          className="font-mono text-sm uppercase tracking-[0.14em]"
+          className="font-mono text-sm tracking-[0.14em] uppercase"
           style={{ color: "#5C554A" }}
         >
           About
@@ -95,7 +96,7 @@ export default function AboutPage() {
         {/* Currently section */}
         <div className="mt-24">
           <div
-            className="font-mono text-sm uppercase tracking-[0.14em]"
+            className="font-mono text-sm tracking-[0.14em] uppercase"
             style={{ color: "#5C554A" }}
           >
             Currently
@@ -120,7 +121,7 @@ export default function AboutPage() {
                   style={{ backgroundColor: "#C9C2B4" }}
                 />
                 <div
-                  className="mt-5 font-mono text-xs uppercase tracking-[0.14em]"
+                  className="mt-5 font-mono text-xs tracking-[0.14em] uppercase"
                   style={{ color: "#5C554A" }}
                 >
                   {section.label}
@@ -139,7 +140,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <div
-        className="mt-auto flex items-center justify-between px-12 pb-10 pt-20 font-mono text-sm"
+        className="mt-auto flex items-center justify-between px-12 pt-20 pb-10 font-mono text-sm"
         style={{ color: "#5C554A" }}
       >
         <div className="flex items-center gap-5">
