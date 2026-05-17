@@ -1,6 +1,9 @@
+import type { CSSProperties } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Nav } from "@/components/nav"
+
+import shell from "@/components/site-page.module.css"
+import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "Work",
@@ -15,98 +18,225 @@ export const metadata: Metadata = {
   },
 }
 
-const projects = [
+type Project = {
+  href: string
+  external?: boolean
+  name: string
+  year: string
+  tag: string
+  status: string
+  c: string
+  cTint: string
+}
+
+const projects: Project[] = [
   {
-    slug: "ftp",
+    href: "/work/ftp",
     name: "Farm to People",
-    status: "Shipped",
-    year: "Since 2025",
-    description:
-      "Turns your weekly Farm to People box into personalized meals and a cooking assistant that knows exactly what\u2019s in your kitchen.",
-    tags: ["Python", "FastAPI", "Claude AI", "Playwright", "PWA"],
-    accentColor: "#3B5A6A",
+    year: "2025",
+    tag: "Three meals from your actual box — reads your real cart and suggests what to cook this week.",
+    status: "Shipped · in production",
+    c: "#4d7a5a",
+    cTint: "#e8efe6",
   },
   {
-    slug: "qook",
-    name: "Qook",
-    status: "In Progress",
+    href: "/work/sandlot",
+    name: "Sandlot",
     year: "2026",
-    description:
-      "Generates a set of meal cards matched to your energy level and pulls ingredients through Instacart so checkout is one tap. Illustrated in watercolor.",
-    tags: ["Next.js", "Claude AI", "Instacart API", "Watercolor"],
-    accentColor: "#B85A3B",
+    tag: "Helps me not suck at fantasy baseball. Daily audit, Sunday brief, sources cited.",
+    status: "Shipped · runs daily",
+    c: "#b25a3c",
+    cTint: "#f3e6dd",
   },
   {
-    slug: "siggy",
+    href: "/work/siggy",
     name: "Siggy",
-    status: "Shipped",
     year: "2026",
-    description:
-      "A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime.",
-    tags: ["Next.js", "React", "Vercel", "Satori", "Lemon Squeezy"],
-    accentColor: "#7A5A7F",
+    tag: "A polished signature pasted into Gmail. No extensions, no HTML fiddling.",
+    status: "Shipped · $49 lifetime",
+    c: "#6c649a",
+    cTint: "#ebe9f2",
+  },
+  {
+    href: "https://telestrations-gamma.vercel.app",
+    external: true,
+    name: "Telestrations",
+    year: "2026",
+    tag: "Draw, guess, pass — a web take on the party game. Real-time rooms.",
+    status: "In progress · party game",
+    c: "#a8843a",
+    cTint: "#f1ead7",
   },
 ]
 
 export default function WorkPage() {
+  const stageStyle = {
+    "--accent": "#1B2A4D",
+    "--accent-on": "#fdebcc",
+  } as CSSProperties
+
   return (
-    <div className="min-h-svh bg-background">
-      {/* Nav */}
-      <div className="px-12 pt-10">
-        <Nav showHome />
-      </div>
-
-      {/* Content */}
-      <div className="mx-auto max-w-6xl px-12 pt-12 pb-24">
-        <h1 className="font-serif text-5xl font-normal tracking-tight">
-          Work
-        </h1>
-        <p className="mt-3 text-base text-muted-foreground">
-          Things I&apos;ve built and shipped.
-        </p>
-
-        <div className="mt-12 flex flex-col gap-8">
-          {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/work/${project.slug}`}
-              className="group block rounded-2xl bg-card p-8 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <span>{project.status}</span>
-                <span>{project.year}</span>
-              </div>
-
-              <h2
-                className="mt-3 inline font-serif text-3xl font-normal tracking-tight"
-                style={{
-                  textDecoration: "underline",
-                  textDecorationColor: project.accentColor,
-                  textDecorationThickness: "3px",
-                  textUnderlineOffset: "6px",
-                }}
-              >
-                {project.name}
-              </h2>
-
-              <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-                {project.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border px-3 py-1 text-xs text-muted-foreground"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+    <main className={shell.stage} style={stageStyle}>
+      <div className={shell.inner}>
+        <header className={shell.top}>
+          <Link className={shell.brand} href="/">
+            Zach
+          </Link>
+          <nav className={shell.nav} aria-label="Primary">
+            <Link className={shell.on} href="/work">
+              work
             </Link>
-          ))}
+            <Link href="/about">about</Link>
+            <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
+              say hi
+            </a>
+          </nav>
+        </header>
+
+        <div className={shell.backRow}>
+          <Link className={shell.back} href="/">
+            ← home
+          </Link>
         </div>
+
+        <div
+          aria-hidden="true"
+          className={`${shell.half} ${shell.cream}`}
+          style={{
+            width: 52,
+            height: 26,
+            left: 130,
+            top: 170,
+            transform: "rotate(-15deg)",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className={`${shell.half} ${shell.olive}`}
+          style={{
+            width: 46,
+            height: 23,
+            right: 200,
+            top: 200,
+            transform: "rotate(20deg)",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className={`${shell.half} ${shell.gold} ${shell.flip}`}
+          style={{
+            width: 42,
+            height: 21,
+            right: 160,
+            top: 340,
+            transform: "rotate(180deg)",
+          }}
+        />
+
+        <section className={shell.hero}>
+          <div className={shell.kicker}>
+            <span>selected work</span>
+            <span className={shell.sep}>·</span>
+            <span>03 shipped · 01 in progress</span>
+            <span className={shell.sep}>·</span>
+            <span>updated may 2026</span>
+          </div>
+          <h1 className={shell.title}>
+            work<span className={shell.dot}>.</span>
+          </h1>
+          <p className={shell.subtitle}>
+            Things I&apos;ve built end-to-end — usually because I was
+            annoyed enough by a problem to wire something up over a weekend,
+            then keep going.
+          </p>
+        </section>
+
+        <section
+          className={styles.list}
+          aria-labelledby="work-list-heading"
+        >
+          <h2 id="work-list-heading" className={styles.srOnly}>
+            Selected projects
+          </h2>
+          {projects.map((project) => {
+            const cardStyle = {
+              "--c": project.c,
+              "--c-tint": project.cTint,
+            } as CSSProperties
+            const inner = (
+              <>
+                <span className={styles.tape} aria-hidden="true" />
+                <div className={styles.left}>
+                  <div className={styles.row1}>
+                    <h3 className={styles.cardH}>
+                      {project.name}
+                      <span className={styles.dot}>.</span>
+                    </h3>
+                    <span className={styles.yr}>· {project.year}</span>
+                  </div>
+                  <p className={styles.tag}>{project.tag}</p>
+                </div>
+                <div className={styles.right}>
+                  <span className={styles.status}>{project.status}</span>
+                  <span className={styles.arr} aria-hidden="true">
+                    →
+                  </span>
+                </div>
+              </>
+            )
+            return project.external ? (
+              <a
+                key={project.name}
+                className={styles.card}
+                href={project.href}
+                style={cardStyle}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link
+                key={project.name}
+                className={styles.card}
+                href={project.href}
+                style={cardStyle}
+              >
+                {inner}
+              </Link>
+            )
+          })}
+        </section>
+
+        <section className={shell.pfooter}>
+          <div className={shell.socials}>
+            <a
+              href="https://github.com/zoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://linkedin.com/in/zoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://tiktok.com/@builtwithzach"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tiktok
+            </a>
+          </div>
+          <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }

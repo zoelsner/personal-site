@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { ProjectLayout } from "@/components/project-layout"
+import { ProjectPage } from "@/components/project-page"
 
 export const metadata: Metadata = {
   title: "Qook",
@@ -25,70 +25,121 @@ const meals = [
 
 function QookPreview() {
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow-lg">
-      {/* App header */}
-      <div className="flex items-center justify-between border-b px-5 py-3">
-        <div className="flex items-center gap-2">
-          <div className="h-6 w-6 rounded-md" style={{ backgroundColor: "#B85A3B" }} />
-          <span className="text-sm font-semibold">Qook</span>
+    <div
+      style={{
+        fontFamily: "var(--font-outfit), sans-serif",
+        background: "#fff",
+        borderRadius: 10,
+        overflow: "hidden",
+        border: "1px solid rgba(0,0,0,0.10)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "10px 14px",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            fontSize: 13,
+            fontWeight: 600,
+          }}
+        >
+          <div
+            style={{
+              width: 22,
+              height: 22,
+              borderRadius: 6,
+              background: "#B85A3B",
+            }}
+          />
+          <span>Qook</span>
         </div>
-        <div className="flex gap-1.5 text-[10px] font-medium">
-          <span className="rounded-full border px-2 py-0.5 text-muted-foreground">
+        <div style={{ display: "flex", gap: 6, fontSize: 10, fontWeight: 600 }}>
+          <span
+            style={{
+              padding: "3px 8px",
+              borderRadius: 999,
+              border: "1px solid rgba(0,0,0,0.10)",
+              opacity: 0.6,
+            }}
+          >
             Low
           </span>
           <span
-            className="rounded-full px-2 py-0.5 text-white"
-            style={{ backgroundColor: "#B85A3B" }}
+            style={{
+              padding: "3px 8px",
+              borderRadius: 999,
+              background: "#B85A3B",
+              color: "#fff",
+            }}
           >
             Medium
           </span>
-          <span className="rounded-full border px-2 py-0.5 text-muted-foreground">
+          <span
+            style={{
+              padding: "3px 8px",
+              borderRadius: 999,
+              border: "1px solid rgba(0,0,0,0.10)",
+              opacity: 0.6,
+            }}
+          >
             High
           </span>
         </div>
       </div>
 
-      {/* Section label */}
-      <div className="flex items-center justify-between px-5 pb-2 pt-4">
-        <span className="text-xs font-semibold">Today&apos;s cards</span>
-        <span className="text-[10px] text-muted-foreground">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "14px 14px 6px",
+        }}
+      >
+        <span style={{ fontSize: 12, fontWeight: 700 }}>Today&apos;s cards</span>
+        <span style={{ fontSize: 10, opacity: 0.6 }}>
           Medium energy · 3 picks
         </span>
       </div>
 
-      {/* Meal cards grid */}
-      <div className="grid grid-cols-3 gap-3 px-5 pb-4">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 10,
+          padding: "0 14px 12px",
+        }}
+      >
         {meals.map((meal) => (
           <div
             key={meal.name}
-            className="overflow-hidden rounded-lg border border-[#E8E5DF] bg-[#FAFAF5]"
+            style={{
+              overflow: "hidden",
+              borderRadius: 8,
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#FAFAF5",
+            }}
           >
-            {/* Watercolor swatch */}
             <div
-              className="relative h-24"
               style={{
-                background: `radial-gradient(ellipse at 40% 55%, ${meal.color}99, ${meal.color}33 55%, transparent 85%)`,
+                position: "relative",
+                height: 72,
+                background: `radial-gradient(ellipse at 40% 55%, ${meal.color}99, ${meal.color}33 55%, transparent 85%), radial-gradient(circle at 72% 28%, ${meal.color}66, transparent 45%), radial-gradient(circle at 20% 75%, ${meal.color}44, transparent 35%)`,
               }}
-            >
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: `radial-gradient(circle at 72% 28%, ${meal.color}66, transparent 45%)`,
-                }}
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: `radial-gradient(circle at 20% 75%, ${meal.color}44, transparent 35%)`,
-                }}
-              />
-            </div>
-            {/* Info */}
-            <div className="p-2.5">
-              <div className="text-[11px] font-semibold leading-tight">
+            />
+            <div style={{ padding: 8 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, lineHeight: 1.2 }}>
                 {meal.name}
               </div>
-              <div className="mt-0.5 text-[10px] text-muted-foreground">
+              <div style={{ fontSize: 10, opacity: 0.6, marginTop: 2 }}>
                 {meal.time}
               </div>
             </div>
@@ -96,18 +147,34 @@ function QookPreview() {
         ))}
       </div>
 
-      {/* Instacart checkout bar */}
-      <div className="flex items-center justify-between border-t bg-[#FAFAF5] px-5 py-3">
-        <div className="text-[11px] text-muted-foreground">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "10px 14px",
+          background: "#FAFAF5",
+          borderTop: "1px solid rgba(0,0,0,0.08)",
+        }}
+      >
+        <span style={{ fontSize: 11, opacity: 0.6 }}>
           14 ingredients · pre-filled cart
-        </div>
-        <div
-          className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-medium text-white"
-          style={{ backgroundColor: "#003D29" }}
+        </span>
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+            padding: "5px 12px",
+            borderRadius: 999,
+            background: "#003D29",
+            color: "#fff",
+            fontSize: 11,
+            fontWeight: 600,
+          }}
         >
-          <span>Checkout with Instacart</span>
-          <span>→</span>
-        </div>
+          Checkout with Instacart →
+        </span>
       </div>
     </div>
   )
@@ -115,35 +182,36 @@ function QookPreview() {
 
 export default function QookPage() {
   return (
-    <ProjectLayout
+    <ProjectPage
       name="Qook"
-      year="2026"
-      status="In Progress"
-      description="Generates a set of meal cards matched to your energy level and pulls the ingredients straight through Instacart. Built around watercolor illustrations because the food should look like something you actually want to make."
-      bgColor="#EFE8DA"
-      accentColor="#B85A3B"
-      howItWorks={[
+      accent="#B85A3B"
+      accentOn="#fdebcc"
+      kicker={["in progress", "2026", "iOS first"]}
+      tagline="meal cards matched to your energy level."
+      blurb={
+        <>
+          Generates meal cards matched to <b>how much cooking you have in
+          you today</b> and pulls the ingredients straight through Instacart.
+          Built around watercolor illustrations because the food should look
+          like something you actually want to make.
+        </>
+      }
+      think={[
         {
-          iconColor: "#B85A3B",
           title: "Pick your energy",
-          description:
-            "Tell it how much cooking you have in you today. Low, medium, or high. That's the whole filter.",
+          body: "Tell it how much cooking you have in you today. Low, medium, or high. That's the whole filter — no preference grids that go stale.",
         },
         {
-          iconColor: "#C8963E",
           title: "Get your cards",
-          description:
-            "AI generates meal cards matched to the tier, illustrated in watercolor so you actually want to look at them.",
+          body: "AI generates meal cards matched to the tier, illustrated in watercolor so you actually want to look at them. Three picks a day, not a wall of options.",
         },
         {
-          iconColor: "#003D29",
-          title: "Checkout in one tap",
-          description:
-            "All ingredients pre-populated in an Instacart cart. One tap and they're on the way.",
+          title: "One-tap checkout",
+          body: "All ingredients pre-populated in an Instacart cart. One tap and they're on the way. Charm is in keeping the surface tiny and the loop tight.",
         },
       ]}
       preview={<QookPreview />}
-      builtWith={[
+      stack={[
         "Next.js",
         "React",
         "Claude AI",
@@ -153,9 +221,42 @@ export default function QookPage() {
       ]}
       ctas={[
         {
-          label: "Get notified when it launches",
+          label: "get notified →",
           href: "mailto:zachoelsner@gmail.com?subject=Qook%20waitlist",
-          variant: "primary",
+          external: true,
+          accent: true,
+        },
+      ]}
+      halfCircles={[
+        {
+          tone: "orange",
+          style: {
+            width: 54,
+            height: 27,
+            left: 130,
+            top: 170,
+            transform: "rotate(-10deg)",
+          },
+        },
+        {
+          tone: "gold",
+          style: {
+            width: 46,
+            height: 23,
+            right: 200,
+            top: 200,
+            transform: "rotate(15deg)",
+          },
+        },
+        {
+          tone: "cream",
+          style: {
+            width: 60,
+            height: 30,
+            right: 140,
+            top: 340,
+            transform: "rotate(-12deg)",
+          },
         },
       ]}
     />

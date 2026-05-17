@@ -64,7 +64,9 @@ test.describe("homepage", () => {
     ).toBeVisible()
     await expect(page.getByRole("link", { name: "Sandlot" })).toBeVisible()
     await expect(page.getByRole("link", { name: "Siggy" })).toBeVisible()
-    await expect(page.getByRole("link", { name: "Design notes" })).toBeVisible()
+    await expect(
+      page.getByRole("link", { name: "Telestrations" })
+    ).toBeVisible()
     await expectSeparated(heading, chips, 160)
     await expectNoHorizontalOverflow(page)
   })
@@ -78,24 +80,24 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("link", { name: "Farm to People" })
     ).toHaveAttribute("href", "/work/ftp")
+    await expect(page.getByRole("link", { name: "Sandlot" })).toHaveAttribute(
+      "href",
+      "/work/sandlot"
+    )
     await expect(page.getByRole("link", { name: "Siggy" })).toHaveAttribute(
       "href",
       "/work/siggy"
     )
     await expect(
-      page.getByRole("link", { name: "Design notes" })
-    ).toHaveAttribute("href", "/notes")
-    await expect(page.getByRole("link", { name: "Sandlot" })).toHaveAttribute(
-      "href",
-      "https://github.com/zoelsner/baseball"
-    )
+      page.getByRole("link", { name: "Telestrations" })
+    ).toHaveAttribute("href", "https://telestrations-gamma.vercel.app")
 
     const internalRoutes = [
       "/work",
       "/about",
       "/work/ftp",
+      "/work/sandlot",
       "/work/siggy",
-      "/notes",
     ]
 
     for (const route of internalRoutes) {

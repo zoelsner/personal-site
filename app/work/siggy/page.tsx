@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { ProjectLayout } from "@/components/project-layout"
+import { ProjectPage } from "@/components/project-page"
 
 export const metadata: Metadata = {
   title: "Siggy",
@@ -19,120 +19,259 @@ export const metadata: Metadata = {
 
 function SiggyPreview() {
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow-lg">
-      {/* App header */}
-      <div className="flex items-center justify-between border-b px-5 py-3">
-        <div className="flex items-center gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded-md bg-[#6C5CE7] text-xs font-bold text-white">
+    <div
+      style={{
+        fontFamily: "var(--font-outfit), sans-serif",
+        background: "#fff",
+        borderRadius: 10,
+        overflow: "hidden",
+        border: "1px solid rgba(0,0,0,0.10)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "10px 14px",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: 8,
+            alignItems: "center",
+            fontSize: 13,
+            fontWeight: 600,
+          }}
+        >
+          <div
+            style={{
+              width: 22,
+              height: 22,
+              borderRadius: 6,
+              background: "#6C5CE7",
+              color: "#fff",
+              fontSize: 11,
+              fontWeight: 700,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             S
           </div>
-          <span className="text-sm font-medium">Siggy</span>
+          <span>Siggy</span>
         </div>
-        <button className="rounded-md bg-[#6C5CE7] px-3 py-1 text-xs font-medium text-white">
+        <div
+          style={{
+            padding: "5px 12px",
+            background: "#6C5CE7",
+            color: "#fff",
+            borderRadius: 6,
+            fontSize: 11,
+            fontWeight: 600,
+          }}
+        >
           Copy Signature
-        </button>
+        </div>
       </div>
 
-      <div className="flex">
-        {/* Left panel — form */}
-        <div className="w-44 flex-shrink-0 border-r p-4">
-          <div className="space-y-3">
-            <div>
-              <label className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Details
-              </label>
-              <div className="mt-1 space-y-2">
-                <div>
-                  <span className="text-[10px] text-muted-foreground">
-                    Name
-                  </span>
-                  <div className="rounded border px-2 py-1 text-xs">
-                    Zach Oelsner
-                  </div>
-                </div>
-                <div>
-                  <span className="text-[10px] text-muted-foreground">
-                    Title
-                  </span>
-                  <div className="rounded border px-2 py-1 text-xs">
-                    Builder &amp; Developer
-                  </div>
-                </div>
-                <div>
-                  <span className="text-[10px] text-muted-foreground">
-                    Email
-                  </span>
-                  <div className="rounded border px-2 py-1 text-xs">
-                    zach@oelsner.com
-                  </div>
-                </div>
+      <div style={{ display: "grid", gridTemplateColumns: "130px 1fr" }}>
+        <div
+          style={{
+            padding: 12,
+            borderRight: "1px solid rgba(0,0,0,0.08)",
+            fontSize: 10,
+          }}
+        >
+          <label
+            style={{
+              fontSize: 9,
+              opacity: 0.6,
+              letterSpacing: 1,
+              textTransform: "uppercase",
+              fontWeight: 600,
+            }}
+          >
+            Details
+          </label>
+          {[
+            { label: "Name", value: "Zach Oelsner" },
+            { label: "Title", value: "Builder & Developer" },
+            { label: "Email", value: "zach@oelsner.com" },
+          ].map((field) => (
+            <div key={field.label} style={{ marginTop: 4 }}>
+              <div style={{ fontSize: 9, opacity: 0.6 }}>{field.label}</div>
+              <div
+                style={{
+                  marginTop: 4,
+                  border: "1px solid rgba(0,0,0,0.10)",
+                  padding: "4px 6px",
+                  borderRadius: 4,
+                  fontSize: 10,
+                  marginBottom: 6,
+                }}
+              >
+                {field.value}
               </div>
             </div>
-            <div>
-              <label className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Style
-              </label>
-              <div className="mt-1 flex gap-1.5">
-                <div className="h-5 w-5 rounded-full border-2 border-[#6C5CE7] bg-[#6C5CE7]" />
-                <div className="h-5 w-5 rounded-full border-2 border-[#E17055] bg-[#E17055]" />
-                <div className="h-5 w-5 rounded-full border-2 border-[#1E2328] bg-[#1E2328]" />
-                <div className="h-5 w-5 rounded-full border-2 border-[#A29BFE] bg-[#A29BFE]" />
-              </div>
-            </div>
+          ))}
+          <label
+            style={{
+              marginTop: 8,
+              display: "block",
+              fontSize: 9,
+              opacity: 0.6,
+              letterSpacing: 1,
+              textTransform: "uppercase",
+              fontWeight: 600,
+            }}
+          >
+            Style
+          </label>
+          <div style={{ display: "flex", gap: 5, marginTop: 6 }}>
+            {["#6C5CE7", "#E17055", "#1E2328", "#A29BFE"].map((color) => (
+              <div
+                key={color}
+                style={{
+                  width: 18,
+                  height: 18,
+                  borderRadius: "50%",
+                  background: color,
+                }}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Right panel — signature preview */}
-        <div className="flex flex-1 items-center justify-center bg-[#F8F7FC] p-6">
-          <div className="w-full max-w-xs">
-            <div className="text-2xl font-black tracking-tight">
+        <div
+          style={{
+            background: "#F8F7FC",
+            padding: 24,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ width: "100%", maxWidth: 240 }}>
+            <div
+              style={{
+                fontFamily: "var(--font-paytone), sans-serif",
+                fontSize: 22,
+                letterSpacing: -1,
+                lineHeight: 1,
+              }}
+            >
               ZACH
             </div>
-            <div className="text-2xl font-black tracking-tight text-[#6C5CE7]">
+            <div
+              style={{
+                fontFamily: "var(--font-paytone), sans-serif",
+                fontSize: 22,
+                letterSpacing: -1,
+                lineHeight: 1,
+                color: "#6C5CE7",
+              }}
+            >
               OELSNER
             </div>
             <div
-              className="my-2 h-0.5 w-full"
-              style={{ backgroundColor: "#6C5CE7" }}
+              style={{
+                height: 2,
+                background: "#6C5CE7",
+                margin: "6px 0",
+              }}
             />
-            <div className="flex items-start justify-between text-[10px]">
-              <div>
-                <div className="font-semibold uppercase tracking-wider">
-                  Builder &amp; Developer
-                </div>
-                <div className="text-muted-foreground">New York, NY</div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                fontSize: 9,
+              }}
+            >
+              <div
+                style={{
+                  fontWeight: 600,
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                }}
+              >
+                Builder &amp; Developer
+                <br />
+                <span
+                  style={{
+                    opacity: 0.6,
+                    fontWeight: 500,
+                    letterSpacing: 0,
+                    textTransform: "none",
+                  }}
+                >
+                  New York, NY
+                </span>
               </div>
-              <div className="text-right text-muted-foreground">
-                <div>zach@oelsner.com</div>
-                <div>+1 (555) 000-0000</div>
+              <div style={{ textAlign: "right", opacity: 0.6 }}>
+                zach@oelsner.com
+                <br />
+                +1 (555) 000-0000
               </div>
             </div>
-            <div className="mt-2 flex gap-3 text-[10px] font-semibold uppercase tracking-wider text-[#6C5CE7]">
+            <div
+              style={{
+                marginTop: 6,
+                display: "flex",
+                gap: 8,
+                fontSize: 9,
+                fontWeight: 700,
+                letterSpacing: 1,
+                color: "#6C5CE7",
+                textTransform: "uppercase",
+              }}
+            >
               <span>LinkedIn</span>
               <span>X</span>
               <span>GitHub</span>
             </div>
-            <div className="mt-2 text-[8px] text-muted-foreground">
-              Made with Siggy
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Template tabs */}
-      <div className="flex gap-2 border-t px-5 py-3">
-        <span className="rounded-md border px-3 py-1 text-xs text-muted-foreground">
-          Edge
-        </span>
-        <span className="rounded-md bg-[#6C5CE7] px-3 py-1 text-xs font-medium text-white">
-          Bold
-        </span>
-        <span className="rounded-md border px-3 py-1 text-xs text-muted-foreground">
-          Card
-        </span>
-        <span className="rounded-md border px-3 py-1 text-xs text-muted-foreground">
-          Clean
-        </span>
+      <div
+        style={{
+          display: "flex",
+          gap: 8,
+          padding: "10px 14px",
+          borderTop: "1px solid rgba(0,0,0,0.08)",
+        }}
+      >
+        {[
+          { label: "Edge", on: false },
+          { label: "Bold", on: true },
+          { label: "Card", on: false },
+          { label: "Clean", on: false },
+        ].map((tab) => (
+          <span
+            key={tab.label}
+            style={{
+              padding: "5px 10px",
+              borderRadius: 6,
+              fontSize: 10,
+              ...(tab.on
+                ? {
+                    background: "#6C5CE7",
+                    color: "#fff",
+                    fontWeight: 600,
+                  }
+                : {
+                    border: "1px solid rgba(0,0,0,0.10)",
+                    opacity: 0.6,
+                  }),
+            }}
+          >
+            {tab.label}
+          </span>
+        ))}
       </div>
     </div>
   )
@@ -140,34 +279,36 @@ function SiggyPreview() {
 
 export default function SiggyPage() {
   return (
-    <ProjectLayout
+    <ProjectPage
       name="Siggy"
-      year="2026"
-      description="A polished email signature builder. Pick a template, customize your details, and paste it into Gmail. No design skills needed. $49 lifetime."
-      bgColor="#EFE8DA"
-      accentColor="#7A5A7F"
-      howItWorks={[
+      accent="#6C5CE7"
+      accentOn="#ffffff"
+      kicker={["shipped", "2026", "$49 lifetime"]}
+      tagline="a polished signature, pasted into Gmail."
+      blurb={
+        <>
+          An email signature builder for people who don&apos;t want to fight
+          HTML. <b>Pick a template, fill in your details, paste into Gmail</b> —
+          done. Renders crisp in every client because the name is rendered as
+          an image. $49 lifetime, no subscriptions.
+        </>
+      }
+      think={[
         {
-          iconColor: "#7A5A7F",
           title: "Pick a template",
-          description:
-            "Choose from 4 professionally designed layouts: Edge, Bold, Card, or Clean. Each renders beautifully in every email client.",
+          body: "Four professionally designed layouts — Edge, Bold, Card, Clean. Each renders beautifully in every email client without fighting Outlook's HTML quirks.",
         },
         {
-          iconColor: "#A29BFE",
           title: "Make it yours",
-          description:
-            "Add your name, title, headshot, and links. Choose fonts and colors. Your name renders as a crisp image so it looks perfect everywhere.",
+          body: "Name, title, headshot, links. Choose fonts and colors. The name renders as a crisp Satori-generated image so it looks perfect even when Gmail strips half your CSS.",
         },
         {
-          iconColor: "#E17055",
           title: "Paste into Gmail",
-          description:
-            "One click to copy. Paste it into Gmail settings. Done. No extensions, no fiddling with HTML. Works in every email client.",
+          body: 'One click to copy. Paste into Gmail settings. No extensions, no fiddling. The whole transaction is "pay $49, customize, paste, gone."',
         },
       ]}
       preview={<SiggyPreview />}
-      builtWith={[
+      stack={[
         "Next.js",
         "React",
         "Vercel",
@@ -177,9 +318,43 @@ export default function SiggyPage() {
       ]}
       ctas={[
         {
-          label: "Try Siggy",
+          label: "try siggy →",
           href: "https://siggy-orpin.vercel.app",
-          variant: "primary",
+          external: true,
+          accent: true,
+        },
+      ]}
+      halfCircles={[
+        {
+          tone: "plum",
+          style: {
+            width: 52,
+            height: 26,
+            left: 130,
+            top: 170,
+            transform: "rotate(-12deg)",
+          },
+        },
+        {
+          tone: "cream",
+          style: {
+            width: 56,
+            height: 28,
+            right: 200,
+            top: 200,
+            transform: "rotate(20deg)",
+          },
+        },
+        {
+          tone: "slate",
+          flip: true,
+          style: {
+            width: 60,
+            height: 30,
+            right: 140,
+            top: 340,
+            transform: "rotate(180deg)",
+          },
         },
       ]}
     />

@@ -138,14 +138,13 @@ const halfCircles: HalfCircle[] = [
 
 const chips = [
   { label: "Farm to People", href: "/work/ftp" },
+  { label: "Sandlot", href: "/work/sandlot" },
+  { label: "Siggy", href: "/work/siggy" },
   {
-    label: "Sandlot",
-    href: "https://github.com/zoelsner/baseball",
-    accent: true,
+    label: "Telestrations",
+    href: "https://telestrations-gamma.vercel.app",
     external: true,
   },
-  { label: "Siggy", href: "/work/siggy" },
-  { label: "Design notes", href: "/notes" },
 ]
 
 const socials = [
@@ -206,7 +205,7 @@ export default function Page() {
             chip.external ? (
               <a
                 key={chip.label}
-                className={`${styles.chip} ${chip.accent ? styles.accent : ""}`}
+                className={styles.chip}
                 href={chip.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -214,11 +213,7 @@ export default function Page() {
                 {chip.label}
               </a>
             ) : (
-              <Link
-                key={chip.label}
-                className={`${styles.chip} ${chip.accent ? styles.accent : ""}`}
-                href={chip.href}
-              >
+              <Link key={chip.label} className={styles.chip} href={chip.href}>
                 {chip.label}
               </Link>
             )
