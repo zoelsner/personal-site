@@ -1,11 +1,12 @@
-.workList {
+.list {
   position: relative;
   z-index: 2;
-  max-width: 1120px;
+  max-width: 940px;
   margin: 16px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
+  padding: 8px 32px 16px;
   width: 100%;
 }
 
@@ -21,141 +22,140 @@
   border: 0;
 }
 
-.workCard {
-  display: grid;
-  grid-template-columns: 240px 1fr auto;
-  gap: 32px;
-  align-items: center;
-  padding: 28px 32px;
-  background: #fff;
-  border: 1.5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+.card {
+  position: relative;
+  background: #fcf8ee;
+  border: 2px solid #1a2a18;
+  padding: 22px 28px 20px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.16);
   text-decoration: none;
   color: inherit;
   transition:
     transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.workCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-}
-
-.swatch {
-  position: relative;
-  height: 120px;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
   align-items: center;
-  justify-content: center;
-  padding: 12px;
 }
 
-.pname {
-  font-family: var(--font-paytone), sans-serif;
-  font-size: 22px;
-  color: #1a2a18;
-  letter-spacing: -0.3px;
-  line-height: 1;
-  text-align: center;
+.card:nth-of-type(1) {
+  transform: rotate(-0.6deg);
+}
+.card:nth-of-type(2) {
+  transform: rotate(0.5deg);
+}
+.card:nth-of-type(3) {
+  transform: rotate(0.4deg);
+}
+.card:nth-of-type(4) {
+  transform: rotate(-0.5deg);
 }
 
-.body3 {
+.card:hover {
+  transform: rotate(0deg) translateY(-2px);
+  box-shadow: 6px 6px 0 0 #1a2a18;
+  background-color: var(--c-tint);
+}
+
+.tape {
+  position: absolute;
+  top: -9px;
+  left: 32px;
+  width: 60px;
+  height: 16px;
+  background: var(--c);
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  opacity: 0.85;
+  transform: rotate(-3deg);
+}
+
+.left {
   display: flex;
   flex-direction: column;
   gap: 8px;
   min-width: 0;
 }
 
-.pillInfo {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: #3a4a30;
-  opacity: 0.75;
-}
-
-.pillInfo i {
-  font-style: normal;
-}
-
-.pillInfo .sep {
-  opacity: 0.4;
+.row1 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .cardH {
   font-family: var(--font-paytone), sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   margin: 0;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
+  letter-spacing: -0.3px;
+  line-height: 1;
 }
 
-.desc {
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: #3a4a30;
-  margin: 4px 0 0;
-  max-width: 540px;
+.cardH .dot {
+  color: var(--c);
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 8px;
-}
-
-.chips span {
-  background: rgba(0, 0, 0, 0.06);
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 500;
-  color: #1a2a18;
-}
-
-.arrow {
+.yr {
   font-family: var(--font-outfit), sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  opacity: 0.4;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  color: #3a4a30;
+  opacity: 0.55;
+}
+
+.tag {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  color: #1a2a18;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.status {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--c);
+}
+
+.arr {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a2a18;
+  opacity: 0.35;
   transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
+    opacity 0.15s ease,
+    transform 0.15s ease;
 }
 
-.workCard:hover .arrow {
+.card:hover .arr {
   opacity: 1;
-  transform: translateX(4px);
+  transform: translateX(2px);
 }
 
-/* Swatch backgrounds keep the prior product color */
-.swFtp {
-  background: #bfdcc6;
-}
-.swQook {
-  background: #f0d3c4;
-}
-.swSiggy {
-  background: #e8d8f5;
-}
-
-@media (max-width: 800px) {
-  .workCard {
+@media (max-width: 900px) {
+  .list {
+    padding: 8px 0 16px;
+  }
+  .card {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
-  .swatch {
-    height: 96px;
-  }
-  .arrow {
-    display: none;
+  .right {
+    align-items: flex-start;
   }
 }

@@ -18,52 +18,60 @@ export const metadata: Metadata = {
   },
 }
 
-const projects = [
+type Project = {
+  href: string
+  external?: boolean
+  name: string
+  year: string
+  tag: string
+  status: string
+  c: string
+  cTint: string
+}
+
+const projects: Project[] = [
   {
-    slug: "ftp",
+    href: "/work/ftp",
     name: "Farm to People",
-    swatchClass: styles.swFtp,
-    dotColor: "#2D5A3D",
-    info: ["Shipped", "2025", "In production"],
-    headline: "three meals from your actual box.",
-    description:
-      "Reads your Farm to People cart and gives you three meals to make with what's in there, plus a chat that knows everything in your box. Live in production with real users.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "Claude AI",
-      "Supabase",
-      "Railway",
-      "PWA",
-    ],
+    year: "2025",
+    tag: "Three meals from your actual box — reads your real cart and suggests what to cook this week.",
+    status: "Shipped · in production",
+    c: "#4d7a5a",
+    cTint: "#e8efe6",
   },
   {
-    slug: "qook",
-    name: "Qook",
-    swatchClass: styles.swQook,
-    dotColor: "#B85A3B",
-    info: ["In progress", "2026", "iOS first"],
-    headline: "meal cards matched to your energy level.",
-    description:
-      "Generates meal cards based on how much cooking you have in you today and pre-fills the ingredients in Instacart. Watercolor illustrations make the food look like something you actually want to make.",
-    tags: ["Next.js", "Claude AI", "Instacart API", "Watercolor"],
+    href: "/work/sandlot",
+    name: "Sandlot",
+    year: "2026",
+    tag: "Helps me not suck at fantasy baseball. Daily audit, Sunday brief, sources cited.",
+    status: "Shipped · runs daily",
+    c: "#b25a3c",
+    cTint: "#f3e6dd",
   },
   {
-    slug: "siggy",
+    href: "/work/siggy",
     name: "Siggy",
-    swatchClass: styles.swSiggy,
-    dotColor: "#6C5CE7",
-    info: ["Shipped", "2026", "$49 lifetime"],
-    headline: "a polished signature, pasted into Gmail.",
-    description:
-      "Email signature builder for people who don't want to fight HTML. Pick a template, fill in your details, paste into Gmail — done. Renders crisp in every client because the name is rendered as an image.",
-    tags: ["Next.js", "React", "Vercel", "Satori", "Lemon Squeezy"],
+    year: "2026",
+    tag: "A polished signature pasted into Gmail. No extensions, no HTML fiddling.",
+    status: "Shipped · $49 lifetime",
+    c: "#6c649a",
+    cTint: "#ebe9f2",
+  },
+  {
+    href: "https://telestrations-gamma.vercel.app",
+    external: true,
+    name: "Telestrations",
+    year: "2026",
+    tag: "Draw, guess, pass — a web take on the party game. Real-time rooms.",
+    status: "In progress · party game",
+    c: "#a8843a",
+    cTint: "#f1ead7",
   },
 ]
 
 export default function WorkPage() {
   const stageStyle = {
-    "--accent": "#3B4A5A",
+    "--accent": "#1B2A4D",
     "--accent-on": "#fdebcc",
   } as CSSProperties
 
@@ -104,7 +112,7 @@ export default function WorkPage() {
         />
         <div
           aria-hidden="true"
-          className={`${shell.half} ${shell.slate}`}
+          className={`${shell.half} ${shell.olive}`}
           style={{
             width: 46,
             height: 23,
@@ -115,10 +123,10 @@ export default function WorkPage() {
         />
         <div
           aria-hidden="true"
-          className={`${shell.half} ${shell.ink} ${shell.flip}`}
+          className={`${shell.half} ${shell.gold} ${shell.flip}`}
           style={{
-            width: 40,
-            height: 20,
+            width: 42,
+            height: 21,
             right: 160,
             top: 340,
             transform: "rotate(180deg)",
@@ -129,7 +137,7 @@ export default function WorkPage() {
           <div className={shell.kicker}>
             <span>selected work</span>
             <span className={shell.sep}>·</span>
-            <span>03 projects</span>
+            <span>03 shipped · 01 in progress</span>
             <span className={shell.sep}>·</span>
             <span>updated may 2026</span>
           </div>
@@ -144,50 +152,60 @@ export default function WorkPage() {
         </section>
 
         <section
-          className={styles.workList}
+          className={styles.list}
           aria-labelledby="work-list-heading"
         >
           <h2 id="work-list-heading" className={styles.srOnly}>
             Selected projects
           </h2>
-          {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/work/${project.slug}`}
-              className={styles.workCard}
-              aria-labelledby={`work-${project.slug}-name`}
-            >
-              <div className={`${styles.swatch} ${project.swatchClass}`}>
-                <div
-                  id={`work-${project.slug}-name`}
-                  className={styles.pname}
-                >
-                  {project.name}
-                  <span style={{ color: project.dotColor }}>.</span>
+          {projects.map((project) => {
+            const cardStyle = {
+              "--c": project.c,
+              "--c-tint": project.cTint,
+            } as CSSProperties
+            const inner = (
+              <>
+                <span className={styles.tape} aria-hidden="true" />
+                <div className={styles.left}>
+                  <div className={styles.row1}>
+                    <h3 className={styles.cardH}>
+                      {project.name}
+                      <span className={styles.dot}>.</span>
+                    </h3>
+                    <span className={styles.yr}>· {project.year}</span>
+                  </div>
+                  <p className={styles.tag}>{project.tag}</p>
                 </div>
-              </div>
-              <div className={styles.body3}>
-                <div className={styles.pillInfo}>
-                  {project.info.map((bit, i) => (
-                    <span key={bit}>
-                      {i > 0 && <span className={styles.sep}>·</span>}
-                      <i>{bit}</i>
-                    </span>
-                  ))}
+                <div className={styles.right}>
+                  <span className={styles.status}>{project.status}</span>
+                  <span className={styles.arr} aria-hidden="true">
+                    →
+                  </span>
                 </div>
-                <h3 className={styles.cardH}>{project.headline}</h3>
-                <p className={styles.desc}>{project.description}</p>
-                <div className={styles.chips}>
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.arrow} aria-hidden="true">
-                →
-              </div>
-            </Link>
-          ))}
+              </>
+            )
+            return project.external ? (
+              <a
+                key={project.name}
+                className={styles.card}
+                href={project.href}
+                style={cardStyle}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link
+                key={project.name}
+                className={styles.card}
+                href={project.href}
+                style={cardStyle}
+              >
+                {inner}
+              </Link>
+            )
+          })}
         </section>
 
         <section className={shell.pfooter}>
