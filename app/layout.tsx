@@ -3,6 +3,8 @@ import {
   DM_Sans,
   DM_Serif_Display,
   Instrument_Serif,
+  Outfit,
+  Paytone_One,
 } from "next/font/google"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
@@ -30,6 +32,18 @@ const dmSerifDisplay = DM_Serif_Display({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
+})
+
+const paytoneOne = Paytone_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-paytone",
 })
 
 export const metadata: Metadata = {
@@ -70,6 +84,8 @@ export default function RootLayout({
         instrumentSerif.variable,
         dmSerifDisplay.variable,
         geistMono.variable,
+        outfit.variable,
+        paytoneOne.variable,
       )}
     >
       <body>

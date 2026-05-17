@@ -1,6 +1,9 @@
+import type { CSSProperties } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Nav } from "@/components/nav"
+
+import shell from "@/components/site-page.module.css"
+import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "About",
@@ -18,166 +21,215 @@ export const metadata: Metadata = {
   },
 }
 
-type Section = {
-  label: string
-  color: string
-  body: React.ReactNode
-}
-
-const sections: Section[] = [
-  {
-    label: "Building",
-    color: "#3B5A6A",
-    body: "A meal-planning app for friends, organized around energy levels.",
-  },
-  {
-    label: "Reading",
-    color: "#7A5A7F",
-    body: (
-      <>
-        <em>Do the Opposite, Sort Of</em> by Paul Gottsagen, and{" "}
-        <em>The Phoenix Project</em>.
-      </>
-    ),
-  },
-  {
-    label: "Eating",
-    color: "#B85A3B",
-    body: "Working out of After Eden in LES. Recently made it to Claud after loving Penny (get the Dover sole and the mille-feuille).",
-  },
-  {
-    label: "Moving",
-    color: "#5C7A4A",
-    body: "Try to make it to pilates twice a week.",
-  },
+const bits = [
+  { what: <>Reading: <em>How to Cook a Wolf</em></>, when: "May" },
+  { what: "Cooking from the Farm to People box", when: "Weekly" },
+  { what: "Yankees season + my fantasy team", when: "Daily" },
+  { what: "Long walks across the bridges", when: "Always" },
+  { what: "Espresso, badly pulled", when: "Mornings" },
 ]
 
 export default function AboutPage() {
+  const stageStyle = {
+    "--accent": "#2D5A3D",
+    "--accent-on": "#fdebcc",
+  } as CSSProperties
+
   return (
-    <div
-      className="relative flex min-h-svh flex-col"
-      style={{ backgroundColor: "#EFE8DA", color: "#1A1712" }}
-    >
-      {/* Top nav */}
-      <div className="flex items-center justify-between px-12 pt-10">
-        <Link
-          href="/"
-          className="font-mono text-base tracking-wide hover:opacity-70"
-        >
-          ZO
-        </Link>
-        <Nav />
-      </div>
+    <main className={shell.stage} style={stageStyle}>
+      <div className={shell.inner}>
+        <header className={shell.top}>
+          <Link className={shell.brand} href="/">
+            Zach
+          </Link>
+          <nav className={shell.nav} aria-label="Primary">
+            <Link href="/work">work</Link>
+            <Link className={shell.on} href="/about">
+              about
+            </Link>
+            <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
+              say hi
+            </a>
+          </nav>
+        </header>
 
-      {/* Hero */}
-      <div className="px-12 pt-20">
+        <div className={shell.backRow}>
+          <Link className={shell.back} href="/">
+            ← home
+          </Link>
+        </div>
+
         <div
-          className="font-mono text-sm tracking-[0.14em] uppercase"
-          style={{ color: "#5C554A" }}
-        >
-          About
-        </div>
+          aria-hidden="true"
+          className={`${shell.half} ${shell.olive}`}
+          style={{
+            width: 54,
+            height: 27,
+            left: 120,
+            top: 170,
+            transform: "rotate(-12deg)",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className={`${shell.half} ${shell.cream}`}
+          style={{
+            width: 48,
+            height: 24,
+            right: 200,
+            top: 200,
+            transform: "rotate(20deg)",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className={`${shell.half} ${shell.gold} ${shell.flip}`}
+          style={{
+            width: 58,
+            height: 29,
+            right: 140,
+            top: 340,
+            transform: "rotate(180deg)",
+          }}
+        />
 
-        <div className="mt-8 max-w-[700px]">
-          <p className="font-serif text-3xl leading-[1.25] sm:text-[38px] sm:leading-[1.2]">
-            Most of what I build is about <em>food</em>. I think about food and
-            restaurants a lot, and it keeps turning into software. The rest are
-            one-off tools. Mostly a way to learn something new, explore my
-            design preferences, and improve my process.
+        <section className={shell.hero}>
+          <div className={shell.kicker}>
+            <span>based in LES</span>
+            <span className={shell.sep}>·</span>
+            <span>food-pilled since 2020</span>
+          </div>
+          <h1 className={shell.title}>
+            about<span className={shell.dot}>.</span>
+          </h1>
+          <p className={shell.subtitle}>
+            I build small, useful things — usually around food, sports, or
+            whatever I was annoyed by that week.
           </p>
-          <p
-            className="mt-8 font-serif text-2xl italic sm:text-[28px]"
-            style={{ color: "#2A261F" }}
-          >
-            Based in the Lower East Side.
-          </p>
-        </div>
+        </section>
 
-        {/* Currently section */}
-        <div className="mt-24">
-          <div
-            className="font-mono text-sm tracking-[0.14em] uppercase"
-            style={{ color: "#5C554A" }}
-          >
-            Currently
+        <section className={styles.body}>
+          <div className={styles.prose}>
+            <p className={styles.lede}>
+              I&apos;m Zach. I live on the Lower East Side, cook more than I
+              should, and spend most weekends turning a problem I&apos;ve
+              been complaining about into a small app I actually use.
+            </p>
+            <p>
+              My work mostly lives at the intersection of{" "}
+              <b>cooking, sports, and software that doesn&apos;t try to be a
+              platform.</b>{" "}
+              Farm to People reads my real cart and tells me three meals to
+              make. Sandlot watches my fantasy league and tells me what to
+              do before I open Fantrax. Siggy stops me (and a few hundred
+              other people) from fighting HTML to get a decent email
+              signature.
+            </p>
+            <p>
+              I think most &ldquo;AI products&rdquo; get the shape wrong:
+              too much surface area, too few sharp edges. The interesting
+              work right now is small tools with strong opinions and a
+              tight loop — something that takes thirty seconds and saves
+              you an hour. That&apos;s what I try to build.
+            </p>
+            <p>
+              Before this I was at <b>Bubble</b>, and before that a few
+              other places that taught me how to ship. If you&apos;ve got a
+              half-baked idea that smells like a weekend project, I&apos;d
+              love to hear about it.
+            </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-10">
-            {sections.map((section) => (
-              <div key={section.label} className="flex flex-col">
-                {/* Half-circle grounded on hairline */}
-                <div className="flex h-10 items-end">
-                  <div
-                    style={{
-                      width: 72,
-                      height: 36,
-                      backgroundColor: section.color,
-                      borderRadius: "72px 72px 0 0",
-                    }}
-                  />
-                </div>
-                <div
-                  className="h-px w-full"
-                  style={{ backgroundColor: "#C9C2B4" }}
-                />
-                <div
-                  className="mt-5 font-mono text-xs tracking-[0.14em] uppercase"
-                  style={{ color: "#5C554A" }}
-                >
-                  {section.label}
-                </div>
-                <p
-                  className="mt-3 font-serif text-xl leading-snug sm:text-2xl"
-                  style={{ color: "#2A261F" }}
-                >
-                  {section.body}
-                </p>
+          <aside className={styles.aside}>
+            <div className={styles.quick}>
+              <dl>
+                <dt>Based</dt>
+                <dd>Lower East Side, NYC</dd>
+                <dt>Doing</dt>
+                <dd>Building small useful things</dd>
+                <dt>Past</dt>
+                <dd>Bubble, others</dd>
+                <dt>Email</dt>
+                <dd>
+                  <a href="mailto:zachoelsner@gmail.com">
+                    zachoelsner@gmail.com
+                  </a>
+                </dd>
+                <dt>Elsewhere</dt>
+                <dd>
+                  <a
+                    href="https://github.com/zoelsner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github
+                  </a>
+                  {" · "}
+                  <a
+                    href="https://linkedin.com/in/zoelsner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin
+                  </a>
+                  {" · "}
+                  <a
+                    href="https://tiktok.com/@builtwithzach"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tiktok
+                  </a>
+                </dd>
+              </dl>
+            </div>
+
+            <div>
+              <h4 className={shell.sectionH}>
+                <span className={shell.dotmark} aria-hidden="true" />
+                currently into
+              </h4>
+              <div className={styles.bits}>
+                {bits.map((bit, i) => (
+                  <div key={i} className={styles.bit}>
+                    <span className={styles.what}>{bit.what}</span>
+                    <span className={styles.when}>{bit.when}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
+            </div>
+          </aside>
+        </section>
 
-      {/* Footer */}
-      <div
-        className="mt-auto flex items-center justify-between px-12 pt-20 pb-10 font-mono text-sm"
-        style={{ color: "#5C554A" }}
-      >
-        <div className="flex items-center gap-5">
-          <a
-            href="https://github.com/zoelsner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            github
-          </a>
-          <span>·</span>
-          <a
-            href="https://linkedin.com/in/zoelsner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            linkedin
-          </a>
-          <span>·</span>
-          <a
-            href="https://tiktok.com/@builtwithzach"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            tiktok
-          </a>
-        </div>
-        <a
-          href="mailto:zachoelsner@gmail.com"
-          className="hover:text-foreground"
-        >
-          zachoelsner@gmail.com
-        </a>
+        <section className={shell.pfooter}>
+          <div className={shell.socials}>
+            <a
+              href="https://github.com/zoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://linkedin.com/in/zoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://tiktok.com/@builtwithzach"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tiktok
+            </a>
+          </div>
+          <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }
