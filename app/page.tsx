@@ -136,15 +136,13 @@ const halfCircles: HalfCircle[] = [
   },
 ]
 
-const chips = [
+type Chip = { label: string; href: string; external?: boolean }
+
+const chips: Chip[] = [
   { label: "Farm to People", href: "/work/ftp" },
   { label: "Sandlot", href: "/work/sandlot" },
   { label: "Siggy", href: "/work/siggy" },
-  {
-    label: "Telestrations",
-    href: "https://telestrations-gamma.vercel.app",
-    external: true,
-  },
+  { label: "Telestrations", href: "/work/telestrations" },
 ]
 
 const socials = [
