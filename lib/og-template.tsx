@@ -2,32 +2,78 @@ import { ImageResponse } from "next/og"
 
 export const ogSize = { width: 1200, height: 630 }
 
-export type ProjectSlug = "ftp" | "siggy" | "qook" | "this-site"
+// shared chill product-OG palette
+const INK = "#1a2a18"
+const PAPER = "#f5efe2"
+const CREAM = "#fdebcc"
+const MUTED = "#3a4a30"
+const SLATE = "#3b5a6a"
+const ORANGE = "#d44e2a"
+const GOLD = "#c8963e"
+const OLIVE = "#5a7a3a"
+const PLUM = "#7a5a7f"
+const YELLOW = "#e6b341"
 
-interface OGProps {
-  eyebrow: string
-  title: string
-  subtitle: string
-  activeProject?: ProjectSlug
+export type HalfTone =
+  | "cream"
+  | "orange"
+  | "gold"
+  | "yellow"
+  | "slate"
+  | "plum"
+  | "olive"
+  | "ink"
+  | "accent"
+
+const TONE_BG: Record<HalfTone, string | "accent"> = {
+  cream: CREAM,
+  orange: ORANGE,
+  gold: GOLD,
+  yellow: YELLOW,
+  slate: SLATE,
+  plum: PLUM,
+  olive: OLIVE,
+  ink: INK,
+  accent: "accent",
 }
 
-// Matches the homepage shelf colors and relative proportions
-const SHELF_PROJECTS: {
-  slug: ProjectSlug
-  color: string
-  baseWidth: number
-}[] = [
-  { slug: "ftp", color: "#3B5A6A", baseWidth: 140 },
-  { slug: "siggy", color: "#7A5A7F", baseWidth: 80 },
-  { slug: "qook", color: "#B85A3B", baseWidth: 160 },
-  { slug: "this-site", color: "#5C7A4A", baseWidth: 68 },
-]
+export type OGHalf = {
+  tone: HalfTone
+  width: number
+  height: number
+  top: number
+  left?: number
+  right?: number
+  rotate?: number
+  flip?: boolean
+}
 
-async function loadDisplayFont(): Promise<ArrayBuffer | null> {
+interface OGProps {
+  /** small uppercase line above the title (e.g. "shipped · 2025 · in production") */
+  kicker?: string
+  /** big display title (e.g. "Farm to People") */
+  title: string
+  /** Outfit-semibold tagline below the title */
+  tagline?: string
+  /** page accent color (top strip, dot in title, default for "accent" half-circles) */
+  accent: string
+  /** color text sits on when on top of `accent` (for the page-URL chip). Defaults to cream. */
+  accentOn?: string
+  /** sub-URL for the chip in the top-right (e.g. "zachoelsner.com/work/ftp") */
+  url?: string
+  halves?: OGHalf[]
+}
+
+const PAYTONE_URL =
+  "https://cdn.jsdelivr.net/npm/@fontsource/paytone-one@5.2.8/files/paytone-one-latin-400-normal.woff"
+const OUTFIT_700_URL =
+  "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-700-normal.woff"
+const OUTFIT_600_URL =
+  "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-600-normal.woff"
+
+async function loadFont(url: string): Promise<ArrayBuffer | null> {
   try {
-    const res = await fetch(
-      "https://cdn.jsdelivr.net/npm/@fontsource/dm-serif-display@5.2.8/files/dm-serif-display-latin-400-normal.woff",
-    )
+    const res = await fetch(url)
     return res.ok ? await res.arrayBuffer() : null
   } catch {
     return null
@@ -35,12 +81,47 @@ async function loadDisplayFont(): Promise<ArrayBuffer | null> {
 }
 
 export async function createOG({
-  eyebrow,
+  kicker,
   title,
-  subtitle,
-  activeProject,
+  tagline,
+  accent,
+  accentOn = CREAM,
+  url,
+  halves = [],
 }: OGProps) {
-  const fontData = await loadDisplayFont()
+  const [paytone, outfit700, outfit600] = await Promise.all([
+    loadFont(PAYTONE_URL),
+    loadFont(OUTFIT_700_URL),
+    loadFont(OUTFIT_600_URL),
+  ])
+
+  const fonts: {
+    name: string
+    data: ArrayBuffer
+    style: "normal"
+    weight: 400 | 600 | 700
+  }[] = []
+  if (paytone)
+    fonts.push({
+      name: "Paytone One",
+      data: paytone,
+      style: "normal",
+      weight: 400,
+    })
+  if (outfit700)
+    fonts.push({
+      name: "Outfit",
+      data: outfit700,
+      style: "normal",
+      weight: 700,
+    })
+  if (outfit600)
+    fonts.push({
+      name: "Outfit",
+      data: outfit600,
+      style: "normal",
+      weight: 600,
+    })
 
   return new ImageResponse(
     (
@@ -48,123 +129,142 @@ export async function createOG({
         style={{
           width: "100%",
           height: "100%",
+          background: PAPER,
+          color: INK,
           display: "flex",
           flexDirection: "column",
-          background: "#EFE8DA",
-          padding: "72px 96px",
-          color: "#1A1712",
-          fontFamily: "DM Serif Display, serif",
+          padding: "72px 90px",
+          position: "relative",
+          fontFamily: "Outfit, sans-serif",
         }}
       >
-        {/* Top: eyebrow */}
+        {/* top accent strip */}
         <div
           style={{
-            fontSize: 22,
-            letterSpacing: 4,
-            textTransform: "uppercase",
-            color: "#5C554A",
-            fontFamily: "monospace",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 8,
+            background: accent,
             display: "flex",
           }}
-        >
-          {eyebrow}
-        </div>
+        />
 
-        {/* Middle: title + subtitle (grows to fill) */}
+        {/* URL chip top-right */}
+        {url && (
+          <div
+            style={{
+              position: "absolute",
+              top: 36,
+              right: 36,
+              padding: "8px 16px",
+              borderRadius: 999,
+              background: accent,
+              color: accentOn,
+              fontSize: 16,
+              fontWeight: 700,
+              letterSpacing: 2,
+              textTransform: "uppercase",
+              fontFamily: "Outfit, sans-serif",
+              display: "flex",
+            }}
+          >
+            {url}
+          </div>
+        )}
+
+        {/* Decorative half-circles */}
+        {halves.map((h, i) => {
+          const bgKey = TONE_BG[h.tone]
+          const bg = bgKey === "accent" ? accent : bgKey
+          const horiz =
+            typeof h.left === "number"
+              ? { left: h.left }
+              : { right: h.right ?? 0 }
+          const isInk = h.tone === "ink"
+          const shadowColor = isInk ? CREAM : INK
+          const shadowOffsetY = h.flip ? -5 : 5
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                top: h.top,
+                ...horiz,
+                width: h.width,
+                height: h.height,
+                background: bg,
+                border: `3px solid ${INK}`,
+                borderTopLeftRadius: 9999,
+                borderTopRightRadius: 9999,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+                transform: `rotate(${h.rotate ?? 0}deg)`,
+                boxShadow: `5px ${shadowOffsetY}px 0 0 ${shadowColor}`,
+                display: "flex",
+              }}
+            />
+          )
+        })}
+
+        {/* Hero block, anchored to the lower-middle */}
         <div
           style={{
+            marginTop: "auto",
             display: "flex",
             flexDirection: "column",
-            flex: 1,
-            justifyContent: "center",
-            maxWidth: 940,
+            alignItems: "flex-start",
+            gap: 18,
           }}
         >
+          {kicker && (
+            <div
+              style={{
+                fontSize: 20,
+                fontWeight: 700,
+                letterSpacing: 3,
+                textTransform: "uppercase",
+                color: MUTED,
+                opacity: 0.75,
+                display: "flex",
+              }}
+            >
+              {kicker}
+            </div>
+          )}
           <div
             style={{
-              fontSize: 128,
-              lineHeight: 1.02,
-              letterSpacing: -3,
+              fontFamily: "Paytone One, Impact, sans-serif",
+              fontSize: 156,
+              lineHeight: 0.88,
+              letterSpacing: -5,
+              color: INK,
               display: "flex",
+              alignItems: "baseline",
             }}
           >
-            {title}
+            <div style={{ color: INK, display: "flex" }}>{title}</div>
+            <div style={{ color: accent, display: "flex" }}>.</div>
           </div>
-          <div
-            style={{
-              fontSize: 30,
-              lineHeight: 1.3,
-              marginTop: 24,
-              color: "#3C362E",
-              display: "flex",
-              fontFamily: "serif",
-            }}
-          >
-            {subtitle}
-          </div>
-        </div>
-
-        {/* Bottom: shelf of half-circles */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: 24,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-              height: 140,
-              paddingLeft: 20,
-              paddingRight: 20,
-            }}
-          >
-            {SHELF_PROJECTS.map((p) => {
-              const isActive = p.slug === activeProject
-              const width = isActive ? Math.round(p.baseWidth * 1.45) : p.baseWidth
-              const height = width / 2
-              return (
-                <div
-                  key={p.slug}
-                  style={{
-                    width,
-                    height,
-                    background: p.color,
-                    borderRadius: `${width}px ${width}px 0 0`,
-                    transform: isActive ? "translateY(-14px)" : "translateY(0)",
-                    boxShadow: isActive
-                      ? `0 16px 30px ${p.color}55`
-                      : "none",
-                    display: "flex",
-                  }}
-                />
-              )
-            })}
-          </div>
-          <div
-            style={{
-              height: 1,
-              background: "#C9C2B4",
-            }}
-          />
+          {tagline && (
+            <div
+              style={{
+                fontSize: 30,
+                fontWeight: 600,
+                color: INK,
+                opacity: 0.9,
+                letterSpacing: -0.4,
+                maxWidth: 920,
+                display: "flex",
+              }}
+            >
+              {tagline}
+            </div>
+          )}
         </div>
       </div>
     ),
-    {
-      ...ogSize,
-      fonts: fontData
-        ? [
-            {
-              name: "DM Serif Display",
-              data: fontData,
-              style: "normal",
-              weight: 400,
-            },
-          ]
-        : undefined,
-    },
+    { ...ogSize, fonts }
   )
 }
