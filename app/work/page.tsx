@@ -58,12 +58,11 @@ const projects: Project[] = [
     cTint: "#ebe9f2",
   },
   {
-    href: "https://telestrations-gamma.vercel.app",
-    external: true,
+    href: "/work/telestrations",
     name: "Telestrations",
     year: "2026",
     tag: "Draw, guess, pass — a web take on the party game. Real-time rooms.",
-    status: "In progress · party game",
+    status: "Shipped · play with friends",
     c: "#a8843a",
     cTint: "#f1ead7",
   },
@@ -137,7 +136,7 @@ export default function WorkPage() {
           <div className={shell.kicker}>
             <span>selected work</span>
             <span className={shell.sep}>·</span>
-            <span>03 shipped · 01 in progress</span>
+            <span>04 shipped</span>
             <span className={shell.sep}>·</span>
             <span>updated may 2026</span>
           </div>

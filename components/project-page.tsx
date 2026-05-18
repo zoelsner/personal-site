@@ -7,6 +7,7 @@ type HalfTone =
   | "cream"
   | "orange"
   | "gold"
+  | "yellow"
   | "slate"
   | "plum"
   | "olive"

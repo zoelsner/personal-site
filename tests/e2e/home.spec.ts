@@ -90,7 +90,7 @@ test.describe("homepage", () => {
     )
     await expect(
       page.getByRole("link", { name: "Telestrations" })
-    ).toHaveAttribute("href", "https://telestrations-gamma.vercel.app")
+    ).toHaveAttribute("href", "/work/telestrations")
 
     const internalRoutes = [
       "/work",
@@ -98,6 +98,7 @@ test.describe("homepage", () => {
       "/work/ftp",
       "/work/sandlot",
       "/work/siggy",
+      "/work/telestrations",
     ]
 
     for (const route of internalRoutes) {

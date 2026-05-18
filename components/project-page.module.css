@@ -200,6 +200,11 @@
   box-shadow: 4px 4px 0 0 var(--cream);
 }
 
+.yellow {
+  background: #e6b341;
+  box-shadow: var(--shadow-sm);
+}
+
 .flip {
   box-shadow: 4px -4px 0 0 var(--ink);
 }
