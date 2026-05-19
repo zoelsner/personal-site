@@ -6,7 +6,7 @@ export const contentType = "image/png"
 
 export default async function Image() {
   return createOG({
-    kicker: "shipped · 2026 · $49 lifetime",
+    kicker: "shipped · 2026 · $19 lifetime",
     title: "Siggy",
     tagline: "a polished signature, pasted into Gmail.",
     accent: "#6C5CE7",
