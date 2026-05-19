@@ -147,7 +147,7 @@ const chips: Chip[] = [
 
 const socials = [
   { label: "github", href: "https://github.com/zoelsner" },
-  { label: "linkedin", href: "https://linkedin.com/in/zoelsner" },
+  { label: "linkedin", href: "https://www.linkedin.com/in/zacharyoelsner/" },
   { label: "tiktok", href: "https://tiktok.com/@builtwithzach" },
 ]
 
