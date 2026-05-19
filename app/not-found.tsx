@@ -88,7 +88,7 @@ export default function NotFound() {
           </a>
           <span>·</span>
           <a
-            href="https://linkedin.com/in/zoelsner"
+            href="https://www.linkedin.com/in/zacharyoelsner/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground"

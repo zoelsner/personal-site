@@ -218,7 +218,7 @@ export default function WorkPage() {
             </a>
             <span style={{ opacity: 0.3 }}>·</span>
             <a
-              href="https://linkedin.com/in/zoelsner"
+              href="https://www.linkedin.com/in/zacharyoelsner/"
               target="_blank"
               rel="noopener noreferrer"
             >
