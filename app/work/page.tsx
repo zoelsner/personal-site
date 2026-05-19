@@ -53,7 +53,7 @@ const projects: Project[] = [
     name: "Siggy",
     year: "2026",
     tag: "A polished signature pasted into Gmail. No extensions, no HTML fiddling.",
-    status: "Shipped · $49 lifetime",
+    status: "Shipped · $19 lifetime",
     c: "#6c649a",
     cTint: "#ebe9f2",
   },

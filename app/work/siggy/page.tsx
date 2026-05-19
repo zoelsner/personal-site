@@ -4,16 +4,16 @@ import { ProjectPage } from "@/components/project-page"
 export const metadata: Metadata = {
   title: "Siggy",
   description:
-    "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
+    "A polished email signature builder. Pick a template, paste into Gmail. $19 lifetime.",
   openGraph: {
     title: "Siggy · Zach Oelsner",
     description:
-      "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
+      "A polished email signature builder. Pick a template, paste into Gmail. $19 lifetime.",
   },
   twitter: {
     title: "Siggy · Zach Oelsner",
     description:
-      "A polished email signature builder. Pick a template, paste into Gmail. $49 lifetime.",
+      "A polished email signature builder. Pick a template, paste into Gmail. $19 lifetime.",
   },
 }
 
@@ -283,14 +283,14 @@ export default function SiggyPage() {
       name="Siggy"
       accent="#6C5CE7"
       accentOn="#ffffff"
-      kicker={["shipped", "2026", "$49 lifetime"]}
+      kicker={["shipped", "2026", "$19 lifetime"]}
       tagline="a polished signature, pasted into Gmail."
       blurb={
         <>
           An email signature builder for people who don&apos;t want to fight
           HTML. <b>Pick a template, fill in your details, paste into Gmail</b> —
           done. Renders crisp in every client because the name is rendered as
-          an image. $49 lifetime, no subscriptions.
+          an image. $19 lifetime, no subscriptions.
         </>
       }
       think={[
