@@ -107,11 +107,11 @@
   text-transform: uppercase;
   text-decoration: none;
   border: var(--border);
-  background: var(--accent);
-  color: var(--accent-on);
+  background: transparent;
+  color: var(--ink);
   transition:
-    transform 0.12s ease,
-    box-shadow 0.12s ease;
+    background 0.12s ease,
+    color 0.12s ease;
 }
 
 .pill:hover {

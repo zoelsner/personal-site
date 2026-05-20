@@ -5,16 +5,16 @@ import { ProjectPage } from "@/components/project-page"
 export const metadata: Metadata = {
   title: "Farm to People",
   description:
-    "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
+    "Reads my Farm to People cart and gives me three meals to make with what's already in there. Built it because I kept wasting half the box.",
   openGraph: {
     title: "Farm to People · Zach Oelsner",
     description:
-      "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
+      "Reads my Farm to People cart and gives me three meals to make with what's already in there. Built it because I kept wasting half the box.",
   },
   twitter: {
     title: "Farm to People · Zach Oelsner",
     description:
-      "People pay for a Farm to People box and still let half of it go soft. This reads your actual cart and gives you three meals to make with what's in there.",
+      "Reads my Farm to People cart and gives me three meals to make with what's already in there. Built it because I kept wasting half the box.",
   },
 }
 
@@ -247,25 +247,21 @@ export default function FTPPage() {
       tagline="three meals from your actual box."
       blurb={
         <>
-          People pay for a Farm to People box and still let half of it go
-          soft. The box shows up Wednesday; by Sunday you&apos;re staring at
-          kohlrabi. This reads your <b>actual cart</b> and gives you three
-          meals to make with what&apos;s in there — plus a chat that knows
-          everything in your box.
+          I kept paying for the Farm to People box because the produce
+          was great and I was learning new ingredients. But I was wasting
+          half of it. Asking AI for ideas worked some days; getting my
+          cart into the prompt was the bottleneck. I built a scraper.
+          The rest is what you see.
         </>
       }
       think={[
         {
           title: "Catalyst",
-          body: "People order the box because they want to cook more than they actually do. The gap isn't ingredients — it's the five minutes between opening the fridge and knowing what to make.",
+          body: "Knowing what to make. Not wasting half the box.",
         },
         {
           title: "Decision",
-          body: "Built it cart-first. Most meal apps tell you what to buy; this one starts from what you already bought. Skipped the personalization onboarding — preferences set up once go stale.",
-        },
-        {
-          title: "Status",
-          body: "Live in production with a handful of real users. Sent FtP a proposal to turn it into a two-month paid engagement. Open question: standalone app, licensed feature, or partnership.",
+          body: "What I wanted to know: the best way to optimize my cart before I ordered. What to swap, what I could already cook with. Adding a protein and watching the recommendations evolve is the fun part.",
         },
       ]}
       preview={<FTPPreview />}
