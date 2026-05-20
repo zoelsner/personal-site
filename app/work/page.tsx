@@ -144,9 +144,9 @@ export default function WorkPage() {
             work<span className={shell.dot}>.</span>
           </h1>
           <p className={shell.subtitle}>
-            Things I&apos;ve built end-to-end — usually because I was
-            annoyed enough by a problem to wire something up over a weekend,
-            then keep going.
+            Ideas I&apos;ve had to help ease everyday decisions, or fun
+            projects I was curious about. Usually helping me learn
+            something new every time.
           </p>
         </section>
 
