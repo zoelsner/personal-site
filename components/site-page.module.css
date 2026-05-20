@@ -294,9 +294,17 @@
     font-size: 13px;
   }
   .title {
+    font-size: clamp(40px, 13vw, 64px);
     letter-spacing: -1.2px;
   }
   .hero {
     padding: 36px 0 40px;
+  }
+  /* Shrink decorative half-circles so they don't crowd content on phones.
+     transform: scale() overrides the inline rotate; rotations are imperceptible at this size. */
+  .half {
+    transform: scale(0.4) !important;
+    transform-origin: center;
+    opacity: 0.85;
   }
 }
