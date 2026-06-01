@@ -34,7 +34,7 @@ const projects: Project[] = [
     href: "/work/ftp",
     name: "Farm to People",
     year: "2025",
-    tag: "Three meals from your actual box — reads your real cart and suggests what to cook this week.",
+    tag: "Turns my weekly produce-box delivery into three dinners. Reads the real cart so I stop wasting half of it.",
     status: "Shipped · in production",
     c: "#4d7a5a",
     cTint: "#e8efe6",
@@ -52,7 +52,7 @@ const projects: Project[] = [
     href: "/work/siggy",
     name: "Siggy",
     year: "2026",
-    tag: "A polished signature pasted into Gmail. No extensions, no HTML fiddling.",
+    tag: "An email signature you add to Gmail. Pick a template, paste it in, done.",
     status: "Shipped · $19 lifetime",
     c: "#6c649a",
     cTint: "#ebe9f2",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     href: "/work/telestrations",
     name: "Telestrations",
     year: "2026",
-    tag: "Draw, guess, pass — a web take on the party game. Real-time rooms.",
+    tag: "The drawing-telephone party game, now playable over a video call. Share a link, no install.",
     status: "Shipped · play with friends",
     c: "#a8843a",
     cTint: "#f1ead7",
@@ -98,40 +98,6 @@ export default function WorkPage() {
           </Link>
         </div>
 
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.cream}`}
-          style={{
-            width: 52,
-            height: 26,
-            left: 130,
-            top: 170,
-            transform: "rotate(-15deg)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.olive}`}
-          style={{
-            width: 46,
-            height: 23,
-            right: 200,
-            top: 200,
-            transform: "rotate(20deg)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.gold} ${shell.flip}`}
-          style={{
-            width: 42,
-            height: 21,
-            right: 160,
-            top: 340,
-            transform: "rotate(180deg)",
-          }}
-        />
-
         <section className={shell.hero}>
           <div className={shell.kicker}>
             <span>selected work</span>
@@ -149,6 +115,39 @@ export default function WorkPage() {
             something new every time.
           </p>
         </section>
+
+        <div className={shell.halves} aria-hidden="true">
+          <div
+            className={`${shell.half} ${shell.cream}`}
+            style={{
+              width: 52,
+              height: 26,
+              left: 130,
+              top: 170,
+              transform: "rotate(-15deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.olive}`}
+            style={{
+              width: 46,
+              height: 23,
+              right: 200,
+              top: 200,
+              transform: "rotate(20deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.gold} ${shell.flip}`}
+            style={{
+              width: 42,
+              height: 21,
+              right: 160,
+              top: 340,
+              transform: "rotate(180deg)",
+            }}
+          />
+        </div>
 
         <section
           className={styles.list}

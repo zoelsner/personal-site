@@ -48,40 +48,6 @@ export default function AboutPage() {
           </Link>
         </div>
 
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.olive}`}
-          style={{
-            width: 54,
-            height: 27,
-            left: 120,
-            top: 170,
-            transform: "rotate(-12deg)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.cream}`}
-          style={{
-            width: 48,
-            height: 24,
-            right: 200,
-            top: 200,
-            transform: "rotate(20deg)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className={`${shell.half} ${shell.gold} ${shell.flip}`}
-          style={{
-            width: 58,
-            height: 29,
-            right: 140,
-            top: 340,
-            transform: "rotate(180deg)",
-          }}
-        />
-
         <section className={shell.hero}>
           <div className={shell.kicker}>
             <span>based in LES</span>
@@ -102,6 +68,39 @@ export default function AboutPage() {
             page is where the story lives.
           </p>
         </section>
+
+        <div className={shell.halves} aria-hidden="true">
+          <div
+            className={`${shell.half} ${shell.olive}`}
+            style={{
+              width: 54,
+              height: 27,
+              left: 120,
+              top: 170,
+              transform: "rotate(-12deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.cream}`}
+            style={{
+              width: 48,
+              height: 24,
+              right: 200,
+              top: 200,
+              transform: "rotate(20deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.gold} ${shell.flip}`}
+            style={{
+              width: 58,
+              height: 29,
+              right: 140,
+              top: 340,
+              transform: "rotate(180deg)",
+            }}
+          />
+        </div>
 
         <section className={styles.placeholder}>
           <span className={styles.placeholderDot} aria-hidden="true" />
