@@ -96,21 +96,6 @@ export function ProjectPage({
           </Link>
         </div>
 
-        {halfCircles.map((half, index) => (
-          <div
-            key={`${half.tone}-${index}`}
-            aria-hidden="true"
-            className={[
-              styles.half,
-              styles[half.tone],
-              half.flip ? styles.flip : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            style={half.style}
-          />
-        ))}
-
         <section className={styles.hero}>
           <div className={styles.kicker}>
             {kicker.map((part, i) => (
@@ -127,6 +112,22 @@ export function ProjectPage({
           <h2 className={styles.tagline}>{tagline}</h2>
           <p className={styles.blurb}>{blurb}</p>
         </section>
+
+        <div className={styles.halves} aria-hidden="true">
+          {halfCircles.map((half, index) => (
+            <div
+              key={`${half.tone}-${index}`}
+              className={[
+                styles.half,
+                styles[half.tone],
+                half.flip ? styles.flip : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              style={half.style}
+            />
+          ))}
+        </div>
 
         <section className={styles.body}>
           <div>
