@@ -5,16 +5,19 @@ import Link from "next/link"
 import shell from "@/components/site-page.module.css"
 import styles from "./page.module.css"
 
+const description =
+  "Zach Oelsner — I build tools to make everyday life easier. By day I consult to a top-5 US card issuer on credit-card remediation."
+
 export const metadata: Metadata = {
   title: "About",
-  description: "About Zach Oelsner — more soon.",
+  description,
   openGraph: {
     title: "About · Zach Oelsner",
-    description: "About Zach Oelsner — more soon.",
+    description,
   },
   twitter: {
     title: "About · Zach Oelsner",
-    description: "About Zach Oelsner — more soon.",
+    description,
   },
 }
 
@@ -50,22 +53,16 @@ export default function AboutPage() {
 
         <section className={shell.hero}>
           <div className={shell.kicker}>
-            <span>based in LES</span>
+            <span>food-pilled</span>
             <span className={shell.sep}>·</span>
-            <span>more soon</span>
+            <span>LES</span>
           </div>
           <h1 className={shell.title}>
             about<span className={shell.dot}>.</span>
           </h1>
           <p className={shell.subtitle}>
-            Still writing this one. In the meantime: the{" "}
-            <Link
-              href="/work"
-              style={{ color: "inherit", textDecorationThickness: 2 }}
-            >
-              work
-            </Link>{" "}
-            page is where the story lives.
+            I’m Zach. I find joy in building tools that help me through
+            everyday life.
           </p>
         </section>
 
@@ -102,9 +99,77 @@ export default function AboutPage() {
           />
         </div>
 
-        <section className={styles.placeholder}>
-          <span className={styles.placeholderDot} aria-hidden="true" />
-          <span>more soon</span>
+        <section className={styles.prose}>
+          <p>
+            It usually starts from a small, repetitive task or problem I keep
+            running into. I see if I can put together a solution that’s easy
+            to use every day, and then I share it with people I know running
+            into the same thing.
+          </p>
+          <p>
+            I’ve come to love design. It’s something that can consume me, and
+            I look forward to learning and discovering more about my design
+            tastes.
+          </p>
+
+          <div className={styles.block}>
+            <h2 className={shell.sectionH}>
+              <span className={shell.dotmark} aria-hidden="true" />
+              the day job (“client work”)
+            </h2>
+            <p>
+              During the day, I consult to a top-5 card issuer. Remediation
+              means finding issues across the common functions you’d think a
+              bank would have nailed down, like APR and rewards, and the list
+              goes on. We scope the issue, develop or validate that the data
+              behind the population is accurate so we’re not missing anyone,
+              and we deploy the code fix so it doesn’t happen again. We also
+              help the customers who were harmed before the fix. We make them
+              whole by sending them money and correcting anything that hit
+              their credit bureau reporting.
+            </p>
+            <p>
+              This takes a lot of analysis, which is something I enjoy. It
+              also takes a lot of stakeholder management: creating consensus,
+              and making complex processes and analytical ideas accessible to
+              people who may be less experienced with analytics but carry real
+              domain expertise. Bringing all those people together,
+              facilitating a productive discussion, and helping push the fix
+              along.
+            </p>
+            <p>
+              Right now we’re building custom Gems in Gemini for a client. I
+              spend a lot of my time in Google Workspace, Gemini, and
+              Snowflake.
+            </p>
+            <p className={styles.impact}>
+              So far, my efforts have found issues across millions of accounts
+              and hundreds of thousands of dollars in money owed to customers
+              that wouldn’t have been found otherwise.
+            </p>
+          </div>
+
+          <div className={styles.block}>
+            <h2 className={shell.sectionH}>
+              <span className={shell.dotmark} aria-hidden="true" />
+              building community wherever I work
+            </h2>
+            <p>
+              I equally enjoy being involved in the firm and building our
+              community. I’m chief of staff to our 70-person advanced
+              analytics group, and I run our AI training group in the New York
+              office.
+            </p>
+            <p>
+              I enjoy hosting panels that help people understand what’s
+              happening across different parts of the firm and encourage
+              collaboration. Recently I instructed our firm’s AI crash course,
+              upskilling people on what AI can actually do within their
+              everyday workflows. It’s deeply satisfying to watch an epiphany
+              form within someone who hasn’t been exposed to the powers of AI.
+              It can be quite fun.
+            </p>
+          </div>
         </section>
 
         <section className={shell.pfooter}>
