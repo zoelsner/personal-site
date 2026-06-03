@@ -1,6 +1,8 @@
+import type { CSSProperties } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Nav } from "@/components/nav"
+
+import shell from "@/components/site-page.module.css"
 
 export const metadata: Metadata = {
   title: "Not found",
@@ -8,105 +10,116 @@ export const metadata: Metadata = {
 }
 
 export default function NotFound() {
+  const stageStyle = {
+    "--accent": "#b25a3c",
+    "--accent-on": "#fdebcc",
+  } as CSSProperties
+
   return (
-    <div
-      className="relative flex min-h-svh flex-col"
-      style={{ backgroundColor: "#EFE8DA", color: "#1A1712" }}
-    >
-      {/* Top nav */}
-      <div className="flex items-center justify-between px-6 pt-8 sm:px-12 sm:pt-10">
-        <Link
-          href="/"
-          className="font-mono text-sm tracking-wide hover:opacity-70 sm:text-base"
-        >
-          ZO
-        </Link>
-        <Nav />
-      </div>
+    <main className={shell.stage} style={stageStyle}>
+      <div className={shell.inner}>
+        <header className={shell.top}>
+          <Link className={shell.brand} href="/">
+            Zach
+          </Link>
+          <nav className={shell.nav} aria-label="Primary">
+            <Link href="/work">work</Link>
+            <Link href="/about">about</Link>
+            <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
+              say hi
+            </a>
+          </nav>
+        </header>
 
-      {/* Hero */}
-      <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-6 py-16 sm:px-12 sm:py-24">
-        <div
-          className="font-mono text-xs uppercase tracking-[0.14em] sm:text-sm"
-          style={{ color: "#8A8275" }}
-        >
-          404
+        <div className={shell.backRow}>
+          <Link className={shell.back} href="/">
+            ← home
+          </Link>
         </div>
-        <h1 className="mt-4 font-serif text-5xl leading-[1.1] tracking-tight sm:mt-6 sm:text-6xl md:text-7xl">
-          Nothing on this shelf.
-        </h1>
-        <p
-          className="mt-6 max-w-xl font-serif text-xl leading-snug italic sm:mt-8 sm:text-2xl"
-          style={{ color: "#3C362E" }}
-        >
-          The page you&apos;re looking for isn&apos;t here.
-        </p>
 
-        {/* Small olive half-circle on a hairline, as a signature visual */}
-        <div className="mt-14 max-w-xs sm:mt-16">
-          <div className="flex h-10 items-end">
-            <div
-              style={{
-                width: 72,
-                height: 36,
-                backgroundColor: "#5C7A4A",
-                borderRadius: "72px 72px 0 0",
-              }}
-            />
+        <section className={shell.hero}>
+          <div className={shell.kicker}>
+            <span>404</span>
+            <span className={shell.sep}>·</span>
+            <span>dead link</span>
           </div>
+          <h1 className={shell.title}>
+            nothing here<span className={shell.dot}>.</span>
+          </h1>
+          <p className={shell.subtitle}>
+            This page went nowhere. The{" "}
+            <Link
+              href="/work"
+              style={{ color: "inherit", textDecorationThickness: 2 }}
+            >
+              work
+            </Link>{" "}
+            page is where everything lives.
+          </p>
+        </section>
+
+        <div className={shell.halves} aria-hidden="true">
           <div
-            className="h-px w-full"
-            style={{ backgroundColor: "#C9C2B4" }}
+            className={`${shell.half} ${shell.olive}`}
+            style={{
+              width: 54,
+              height: 27,
+              left: 120,
+              top: 170,
+              transform: "rotate(-12deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.cream}`}
+            style={{
+              width: 48,
+              height: 24,
+              right: 200,
+              top: 200,
+              transform: "rotate(20deg)",
+            }}
+          />
+          <div
+            className={`${shell.half} ${shell.gold} ${shell.flip}`}
+            style={{
+              width: 58,
+              height: 29,
+              right: 140,
+              top: 340,
+              transform: "rotate(180deg)",
+            }}
           />
         </div>
 
-        <div className="mt-10 sm:mt-12">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-[0.14em] hover:opacity-70"
-            style={{ color: "#1A1712" }}
-          >
-            <span>Back home</span>
-            <span>→</span>
-          </Link>
-        </div>
+        <section className={shell.pfooter}>
+          <div className={shell.socials}>
+            <a
+              href="https://github.com/zoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://www.linkedin.com/in/zacharyoelsner/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://tiktok.com/@builtwithzach"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tiktok
+            </a>
+          </div>
+          <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>
+        </section>
       </div>
-
-      {/* Footer */}
-      <div
-        className="flex items-center justify-between px-6 pb-8 pt-6 font-mono text-xs sm:px-12 sm:pb-10 sm:text-sm"
-        style={{ color: "#8A8275" }}
-      >
-        <div className="flex items-center gap-4 sm:gap-5">
-          <a
-            href="https://github.com/zoelsner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            github
-          </a>
-          <span>·</span>
-          <a
-            href="https://www.linkedin.com/in/zacharyoelsner/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            linkedin
-          </a>
-          <span>·</span>
-          <a
-            href="https://tiktok.com/@builtwithzach"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            tiktok
-          </a>
-        </div>
-        <div>© 2026</div>
-      </div>
-    </div>
+    </main>
   )
 }

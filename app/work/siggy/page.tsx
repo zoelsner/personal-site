@@ -288,15 +288,15 @@ export default function SiggyPage() {
       blurb={
         <>
           An email signature builder for people who don&apos;t want to fight
-          HTML. <b>Pick a template, fill in your details, paste into Gmail</b> —
-          done. Renders crisp in every client because the name is rendered as
+          HTML. <b>Pick a template, fill in your details, paste into Gmail</b>.
+          Done. Renders crisp in every client because the name is rendered as
           an image. $19 lifetime, no subscriptions.
         </>
       }
       think={[
         {
           title: "Pick a template",
-          body: "Four professionally designed layouts — Edge, Bold, Card, Clean. Each renders beautifully in every email client without fighting Outlook's HTML quirks.",
+          body: "Four professionally designed layouts: Edge, Bold, Card, Clean. Each renders beautifully in every email client without fighting Outlook's HTML quirks.",
         },
         {
           title: "Make it yours",
@@ -304,7 +304,7 @@ export default function SiggyPage() {
         },
         {
           title: "Paste into Gmail",
-          body: 'One click to copy. Paste into Gmail settings. No extensions, no fiddling. The whole transaction is "pay $49, customize, paste, gone."',
+          body: 'One click to copy. Paste into Gmail settings. No extensions, no fiddling. The whole transaction is "pay $19, customize, paste, gone."',
         },
       ]}
       preview={<SiggyPreview />}
@@ -318,8 +318,8 @@ export default function SiggyPage() {
       ]}
       ctas={[
         {
-          label: "try siggy →",
-          href: "https://siggy-orpin.vercel.app",
+          label: "try the builder →",
+          href: "https://siggy-orpin.vercel.app/editor",
           external: true,
           accent: true,
         },

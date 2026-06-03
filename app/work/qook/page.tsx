@@ -199,7 +199,7 @@ export default function QookPage() {
       think={[
         {
           title: "Pick your energy",
-          body: "Tell it how much cooking you have in you today. Low, medium, or high. That's the whole filter — no preference grids that go stale.",
+          body: "Tell it how much cooking you have in you today. Low, medium, or high. That's the whole filter. No preference grids that go stale.",
         },
         {
           title: "Get your cards",
