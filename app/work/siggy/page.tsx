@@ -318,8 +318,8 @@ export default function SiggyPage() {
       ]}
       ctas={[
         {
-          label: "try siggy →",
-          href: "https://siggy-orpin.vercel.app",
+          label: "try the builder →",
+          href: "https://siggy-orpin.vercel.app/editor",
           external: true,
           accent: true,
         },
