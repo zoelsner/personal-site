@@ -126,7 +126,7 @@ function TelestrationsPreview() {
               letterSpacing: 0.6,
             }}
           >
-            your turn — describe what you see
+            your turn: describe what you see
           </span>
         </div>
 
@@ -329,7 +329,7 @@ export default function TelestrationsPage() {
       tagline="the cardboard party game, now playable over a video call."
       blurb={
         <>
-          A web version of the chain-of-doodles party game — one person
+          A web version of the chain-of-doodles party game. One person
           writes a prompt, the next draws it, the next describes the
           drawing, and so on, until the end of the chain is hilariously far
           from where it started.{" "}
@@ -341,15 +341,15 @@ export default function TelestrationsPage() {
       think={[
         {
           title: "Catalyst",
-          body: "The cardboard game is genuinely fun but you need 6 people in one room. I wanted to play it remotely with the same group chat I already video-call into every Sunday — so I wired up a web version over a weekend.",
+          body: "The cardboard game is genuinely fun but you need 6 people in one room. I wanted to play it remotely with the same group chat I already video-call into every Sunday, so I wired up a web version over a weekend.",
         },
         {
           title: "Decision",
-          body: "Keep the loop fast: no accounts, no lobbies, just a join-link. Keep the drawing tool dumb-simple — one pen, undo, done. The fun is in the chain drift, not in the tools.",
+          body: "Keep the loop fast: no accounts, no lobbies, just a join-link. Keep the drawing tool dumb-simple: one pen, undo, done. The fun is in the chain drift, not in the tools.",
         },
         {
           title: "Status",
-          body: "Shipped and live. No monetization, no auth — just a link you send to a group chat. Running on Vercel with a Socket.io room server and Postgres for finished-chain replays.",
+          body: "Shipped and live. No monetization, no auth, just a link you send to a group chat. Running on Vercel with a Socket.io room server and Postgres for finished-chain replays.",
         },
       ]}
       preview={<TelestrationsPreview />}

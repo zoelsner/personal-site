@@ -9,7 +9,7 @@ export default async function Image() {
     kicker: "based in LES · food-pilled since 2020",
     title: "about",
     tagline:
-      "I build small, useful things — usually around food, sports, or whatever I was annoyed by that week.",
+      "I build small, useful things, usually around food, sports, or whatever I was annoyed by that week.",
     accent: "#2D5A3D",
     accentOn: "#fdebcc",
     url: "zachoelsner.com/about",

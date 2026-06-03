@@ -141,7 +141,7 @@ export default function SandlotPage() {
       blurb={
         <>
           I want to play fantasy without staring at Fantrax for an hour a
-          day. Sandlot watches my league — a <b>daily audit</b> in my inbox
+          day. Sandlot watches my league: a <b>daily audit</b> in my inbox
           at 7am, plus a <b>deeper Sunday brief</b> with grounded web
           research (sources cited, last 30 days only). It tells me what to
           do; I execute manually.
@@ -150,11 +150,11 @@ export default function SandlotPage() {
       think={[
         {
           title: "Catalyst",
-          body: "Fantasy baseball rewards consistency, not effort. I was checking Fantrax twice a day and still missing rotations and waiver moves. The decisions are recurring and rule-shaped — perfect to hand off.",
+          body: "Fantasy baseball rewards consistency, not effort. I was checking Fantrax twice a day and still missing rotations and waiver moves. The decisions are recurring and rule-shaped. Perfect to hand off.",
         },
         {
           title: "Decision",
-          body: "Recommend-only — never auto-execute. The Sunday brief had to be grounded: every claim references an article from the last 30 days, or it gets flagged as unverified. No training-data hallucinations.",
+          body: "Recommend-only, never auto-execute. The Sunday brief had to be grounded: every claim references an article from the last 30 days, or it gets flagged as unverified. No training-data hallucinations.",
         },
         {
           title: "Status",

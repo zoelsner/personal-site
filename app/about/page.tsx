@@ -7,14 +7,14 @@ import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Zach Oelsner — more soon.",
+  description: "About Zach Oelsner. More soon.",
   openGraph: {
     title: "About · Zach Oelsner",
-    description: "About Zach Oelsner — more soon.",
+    description: "About Zach Oelsner. More soon.",
   },
   twitter: {
     title: "About · Zach Oelsner",
-    description: "About Zach Oelsner — more soon.",
+    description: "About Zach Oelsner. More soon.",
   },
 }
 
