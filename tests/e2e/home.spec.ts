@@ -26,7 +26,7 @@ test.describe("homepage", () => {
 
     const stage = page.locator("main").first()
     const heading = page.getByRole("heading", { name: "zach oelsner." })
-    const kicker = page.getByText("food-pilled · since 2020 · LES")
+    const kicker = page.getByText("food-pilled · LES")
     const chips = page.locator('[aria-label="Featured links"]')
 
     await expect(stage).toHaveCSS("background-color", "rgb(191, 220, 198)")
