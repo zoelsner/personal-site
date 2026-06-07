@@ -1,28 +1,42 @@
-.placeholder {
+.prose {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
   max-width: 720px;
-  margin: 48px auto 0;
-  padding: 36px 24px;
-  border: 1.5px dashed rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-  font-family: var(--font-outfit), sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: #3a4a30;
-  opacity: 0.75;
   width: 100%;
+  margin: 8px auto 0;
+  text-align: left;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
 }
 
-.placeholderDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent, #2d5a3d);
+.prose p {
+  margin: 0 0 18px;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.block {
+  margin-top: 48px;
+}
+
+.impact {
+  margin-top: 22px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--accent, #2d5a3d);
+  background: rgba(45, 90, 61, 0.06);
+  border-radius: 0 10px 10px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .prose {
+    font-size: 16px;
+  }
+  .block {
+    margin-top: 36px;
+  }
 }
