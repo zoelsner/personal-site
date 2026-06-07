@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className={shell.kicker}>
             <span>food-pilled</span>
             <span className={shell.sep}>·</span>
-            <span>LES</span>
+            <span>NYC</span>
           </div>
           <h1 className={shell.title}>
             about<span className={shell.dot}>.</span>
