@@ -191,7 +191,7 @@ export default function Page() {
       </div>
 
       <section className={styles.centerName} aria-label="Zach Oelsner">
-        <p className={styles.kicker}>food-pilled · LES</p>
+        <p className={styles.kicker}>food-pilled · NYC</p>
         <h1 className={styles.name}>
           zach oelsner<span className={styles.dot}>.</span>
         </h1>
