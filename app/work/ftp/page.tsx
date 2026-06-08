@@ -3,7 +3,8 @@ import Image from "next/image"
 import { ProjectPage } from "@/components/project-page"
 import { VideoLightbox } from "@/components/video-lightbox"
 
-const VIDEO_SRC = "/ftp-demo.mp4"
+const VIDEO_SRC =
+  "https://xwio06u3kk8ffotz.public.blob.vercel-storage.com/v15044gf0000d6ib0sfog65v2rtgvua0.mp4"
 const TIKTOK_URL = "PASTE_TIKTOK_URL_HERE"
 
 export const metadata: Metadata = {
