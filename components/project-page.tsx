@@ -9,6 +9,7 @@ type HalfTone =
   | "gold"
   | "yellow"
   | "slate"
+  | "navy"
   | "plum"
   | "olive"
   | "ink"

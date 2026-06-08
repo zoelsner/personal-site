@@ -349,7 +349,7 @@ export default function DockMePage() {
           },
         },
         {
-          tone: "olive",
+          tone: "navy",
           style: {
             width: 46,
             height: 23,
@@ -359,7 +359,7 @@ export default function DockMePage() {
           },
         },
         {
-          tone: "gold",
+          tone: "cream",
           flip: true,
           style: {
             width: 60,

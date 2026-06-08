@@ -5,6 +5,7 @@
   --orange: #d44e2a;
   --gold: #c8963e;
   --slate: #3b5a6a;
+  --navy: #1b3f56;
   --plum: #7a5a7f;
   --olive: #5a7a3a;
   --muted: #3a4a30;
@@ -182,6 +183,11 @@
 
 .slate {
   background: var(--slate);
+  box-shadow: var(--shadow-sm);
+}
+
+.navy {
+  background: var(--navy);
   box-shadow: var(--shadow-sm);
 }
 

@@ -14,8 +14,8 @@ export default async function Image() {
     url: "zachoelsner.com/work/dockme",
     halves: [
       { tone: "slate", width: 100, height: 50, top: 90, left: 100, rotate: -14 },
-      { tone: "olive", width: 80, height: 40, top: 190, left: 240, rotate: 22 },
-      { tone: "gold", width: 90, height: 45, top: 105, left: 390, rotate: -10, flip: true },
+      { tone: "navy", width: 80, height: 40, top: 190, left: 240, rotate: 22 },
+      { tone: "cream", width: 90, height: 45, top: 105, left: 390, rotate: -10, flip: true },
       { tone: "accent", width: 70, height: 35, top: 130, right: 240, rotate: 16 },
       { tone: "ink", width: 60, height: 30, top: 230, right: 370, rotate: 38 },
     ],

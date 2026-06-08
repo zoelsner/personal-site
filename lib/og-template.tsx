@@ -8,6 +8,7 @@ const PAPER = "#f5efe2"
 const CREAM = "#fdebcc"
 const MUTED = "#3a4a30"
 const SLATE = "#3b5a6a"
+const NAVY = "#1b3f56"
 const ORANGE = "#d44e2a"
 const GOLD = "#c8963e"
 const OLIVE = "#5a7a3a"
@@ -20,6 +21,7 @@ export type HalfTone =
   | "gold"
   | "yellow"
   | "slate"
+  | "navy"
   | "plum"
   | "olive"
   | "ink"
@@ -31,6 +33,7 @@ const TONE_BG: Record<HalfTone, string | "accent"> = {
   gold: GOLD,
   yellow: YELLOW,
   slate: SLATE,
+  navy: NAVY,
   plum: PLUM,
   olive: OLIVE,
   ink: INK,
