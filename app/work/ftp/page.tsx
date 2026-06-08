@@ -5,7 +5,8 @@ import { VideoLightbox } from "@/components/video-lightbox"
 
 const VIDEO_SRC =
   "https://xwio06u3kk8ffotz.public.blob.vercel-storage.com/v15044gf0000d6ib0sfog65v2rtgvua0.mp4"
-const TIKTOK_URL = "PASTE_TIKTOK_URL_HERE"
+const TIKTOK_URL =
+  "https://www.tiktok.com/@builtwithzach/video/7612403206081072414"
 
 export const metadata: Metadata = {
   title: "Farm to People",
