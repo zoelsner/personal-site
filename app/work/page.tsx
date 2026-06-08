@@ -7,14 +7,14 @@ import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Things I've built. Mostly about food. A few one-off tools.",
+  description: "Things I've built around food, transit, and one-off tools.",
   openGraph: {
     title: "Work · Zach Oelsner",
-    description: "Things I've built. Mostly about food. A few one-off tools.",
+    description: "Things I've built around food, transit, and one-off tools.",
   },
   twitter: {
     title: "Work · Zach Oelsner",
-    description: "Things I've built. Mostly about food. A few one-off tools.",
+    description: "Things I've built around food, transit, and one-off tools.",
   },
 }
 
@@ -47,6 +47,15 @@ const projects: Project[] = [
     status: "Shipped · runs daily",
     c: "#b25a3c",
     cTint: "#f3e6dd",
+  },
+  {
+    href: "/work/dockme",
+    name: "DockMe",
+    year: "2026",
+    tag: "Checks Citi Bike return-dock risk before the ride. Nearest dock, backup dock, and day-hour patterns.",
+    status: "In progress · live analysis",
+    c: "#146C7C",
+    cTint: "#e5f0ef",
   },
   {
     href: "/work/siggy",
@@ -102,9 +111,9 @@ export default function WorkPage() {
           <div className={shell.kicker}>
             <span>selected work</span>
             <span className={shell.sep}>·</span>
-            <span>04 shipped</span>
+            <span>05 projects</span>
             <span className={shell.sep}>·</span>
-            <span>updated may 2026</span>
+            <span>updated june 2026</span>
           </div>
           <h1 className={shell.title}>
             work<span className={shell.dot}>.</span>

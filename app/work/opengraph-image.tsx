@@ -6,7 +6,7 @@ export const contentType = "image/png"
 
 export default async function Image() {
   return createOG({
-    kicker: "selected work · 04 shipped · updated may 2026",
+    kicker: "selected work · 05 projects · updated june 2026",
     title: "work",
     tagline: "things I've built end-to-end.",
     accent: "#1B2A4D",
