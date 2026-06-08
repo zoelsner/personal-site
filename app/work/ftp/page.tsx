@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { ProjectPage } from "@/components/project-page"
+import { VideoLightbox } from "@/components/video-lightbox"
+
+const VIDEO_SRC = "/ftp-demo.mp4"
+const TIKTOK_URL = "PASTE_TIKTOK_URL_HERE"
 
 export const metadata: Metadata = {
   title: "Farm to People",
@@ -142,9 +146,7 @@ function FTPPreview() {
                 }}
               />
               <div>
-                <div
-                  style={{ fontSize: 11, fontWeight: 600, lineHeight: 1.2 }}
-                >
+                <div style={{ fontSize: 11, fontWeight: 600, lineHeight: 1.2 }}>
                   {meal.name}
                 </div>
                 <div
@@ -247,11 +249,10 @@ export default function FTPPage() {
       tagline="three meals from your actual box."
       blurb={
         <>
-          I kept paying for the Farm to People box because the produce
-          was great and I was learning new ingredients. But I was wasting
-          half of it. Asking AI for ideas worked some days; getting my
-          cart into the prompt was the bottleneck. I built a scraper.
-          The rest is what you see.
+          I kept paying for the Farm to People box because the produce was great
+          and I was learning new ingredients. But I was wasting half of it.
+          Asking AI for ideas worked some days; getting my cart into the prompt
+          was the bottleneck. I built a scraper. The rest is what you see.
         </>
       }
       think={[
@@ -264,7 +265,11 @@ export default function FTPPage() {
           body: "What I wanted to know: the best way to optimize my cart before I ordered. What to swap, what I could already cook with. Adding a protein and watching the recommendations evolve is the fun part.",
         },
       ]}
-      preview={<FTPPreview />}
+      preview={
+        <VideoLightbox videoSrc={VIDEO_SRC} tiktokUrl={TIKTOK_URL}>
+          <FTPPreview />
+        </VideoLightbox>
+      }
       stack={[
         "Python",
         "FastAPI",
