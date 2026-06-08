@@ -161,7 +161,8 @@
   outline: none;
 }
 
-.video {
+.videoShell {
+  position: relative;
   width: min(92vw, 390px);
   max-height: min(74svh, 760px);
   aspect-ratio: 9 / 16;
@@ -171,7 +172,68 @@
   box-shadow:
     0 24px 70px rgba(0, 0, 0, 0.4),
     6px 6px 0 0 #2d5a3d;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: #000;
   object-fit: contain;
+}
+
+.videoFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 34px;
+  background: #11160f;
+  color: #fdebcc;
+  font-family: var(--font-outfit), sans-serif;
+  text-align: center;
+}
+
+.fallbackPlay {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 2.5px solid #fdebcc;
+  border-radius: 999px;
+  background: #2d5a3d;
+  box-shadow: 4px 4px 0 0 #050604;
+}
+
+.fallbackPlayIcon {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #fdebcc;
+}
+
+.fallbackTitle {
+  max-width: 230px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.fallbackCopy {
+  max-width: 260px;
+  color: rgba(253, 235, 204, 0.78);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .close {
@@ -229,6 +291,15 @@
   outline: none;
 }
 
+.tiktokPending {
+  color: rgba(253, 235, 204, 0.68);
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 560px) {
   .idleCue {
     right: 10px;
@@ -247,7 +318,7 @@
     padding: 22px;
   }
 
-  .video {
+  .videoShell {
     width: min(86vw, 360px);
     max-height: 72svh;
   }

@@ -56,6 +56,7 @@ export function VideoLightbox({
   tiktokUrl,
 }: VideoLightboxProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [videoError, setVideoError] = useState(false)
   const prefersReducedMotion = useSyncExternalStore(
     subscribeToReducedMotion,
     getReducedMotionSnapshot,
@@ -87,6 +88,7 @@ export function VideoLightbox({
   }, [resetVideo])
 
   const openLightbox = useCallback(() => {
+    setVideoError(false)
     setIsOpen(true)
   }, [])
 
@@ -114,7 +116,7 @@ export function VideoLightbox({
   }, [isOpen])
 
   useEffect(() => {
-    if (!isOpen || prefersReducedMotion) {
+    if (!isOpen || prefersReducedMotion || videoError) {
       return
     }
 
@@ -141,7 +143,7 @@ export function VideoLightbox({
     }
 
     void playWithSound()
-  }, [isOpen, prefersReducedMotion])
+  }, [isOpen, prefersReducedMotion, videoError])
 
   useEffect(() => {
     if (!isOpen) {
@@ -204,6 +206,8 @@ export function VideoLightbox({
     }
   }
 
+  const hasTiktokUrl = /^https?:\/\//.test(tiktokUrl)
+
   const lightbox = (
     <div
       className={styles.backdrop}
@@ -229,22 +233,44 @@ export function VideoLightbox({
         >
           ✕
         </button>
-        <video
-          ref={videoRef}
-          className={styles.video}
-          src={videoSrc}
-          controls
-          playsInline
-          preload="metadata"
-        />
-        <a
-          className={styles.tiktokLink}
-          href={tiktokUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          watch on TikTok →
-        </a>
+        <div className={styles.videoShell}>
+          <video
+            ref={videoRef}
+            className={styles.video}
+            src={videoSrc}
+            controls
+            playsInline
+            preload="metadata"
+            onError={() => setVideoError(true)}
+            onLoadedData={() => setVideoError(false)}
+          />
+          {videoError ? (
+            <div className={styles.videoFallback} role="status">
+              <span className={styles.fallbackPlay} aria-hidden="true">
+                <span className={styles.fallbackPlayIcon} />
+              </span>
+              <span className={styles.fallbackTitle}>
+                demo video is still uploading
+              </span>
+              <span className={styles.fallbackCopy}>
+                The player is wired up. Add the MP4 at {videoSrc} and this will
+                play here.
+              </span>
+            </div>
+          ) : null}
+        </div>
+        {hasTiktokUrl ? (
+          <a
+            className={styles.tiktokLink}
+            href={tiktokUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            watch on TikTok →
+          </a>
+        ) : (
+          <span className={styles.tiktokPending}>TikTok link coming soon</span>
+        )}
       </div>
     </div>
   )
