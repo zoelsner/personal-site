@@ -7,6 +7,7 @@ const VIDEO_SRC =
   "https://xwio06u3kk8ffotz.public.blob.vercel-storage.com/v15044gf0000d6ib0sfog65v2rtgvua0.mp4"
 const TIKTOK_URL =
   "https://www.tiktok.com/@builtwithzach/video/7612403206081072414"
+const STAGING_URL = "https://farmtopeople-staging.up.railway.app"
 
 export const metadata: Metadata = {
   title: "Farm to People",
@@ -283,8 +284,8 @@ export default function FTPPage() {
       ]}
       ctas={[
         {
-          label: "view live app →",
-          href: "https://farmtopeople-demo.up.railway.app/",
+          label: "join staging app →",
+          href: STAGING_URL,
           external: true,
           accent: true,
         },
