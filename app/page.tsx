@@ -141,6 +141,7 @@ type Chip = { label: string; href: string; external?: boolean }
 const chips: Chip[] = [
   { label: "Farm to People", href: "/work/ftp" },
   { label: "Sandlot", href: "/work/sandlot" },
+  { label: "DockMe", href: "/work/dockme" },
   { label: "Siggy", href: "/work/siggy" },
   { label: "Telestrations", href: "/work/telestrations" },
 ]
