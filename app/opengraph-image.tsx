@@ -18,15 +18,12 @@ const LILITA =
 const OUTFIT_SEMI =
   "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-700-normal.woff"
 
-// Same palette as the home page
-const INK = "#1a2a18"
-const MINT = "#bfdcc6"
+// Same palette as the navy home page
+const NAVY = "#1a2540"
 const CREAM = "#fdebcc"
-const ORANGE = "#d44e2a"
+const TOMATO = "#d44e2a"
 const GOLD = "#c8963e"
-const SLATE = "#3b5a6a"
-const PLUM = "#7a5a7f"
-const OLIVE = "#5a7a3a"
+const MUTED = "#a8b0c4"
 
 type Half = {
   tone: string
@@ -36,26 +33,17 @@ type Half = {
   left?: number
   right?: number
   rotate: number
-  shadow?: "ink" | "cream"
 }
 
 const halves: Half[] = [
   { tone: CREAM, width: 110, height: 55, top: 110, left: 120, rotate: -14 },
-  { tone: ORANGE, width: 150, height: 75, top: 140, left: 320, rotate: 22 },
-  { tone: GOLD, width: 130, height: 65, top: 100, left: 580, rotate: 180 },
-  { tone: PLUM, width: 70, height: 35, top: 80, left: 800, rotate: 72 },
-  { tone: SLATE, width: 60, height: 30, top: 230, left: 870, rotate: -30 },
-  { tone: ORANGE, width: 120, height: 60, top: 90, right: 110, rotate: -12 },
-  {
-    tone: INK,
-    width: 70,
-    height: 35,
-    top: 250,
-    right: 70,
-    rotate: 45,
-    shadow: "cream",
-  },
-  { tone: OLIVE, width: 80, height: 40, top: 230, left: 480, rotate: -55 },
+  { tone: TOMATO, width: 150, height: 75, top: 140, left: 320, rotate: 22 },
+  { tone: CREAM, width: 130, height: 65, top: 100, left: 580, rotate: 180 },
+  { tone: TOMATO, width: 70, height: 35, top: 80, left: 800, rotate: 72 },
+  { tone: GOLD, width: 60, height: 30, top: 230, left: 870, rotate: -30 },
+  { tone: TOMATO, width: 120, height: 60, top: 90, right: 110, rotate: -12 },
+  { tone: CREAM, width: 90, height: 45, top: 250, right: 70, rotate: 45 },
+  { tone: GOLD, width: 80, height: 40, top: 230, left: 480, rotate: -55 },
 ]
 
 export default async function Image() {
@@ -70,8 +58,8 @@ export default async function Image() {
         style={{
           width: "100%",
           height: "100%",
-          background: MINT,
-          color: INK,
+          background: NAVY,
+          color: CREAM,
           display: "flex",
           flexDirection: "column",
           padding: "56px 80px",
@@ -89,8 +77,7 @@ export default async function Image() {
             fontWeight: 700,
             letterSpacing: 3,
             textTransform: "uppercase",
-            color: INK,
-            opacity: 0.7,
+            color: MUTED,
             display: "flex",
           }}
         >
@@ -99,7 +86,7 @@ export default async function Image() {
 
         {/* Chunky half-circles, scattered top half */}
         {halves.map((h, i) => {
-          const shadowColor = h.shadow === "cream" ? CREAM : INK
+          const shadowColor = h.tone === CREAM ? TOMATO : CREAM
           const horiz =
             typeof h.left === "number"
               ? { left: h.left }
@@ -114,7 +101,7 @@ export default async function Image() {
                 width: h.width,
                 height: h.height,
                 background: h.tone,
-                border: `3px solid ${INK}`,
+                border: `3px solid ${CREAM}`,
                 borderTopLeftRadius: 9999,
                 borderTopRightRadius: 9999,
                 borderBottomLeftRadius: 0,
@@ -143,12 +130,11 @@ export default async function Image() {
               fontWeight: 700,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: INK,
-              opacity: 0.7,
+              color: TOMATO,
               display: "flex",
             }}
           >
-            food-pilled · since 2020 · LES
+            food-pilled · NYC
           </div>
           <div
             style={{
@@ -157,11 +143,21 @@ export default async function Image() {
               letterSpacing: -6,
               fontFamily: "Lilita One, Impact, sans-serif",
               display: "flex",
-              alignItems: "baseline",
+              alignItems: "flex-end",
             }}
           >
-            <div style={{ color: INK, display: "flex" }}>zach oelsner</div>
-            <div style={{ color: ORANGE, display: "flex" }}>.</div>
+            <div style={{ color: CREAM, display: "flex" }}>zach oelsner</div>
+            <div
+              style={{
+                width: 34,
+                height: 34,
+                marginLeft: 14,
+                marginBottom: 10,
+                borderRadius: 5,
+                background: TOMATO,
+                display: "flex",
+              }}
+            />
           </div>
         </div>
       </div>
