@@ -50,6 +50,25 @@ export type ProjectPageProps = {
   backLabel?: string
 }
 
+// Half-circle coords are authored against the 1280px desktop layout. Convert
+// horizontal position + size to container-relative units so the composition
+// scales with the page and the shapes keep their desktop relationship to the
+// text instead of colliding with it at narrower widths. Vertical offsets stay
+// fixed: the hero's vertical rhythm (kicker, title top) doesn't scale with
+// width. (.inner is the container — see container-type in the module CSS.)
+const DESKTOP_INNER = 1280
+
+function scaleHalfStyle(style: CSSProperties): CSSProperties {
+  const out: CSSProperties = { ...style }
+  for (const key of ["left", "right", "width", "height"] as const) {
+    const value = style[key]
+    if (typeof value === "number") {
+      out[key] = `${((value / DESKTOP_INNER) * 100).toFixed(4)}cqw`
+    }
+  }
+  return out
+}
+
 export function ProjectPage({
   name,
   accent,
@@ -125,7 +144,7 @@ export function ProjectPage({
               ]
                 .filter(Boolean)
                 .join(" ")}
-              style={half.style}
+              style={scaleHalfStyle(half.style)}
             />
           ))}
         </div>

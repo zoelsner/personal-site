@@ -47,6 +47,10 @@
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
+  /* Anchor for cqw units: hero type and half-circle decorations scale
+     proportionally with this container so they keep the 1280px desktop
+     composition at narrower widths. */
+  container-type: inline-size;
 }
 
 /* ── topbar ─────────────────────────────────────────────── */
@@ -243,6 +247,9 @@
 .title {
   font-family: var(--font-paytone), sans-serif;
   font-size: clamp(56px, 11vw, 104px);
+  /* 104px at the 1280px container — proportional below it, so the side
+     margins that keep the half-circles clear of the text are preserved. */
+  font-size: clamp(42px, 8.125cqw, 104px);
   line-height: 0.9;
   letter-spacing: -2.5px;
   margin: 0;
@@ -267,6 +274,9 @@
   font-size: 16.5px;
   line-height: 1.65;
   max-width: 620px;
+  /* Narrows with the container so blurb-level half-circles stay in the
+     margins beside it (620px at the 1280px container). */
+  max-width: min(620px, 50cqw);
   margin: 0 auto;
   color: var(--muted);
 }
@@ -465,6 +475,9 @@
 
   .blurb {
     font-size: 15.5px;
+    /* Half-circles sit in their own row down here, so the blurb doesn't
+       need to reserve side margins for them. */
+    max-width: none;
   }
 
   /* Relocate the scattered half-circles into one tidy centered row below the
