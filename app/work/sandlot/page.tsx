@@ -31,9 +31,9 @@ export default function SandlotPage() {
           I want to play fantasy baseball without turning Fantrax into a second
           job. Sandlot turns my league data into a small attention queue:
           injuries, lineup risks, waiver swaps, matchup context, and player
-          details worth reviewing. The app does the deterministic read, Skipper
-          explains the reasoning, and I still execute every move manually in
-          Fantrax.
+          details worth reviewing. The app does the deterministic read of the
+          league data, Skipper explains the reasoning, and I still execute
+          every move manually in Fantrax.
         </>
       }
       think={[

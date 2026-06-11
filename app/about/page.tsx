@@ -143,9 +143,9 @@ export default function AboutPage() {
               Snowflake.
             </p>
             <p className={styles.impact}>
-              So far, my efforts have found issues across millions of accounts
-              and hundreds of thousands of dollars in money owed to customers
-              that wouldn’t have been found otherwise.
+              So far that work has turned up issues across millions of
+              accounts and hundreds of thousands of dollars owed back to
+              customers that wouldn’t have been found otherwise.
             </p>
           </div>
 
@@ -165,9 +165,9 @@ export default function AboutPage() {
               happening across different parts of the firm and encourage
               collaboration. Recently I instructed our firm’s AI crash course,
               upskilling people on what AI can actually do within their
-              everyday workflows. It’s deeply satisfying to watch an epiphany
-              form within someone who hasn’t been exposed to the powers of AI.
-              It can be quite fun.
+              everyday workflows. My favorite moment is when the epiphany
+              lands, when someone who hadn’t touched AI suddenly sees what it
+              can do for them. It can be quite fun.
             </p>
           </div>
         </section>

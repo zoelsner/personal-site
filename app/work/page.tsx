@@ -119,9 +119,8 @@ export default function WorkPage() {
             work<span className={shell.dot}>.</span>
           </h1>
           <p className={shell.subtitle}>
-            Ideas I&apos;ve had to help ease everyday decisions, or fun
-            projects I was curious about. Usually helping me learn
-            something new every time.
+            Tools for small problems I keep running into, plus a few things I
+            built because I was curious. I learn something new every time.
           </p>
         </section>
 

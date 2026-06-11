@@ -299,10 +299,10 @@ export default function DockMePage() {
       blurb={
         <>
           Citi Bike routing only matters if you can return the bike at the end.
-          DockMe is the app I am building around that moment: check the
-          destination dock, see the risk, and keep a backup nearby. The current
-          web analysis uses captured station snapshots to turn return-room
-          history into something I can actually make a ride decision with.
+          DockMe is the app I&apos;m building that checks the destination dock,
+          sees the risk, and keeps a backup nearby. The current web analysis
+          uses captured station snapshots to turn return-room history into
+          something I can actually make a ride decision with.
         </>
       }
       think={[
@@ -316,7 +316,7 @@ export default function DockMePage() {
         },
         {
           title: "Status",
-          body: "The web analysis is live with captured station snapshots. The app direction is DockMe: a small destination-dock check that can become part of a normal ride-planning flow.",
+          body: "The web analysis is live with captured station snapshots. Next is the app: a quick destination-dock check before you ride.",
         },
       ]}
       preview={<DockMePreview />}

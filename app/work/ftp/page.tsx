@@ -267,6 +267,10 @@ export default function FTPPage() {
           title: "Decision",
           body: "What I wanted to know: the best way to optimize my cart before I ordered. What to swap, what I could already cook with. Adding a protein and watching the recommendations evolve is the fun part.",
         },
+        {
+          title: "Status",
+          body: "Live since 2025. Playwright reads the real cart on Railway, Claude turns it into three meals, and the chat handles the follow-up questions. There's a staging app if you want to poke around.",
+        },
       ]}
       preview={
         <VideoLightbox videoSrc={VIDEO_SRC} tiktokUrl={TIKTOK_URL}>

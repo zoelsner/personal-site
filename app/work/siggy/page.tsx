@@ -297,7 +297,7 @@ export default function SiggyPage() {
       think={[
         {
           title: "Pick a template",
-          body: "Four professionally designed layouts: Edge, Bold, Card, Clean. Each renders beautifully in every email client without fighting Outlook's HTML quirks.",
+          body: "Four layouts: Edge, Bold, Card, Clean. Each renders clean in every email client without fighting Outlook's HTML quirks.",
         },
         {
           title: "Make it yours",
