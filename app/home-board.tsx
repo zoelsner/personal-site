@@ -168,8 +168,13 @@ function Letter({ ch, i }: { ch: string; i: number }) {
         }
       }}
       onAnimationEnd={(e) => {
-        if (e.animationName === "v3-pop") e.currentTarget.style.animation = "none"
-        if (e.animationName === "v3-jelly") e.currentTarget.classList.remove(styles.jelly)
+        // Keyframe names are CSS Modules-hashed (e.g. page-module__x__v3-pop)
+        if (e.animationName.includes("v3-pop")) {
+          e.currentTarget.style.animation = "none"
+        }
+        if (e.animationName.includes("v3-jelly")) {
+          e.currentTarget.classList.remove(styles.jelly)
+        }
       }}
     >
       {ch === " " ? " " : ch}

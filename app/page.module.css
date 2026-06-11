@@ -373,6 +373,69 @@
   font-size: 12px;
 }
 
+/* Keyframes live in this module: CSS Modules localize animation-name
+   references, so definitions must be local too or they resolve to nothing.
+   JS animationName checks match via .includes() since names are hashed. */
+@keyframes v3-kick {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes v3-pop {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes v3-jelly {
+  30% {
+    transform: scale(1.12, 0.82);
+  }
+  60% {
+    transform: scale(0.94, 1.08);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes v3-invite {
+  0%,
+  92%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  94% {
+    transform: translateY(-16px) rotate(-8deg);
+  }
+  97% {
+    transform: translateY(0) rotate(0deg) scale(1.1, 0.9);
+  }
+}
+
+@keyframes v3-wobble {
+  25% {
+    transform: rotate(7deg) translateY(-4px);
+  }
+  55% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .letter,
   .dot,
