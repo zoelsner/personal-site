@@ -12,7 +12,8 @@
   --paper: #f5efe2;
   --accent: var(--slate);
   --accent-on: var(--cream);
-  --shadow: 5px 5px 0 0 var(--ink);
+  /* Button shadow — decorative halves use --shadow-sm, keep that chunky */
+  --shadow: 4.5px 4.5px 0 0 var(--ink);
   --shadow-sm: 4px 4px 0 0 var(--ink);
   --border: 2.5px solid var(--ink);
 
@@ -113,7 +114,7 @@
 
 .pill:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 0 var(--ink);
+  box-shadow: 6.5px 6.5px 0 0 var(--ink);
 }
 
 .pill:active {

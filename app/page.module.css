@@ -85,10 +85,10 @@
   display: inline-flex;
   align-items: center;
   padding: 8px 18px;
-  border: 2.5px solid var(--cream);
+  border: 2px solid var(--cream);
   border-radius: 999px;
   background: var(--tomato);
-  box-shadow: 4px 4px 0 0 var(--cream);
+  box-shadow: 3.5px 3.5px 0 0 var(--cream);
   color: var(--cream) !important;
   cursor: pointer;
   font-size: 11px;
@@ -101,7 +101,7 @@
 }
 
 .sayhi:hover {
-  box-shadow: 6px 6px 0 0 var(--cream);
+  box-shadow: 5.5px 5.5px 0 0 var(--cream);
   transform: translate(-2px, -2px);
 }
 
@@ -225,7 +225,7 @@
   border: 2.5px solid var(--cream);
   border-radius: 999px;
   background: var(--cream);
-  box-shadow: 5px 5px 0 0 var(--tomato);
+  box-shadow: 4.5px 4.5px 0 0 var(--tomato);
   color: var(--navy);
   cursor: pointer;
   font-size: 14px;
@@ -240,7 +240,7 @@
 
 .chip:hover,
 .on {
-  box-shadow: 7px 7px 0 0 var(--tomato);
+  box-shadow: 6.5px 6.5px 0 0 var(--tomato);
   transform: translate(-2px, -2px);
 }
 
@@ -363,7 +363,7 @@
 .isMobile .chip {
   padding: 11px 16px;
   border-width: 2px;
-  box-shadow: 4px 4px 0 0 var(--tomato);
+  box-shadow: 3.5px 3.5px 0 0 var(--tomato);
   font-size: 11.5px;
   letter-spacing: 1px;
 }
