@@ -269,6 +269,110 @@
   text-underline-offset: 4px;
 }
 
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* ── mobile layout (toggled via JS class at <680px) ───────────
+   The scaled 1280×820 canvas collapses to an unusable sliver on portrait
+   phones, so the board reflows into a fluid full-height stack instead. */
+
+.isMobile {
+  position: relative;
+  display: block;
+  height: auto;
+  min-height: 100svh;
+}
+
+.isMobile .scaler {
+  width: 100%;
+}
+
+.isMobile .stage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100svh;
+  padding: 20px 20px calc(18px + env(safe-area-inset-bottom));
+}
+
+.isMobile .top {
+  position: static;
+}
+
+.isMobile .brand {
+  font-size: 22px;
+}
+
+.isMobile .nav {
+  gap: 14px;
+  font-size: 13px;
+}
+
+.isMobile .sayhi {
+  padding: 6px 13px;
+  font-size: 10px;
+}
+
+.isMobile .field {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 160px;
+  margin-top: 12px;
+}
+
+.isMobile .center {
+  position: static;
+  margin: 18px 0 30px;
+}
+
+.isMobile .kickwrap {
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.isMobile .kicker {
+  font-size: 11px;
+  letter-spacing: 1.3px;
+}
+
+.isMobile .name {
+  font-size: clamp(56px, 17.5vw, 80px);
+  letter-spacing: -2px;
+  line-height: 0.92;
+  white-space: normal;
+}
+
+.isMobile .dot {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  border-radius: 3px;
+}
+
+.isMobile .footer {
+  position: static;
+}
+
+.isMobile .chips {
+  gap: 10px;
+}
+
+.isMobile .chip {
+  padding: 11px 16px;
+  border-width: 2px;
+  box-shadow: 4px 4px 0 0 var(--tomato);
+  font-size: 11.5px;
+  letter-spacing: 1px;
+}
+
+.isMobile .socials {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .letter,
   .dot,

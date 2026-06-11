@@ -180,19 +180,27 @@ function Letter({ ch, i }: { ch: string; i: number }) {
 export default function HomeBoard({ fontClassName }: { fontClassName: string }) {
   const [scene, setScene] = useState<SceneKey>("home")
   const [theta, setTheta] = useState(0)
-  const [scale, setScale] = useState<number | null>(null)
+  const [view, setView] = useState<{ mobile: boolean; scale: number } | null>(null)
 
   const stageRef = useRef<HTMLDivElement>(null)
   const dotRef = useRef<HTMLSpanElement>(null)
   const ballRef = useRef<HTMLDivElement>(null)
   const halfRefs = useRef<(HTMLDivElement | null)[]>([])
-  const halvesRef = useRef<Half[]>([])
   const busyRef = useRef(false)
 
-  // Fit the fixed 1280×820 canvas to the viewport (matches the prototype's scaler).
+  // Desktop: fit the fixed 1280×820 canvas to the viewport (matches the
+  // prototype's scaler). Phones get a fluid stacked layout instead — a
+  // scaled-down canvas leaves an unusable sliver on portrait screens.
   useEffect(() => {
-    const fit = () =>
-      setScale(Math.min(window.innerWidth / 1280, window.innerHeight / 820))
+    const fit = () => {
+      const mobile = window.innerWidth < 680
+      setView({
+        mobile,
+        scale: mobile
+          ? 1
+          : Math.min(window.innerWidth / 1280, window.innerHeight / 820),
+      })
+    }
     fit()
     window.addEventListener("resize", fit)
     return () => window.removeEventListener("resize", fit)
@@ -208,9 +216,15 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
     return () => clearInterval(id)
   }, [scene])
 
+  const mobile = view?.mobile ?? false
+
   const s = V3_SCENES[scene]
-  const halves = scene === "tele" ? v3Tele(theta) : s.halves
-  halvesRef.current = halves
+  // No hover on touch — mobile keeps the home composition and chips navigate.
+  const halves = mobile
+    ? V3_SCENES.home.halves
+    : scene === "tele"
+      ? v3Tele(theta)
+      : s.halves
 
   const delayFor = (i: number) =>
     scene === "siggy" ? i * 85 : scene === "tele" ? 0 : i * 26
@@ -226,22 +240,36 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
 
     const sr = stage.getBoundingClientRect()
     const dr = dot.getBoundingClientRect()
-    const k = 1280 / sr.width
+    // Physics runs in stage coordinates: the 1280×820 design space on desktop
+    // (the stage is visually scaled), real pixels on mobile.
+    const k = mobile ? 1 : 1280 / sr.width
+    const W = mobile ? sr.width : 1280
+    const H = mobile ? sr.height : 820
     const home = {
       x: (dr.left - sr.left + dr.width / 2) * k,
       y: (dr.top - sr.top + dr.height / 2) * k,
     }
 
+    // Snapshot obstacle positions from the DOM so collisions work in both
+    // coordinate systems.
+    const obstacles = halfRefs.current.map((el) => {
+      if (!el) return null
+      const r = el.getBoundingClientRect()
+      return {
+        cx: (r.left - sr.left + r.width / 2) * k,
+        cy: (r.top - sr.top + r.height / 2) * k,
+        w: r.width * k,
+      }
+    })
+
     dot.style.opacity = "0"
     ball.style.display = "block"
 
     const R = 16
-    const W = 1280
-    const H = 820
     let x = home.x
     let y = home.y
     let ang = 0
-    let vx = -350 - Math.random() * 450
+    let vx = (-350 - Math.random() * 450) * (W / 1280)
     let vy = -1050 - Math.random() * 250
     let va = (Math.random() - 0.5) * 700
     const t0 = performance.now()
@@ -316,10 +344,9 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
           vx *= 0.97
           va = vx * 2.4
         }
-        const hs = halvesRef.current
-        for (let i = 0; i < hs.length; i++) {
-          const h = hs[i]
-          if (Math.hypot(x - h.cx, y - h.cy) < R + h.w * 0.32) wobble(i)
+        for (let i = 0; i < obstacles.length; i++) {
+          const o = obstacles[i]
+          if (o && Math.hypot(x - o.cx, y - o.cy) < R + o.w * 0.32) wobble(i)
         }
       }
 
@@ -331,12 +358,14 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
   }
 
   return (
-    <main className={`${styles.scalerOuter} ${fontClassName}`}>
+    <main
+      className={`${styles.scalerOuter} ${mobile ? styles.isMobile : ""} ${fontClassName}`}
+    >
       <div
         className={styles.scaler}
         style={{
-          transform: scale ? `scale(${scale})` : undefined,
-          visibility: scale ? "visible" : "hidden",
+          transform: view && !mobile ? `scale(${view.scale})` : undefined,
+          visibility: view ? "visible" : "hidden",
         }}
       >
         <div className={styles.stage} ref={stageRef}>
@@ -353,7 +382,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
             </nav>
           </header>
 
-          <div aria-hidden="true">
+          <div className={styles.field} aria-hidden="true">
             {halves.map((h, i) => (
               <div
                 key={i}
@@ -361,24 +390,34 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
                   halfRefs.current[i] = el
                 }}
                 className={styles.wrap}
-                style={{
-                  left: h.cx - h.w / 2,
-                  top: h.cy - h.w / 4,
-                  transitionDelay: `${delayFor(i)}ms`,
-                }}
+                style={
+                  mobile
+                    ? {
+                        // Map the 1280×820 home-scene coords into the fluid
+                        // scatter zone (cy spans ~150–370 in the design space).
+                        left: `${((h.cx / 1280) * 100).toFixed(2)}%`,
+                        top: `${(((h.cy - 150) / 220) * 100).toFixed(2)}%`,
+                        transform: "translate(-50%, -50%)",
+                      }
+                    : {
+                        left: h.cx - h.w / 2,
+                        top: h.cy - h.w / 4,
+                        transitionDelay: `${delayFor(i)}ms`,
+                      }
+                }
               >
                 <div
                   className={styles.half}
                   style={{
-                    width: h.w,
-                    height: h.w / 2,
+                    width: mobile ? h.w * 0.55 : h.w,
+                    height: (mobile ? h.w * 0.55 : h.w) / 2,
                     background: h.bg,
                     boxShadow:
                       h.bg === V3.cream
                         ? `4px 4px 0 0 ${V3.tomato}`
                         : `4px 4px 0 0 ${V3.cream}`,
                     transform: `rotate(${h.rot}deg)`,
-                    transitionDelay: `${delayFor(i)}ms`,
+                    transitionDelay: mobile ? undefined : `${delayFor(i)}ms`,
                   }}
                 />
               </div>
@@ -392,25 +431,35 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               </div>
             </div>
             <h1 className={styles.name}>
-              {"zach oelsner".split("").map((ch, i) => (
-                <Letter key={i} ch={ch} i={i} />
-              ))}
-              <span
-                ref={dotRef}
-                className={styles.dot}
-                title="click me"
-                role="button"
-                aria-label="Launch"
-                tabIndex={0}
-                onClick={launch}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault()
-                    launch()
-                  }
-                }}
-                style={{ background: s.acc }}
-              />
+              {/* Words are atomic so the name wraps zach / oelsner. on mobile;
+                  desktop is nowrap so it renders one line as before. Stagger
+                  indices skip 4 (the space) to keep the entrance timing. */}
+              <span className={styles.word}>
+                {"zach".split("").map((ch, i) => (
+                  <Letter key={i} ch={ch} i={i} />
+                ))}
+              </span>{" "}
+              <span className={styles.word}>
+                {"oelsner".split("").map((ch, i) => (
+                  <Letter key={i} ch={ch} i={i + 5} />
+                ))}
+                <span
+                  ref={dotRef}
+                  className={styles.dot}
+                  title="click me"
+                  role="button"
+                  aria-label="Launch"
+                  tabIndex={0}
+                  onClick={launch}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault()
+                      launch()
+                    }
+                  }}
+                  style={{ background: s.acc }}
+                />
+              </span>
             </h1>
           </div>
 
@@ -423,8 +472,8 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
                   key={c.key}
                   href={c.href}
                   className={`${styles.chip} ${scene === c.key ? styles.on : ""}`}
-                  onMouseEnter={() => setScene(c.key)}
-                  onFocus={() => setScene(c.key)}
+                  onMouseEnter={() => !mobile && setScene(c.key)}
+                  onFocus={() => !mobile && setScene(c.key)}
                 >
                   {c.label}
                 </Link>
