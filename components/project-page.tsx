@@ -36,6 +36,8 @@ export type ProjectPageProps = {
   name: string
   accent: string
   accentOn?: string
+  /** Override the page ink (title, body text, borders, shadows). */
+  ink?: string
   kicker: string[]
   tagline: ReactNode
   blurb: ReactNode
@@ -73,6 +75,7 @@ export function ProjectPage({
   name,
   accent,
   accentOn = "#fdebcc",
+  ink,
   kicker,
   tagline,
   blurb,
@@ -89,6 +92,7 @@ export function ProjectPage({
   const stageStyle = {
     "--accent": accent,
     "--accent-on": accentOn,
+    ...(ink ? { "--ink": ink } : {}),
   } as CSSProperties
 
   return (

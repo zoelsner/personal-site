@@ -9,8 +9,8 @@ export default async function Image() {
     kicker: "shipped · 2026 · $19 lifetime",
     title: "Siggy",
     tagline: "a polished signature, pasted into Gmail.",
-    accent: "#6C5CE7",
-    accentOn: "#ffffff",
+    accent: "#7A5A7F",
+    accentOn: "#fdebcc",
     url: "zachoelsner.com/work/siggy",
     halves: [
       { tone: "plum", width: 100, height: 50, top: 100, left: 110, rotate: -12 },

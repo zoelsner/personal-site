@@ -51,7 +51,7 @@ function SiggyPreview() {
               width: 22,
               height: 22,
               borderRadius: 6,
-              background: "#6C5CE7",
+              background: "#7A5A7F",
               color: "#fff",
               fontSize: 11,
               fontWeight: 700,
@@ -67,7 +67,7 @@ function SiggyPreview() {
         <div
           style={{
             padding: "5px 12px",
-            background: "#6C5CE7",
+            background: "#7A5A7F",
             color: "#fff",
             borderRadius: 6,
             fontSize: 11,
@@ -132,7 +132,7 @@ function SiggyPreview() {
             Style
           </label>
           <div style={{ display: "flex", gap: 5, marginTop: 6 }}>
-            {["#6C5CE7", "#E17055", "#1E2328", "#A29BFE"].map((color) => (
+            {["#7A5A7F", "#d44e2a", "#1a2540", "#c8963e"].map((color) => (
               <div
                 key={color}
                 style={{
@@ -148,7 +148,7 @@ function SiggyPreview() {
 
         <div
           style={{
-            background: "#F8F7FC",
+            background: "#f7f4ee",
             padding: 24,
             display: "flex",
             alignItems: "center",
@@ -172,7 +172,7 @@ function SiggyPreview() {
                 fontSize: 22,
                 letterSpacing: -1,
                 lineHeight: 1,
-                color: "#6C5CE7",
+                color: "#7A5A7F",
               }}
             >
               OELSNER
@@ -180,7 +180,7 @@ function SiggyPreview() {
             <div
               style={{
                 height: 2,
-                background: "#6C5CE7",
+                background: "#7A5A7F",
                 margin: "6px 0",
               }}
             />
@@ -225,7 +225,7 @@ function SiggyPreview() {
                 fontSize: 9,
                 fontWeight: 700,
                 letterSpacing: 1,
-                color: "#6C5CE7",
+                color: "#7A5A7F",
                 textTransform: "uppercase",
               }}
             >
@@ -259,7 +259,7 @@ function SiggyPreview() {
               fontSize: 10,
               ...(tab.on
                 ? {
-                    background: "#6C5CE7",
+                    background: "#7A5A7F",
                     color: "#fff",
                     fontWeight: 600,
                   }
@@ -281,8 +281,9 @@ export default function SiggyPage() {
   return (
     <ProjectPage
       name="Siggy"
-      accent="#6C5CE7"
-      accentOn="#ffffff"
+      accent="#7A5A7F"
+      accentOn="#fdebcc"
+      ink="#1a2540"
       kicker={["shipped", "2026", "$19 lifetime"]}
       tagline="a polished signature, pasted into Gmail."
       blurb={
