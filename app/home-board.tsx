@@ -144,11 +144,11 @@ const V3_SCENES: Record<SceneKey, Scene> = {
 }
 
 const V3_CHIPS: { key: SceneKey; label: string; href: string }[] = [
-  { key: "ftp", label: "Farm to People", href: "/work/ftp" },
-  { key: "sandlot", label: "Sandlot", href: "/work/sandlot" },
-  { key: "dockme", label: "DockMe", href: "/work/dockme" },
-  { key: "siggy", label: "Siggy", href: "/work/siggy" },
-  { key: "tele", label: "Telestrations", href: "/work/telestrations" },
+  { key: "ftp", label: "Farm to People", href: "/projects/ftp" },
+  { key: "sandlot", label: "Sandlot", href: "/projects/sandlot" },
+  { key: "dockme", label: "DockMe", href: "/projects/dockme" },
+  { key: "siggy", label: "Siggy", href: "/projects/siggy" },
+  { key: "tele", label: "Telestrations", href: "/projects/telestrations" },
 ]
 
 const SOCIALS = [
@@ -379,7 +379,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               Zach
             </Link>
             <nav className={styles.nav} aria-label="Primary">
-              <Link href="/work">work</Link>
+              <Link href="/projects">projects</Link>
               <Link href="/about">about</Link>
               <a className={styles.sayhi} href="mailto:zachoelsner@gmail.com">
                 say hi
@@ -471,7 +471,11 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
           <div ref={ballRef} className={styles.ball} style={{ display: "none" }} />
 
           <footer className={styles.footer}>
-            <div className={styles.chips} onMouseLeave={() => setScene("home")}>
+            <div
+              className={styles.chips}
+              aria-label="Featured links"
+              onMouseLeave={() => setScene("home")}
+            >
               {V3_CHIPS.map((c) => (
                 <Link
                   key={c.key}

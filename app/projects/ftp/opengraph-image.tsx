@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "three meals from your actual box.",
     accent: "#2D5A3D",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work/ftp",
+    url: "zachoelsner.com/projects/ftp",
     halves: [
       { tone: "cream", width: 100, height: 50, top: 80, left: 110, rotate: -14 },
       { tone: "olive", width: 80, height: 40, top: 100, left: 270, rotate: 20 },

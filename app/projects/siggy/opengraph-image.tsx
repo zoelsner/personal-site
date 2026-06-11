@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "a polished signature, pasted into Gmail.",
     accent: "#7A5A7F",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work/siggy",
+    url: "zachoelsner.com/projects/siggy",
     halves: [
       { tone: "plum", width: 100, height: 50, top: 100, left: 110, rotate: -12 },
       { tone: "cream", width: 80, height: 40, top: 200, left: 240, rotate: 22 },

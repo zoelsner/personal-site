@@ -62,7 +62,7 @@ interface OGProps {
   accent: string
   /** color text sits on when on top of `accent` (for the page-URL chip). Defaults to cream. */
   accentOn?: string
-  /** sub-URL for the chip in the top-right (e.g. "zachoelsner.com/work/ftp") */
+  /** sub-URL for the chip in the top-right (e.g. "zachoelsner.com/projects/ftp") */
   url?: string
   halves?: OGHalf[]
 }

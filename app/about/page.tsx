@@ -35,7 +35,7 @@ export default function AboutPage() {
             Zach
           </Link>
           <nav className={shell.nav} aria-label="Primary">
-            <Link href="/work">work</Link>
+            <Link href="/projects">projects</Link>
             <Link className={shell.on} href="/about">
               about
             </Link>

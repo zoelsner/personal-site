@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "the cardboard party game, now playable over a video call.",
     accent: "#E6B341",
     accentOn: "#1a2a18",
-    url: "zachoelsner.com/work/telestrations",
+    url: "zachoelsner.com/projects/telestrations",
     halves: [
       { tone: "cream", width: 100, height: 50, top: 100, left: 110, rotate: -14 },
       { tone: "yellow", width: 80, height: 40, top: 200, left: 240, rotate: 22 },

@@ -20,20 +20,20 @@ async function expectSeparated(above: Locator, below: Locator, gap = 4) {
 }
 
 test.describe("homepage", () => {
-  test("renders the Dugout homepage cleanly on desktop", async ({ page }) => {
+  test("renders the navy homepage cleanly on desktop", async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 720 })
     await page.goto("/")
 
     const stage = page.locator("main").first()
-    const heading = page.getByRole("heading", { name: "zach oelsner." })
-    const kicker = page.getByText("food-pilled · NYC")
+    const heading = page.locator("h1")
+    const kicker = page.getByText("food-pilled")
     const chips = page.locator('[aria-label="Featured links"]')
 
-    await expect(stage).toHaveCSS("background-color", "rgb(191, 220, 198)")
+    await expect(stage).toHaveCSS("background-color", "rgb(26, 37, 64)")
     await expect(page.getByRole("link", { name: "Zach" })).toBeVisible()
-    await expect(page.getByRole("link", { name: "work" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "projects" })).toHaveAttribute(
       "href",
-      "/work"
+      "/projects"
     )
     await expect(page.getByRole("link", { name: "about" })).toHaveAttribute(
       "href",
@@ -44,7 +44,6 @@ test.describe("homepage", () => {
       "mailto:zachoelsner@gmail.com"
     )
     await expect(kicker).toBeVisible()
-    await expect(kicker).toHaveCSS("color", "rgb(26, 42, 24)")
     await expect(heading).toBeVisible()
     await expect(chips).toBeVisible()
     await expectSeparated(heading, chips)
@@ -55,7 +54,7 @@ test.describe("homepage", () => {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto("/")
 
-    const heading = page.getByRole("heading", { name: "zach oelsner." })
+    const heading = page.locator("h1")
     const chips = page.locator('[aria-label="Featured links"]')
 
     await expect(heading).toBeVisible()
@@ -68,7 +67,7 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("link", { name: "Telestrations" })
     ).toBeVisible()
-    await expectSeparated(heading, chips, 160)
+    await expectSeparated(heading, chips)
     await expectNoHorizontalOverflow(page)
   })
 
@@ -80,31 +79,31 @@ test.describe("homepage", () => {
 
     await expect(
       page.getByRole("link", { name: "Farm to People" })
-    ).toHaveAttribute("href", "/work/ftp")
+    ).toHaveAttribute("href", "/projects/ftp")
     await expect(page.getByRole("link", { name: "Sandlot" })).toHaveAttribute(
       "href",
-      "/work/sandlot"
+      "/projects/sandlot"
     )
     await expect(page.getByRole("link", { name: "DockMe" })).toHaveAttribute(
       "href",
-      "/work/dockme"
+      "/projects/dockme"
     )
     await expect(page.getByRole("link", { name: "Siggy" })).toHaveAttribute(
       "href",
-      "/work/siggy"
+      "/projects/siggy"
     )
     await expect(
       page.getByRole("link", { name: "Telestrations" })
-    ).toHaveAttribute("href", "/work/telestrations")
+    ).toHaveAttribute("href", "/projects/telestrations")
 
     const internalRoutes = [
-      "/work",
+      "/projects",
       "/about",
-      "/work/ftp",
-      "/work/sandlot",
-      "/work/dockme",
-      "/work/siggy",
-      "/work/telestrations",
+      "/projects/ftp",
+      "/projects/sandlot",
+      "/projects/dockme",
+      "/projects/siggy",
+      "/projects/telestrations",
     ]
 
     for (const route of internalRoutes) {

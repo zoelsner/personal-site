@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "meal cards matched to your energy level.",
     accent: "#B85A3B",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work/qook",
+    url: "zachoelsner.com/projects/qook",
     halves: [
       { tone: "orange", width: 100, height: 50, top: 100, left: 110, rotate: -10 },
       { tone: "gold", width: 80, height: 40, top: 200, left: 240, rotate: 22 },

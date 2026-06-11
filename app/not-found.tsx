@@ -23,7 +23,7 @@ export default function NotFound() {
             Zach
           </Link>
           <nav className={shell.nav} aria-label="Primary">
-            <Link href="/work">work</Link>
+            <Link href="/projects">projects</Link>
             <Link href="/about">about</Link>
             <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
               say hi
@@ -49,10 +49,10 @@ export default function NotFound() {
           <p className={shell.subtitle}>
             This page went nowhere. The{" "}
             <Link
-              href="/work"
+              href="/projects"
               style={{ color: "inherit", textDecorationThickness: 2 }}
             >
-              work
+              projects
             </Link>{" "}
             page is where everything lives.
           </p>

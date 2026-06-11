@@ -6,14 +6,14 @@ import shell from "@/components/site-page.module.css"
 import styles from "./page.module.css"
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Projects",
   description: "Things I've built around food, transit, and one-off tools.",
   openGraph: {
-    title: "Work · Zach Oelsner",
+    title: "Projects · Zach Oelsner",
     description: "Things I've built around food, transit, and one-off tools.",
   },
   twitter: {
-    title: "Work · Zach Oelsner",
+    title: "Projects · Zach Oelsner",
     description: "Things I've built around food, transit, and one-off tools.",
   },
 }
@@ -31,7 +31,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    href: "/work/ftp",
+    href: "/projects/ftp",
     name: "Farm to People",
     year: "2025",
     tag: "Turns my weekly produce-box delivery into three dinners. Reads the real cart so I stop wasting half of it.",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     cTint: "#e8efe6",
   },
   {
-    href: "/work/sandlot",
+    href: "/projects/sandlot",
     name: "Sandlot",
     year: "2026",
     tag: "Helps me not suck at fantasy baseball. Daily audit, Sunday brief, sources cited.",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     cTint: "#f3e6dd",
   },
   {
-    href: "/work/dockme",
+    href: "/projects/dockme",
     name: "DockMe",
     year: "2026",
     tag: "Checks Citi Bike return-dock risk before the ride. Nearest dock, backup dock, and day-hour patterns.",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     cTint: "#e5f0ef",
   },
   {
-    href: "/work/siggy",
+    href: "/projects/siggy",
     name: "Siggy",
     year: "2026",
     tag: "An email signature you add to Gmail. Pick a template, paste it in, done.",
@@ -67,7 +67,7 @@ const projects: Project[] = [
     cTint: "#ebe9f2",
   },
   {
-    href: "/work/telestrations",
+    href: "/projects/telestrations",
     name: "Telestrations",
     year: "2026",
     tag: "The drawing-telephone party game, now playable over a video call. Share a link, no install.",
@@ -77,7 +77,7 @@ const projects: Project[] = [
   },
 ]
 
-export default function WorkPage() {
+export default function ProjectsPage() {
   const stageStyle = {
     "--accent": "#1B2A4D",
     "--accent-on": "#fdebcc",
@@ -91,8 +91,8 @@ export default function WorkPage() {
             Zach
           </Link>
           <nav className={shell.nav} aria-label="Primary">
-            <Link className={shell.on} href="/work">
-              work
+            <Link className={shell.on} href="/projects">
+              projects
             </Link>
             <Link href="/about">about</Link>
             <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
@@ -109,14 +109,14 @@ export default function WorkPage() {
 
         <section className={shell.hero}>
           <div className={shell.kicker}>
-            <span>selected work</span>
+            <span>selected projects</span>
             <span className={shell.sep}>·</span>
             <span>05 projects</span>
             <span className={shell.sep}>·</span>
             <span>updated june 2026</span>
           </div>
           <h1 className={shell.title}>
-            work<span className={shell.dot}>.</span>
+            projects<span className={shell.dot}>.</span>
           </h1>
           <p className={shell.subtitle}>
             Tools for small problems I keep running into, plus a few things I

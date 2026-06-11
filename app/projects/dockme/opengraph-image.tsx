@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "know if there will be a dock when you get there.",
     accent: "#146C7C",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work/dockme",
+    url: "zachoelsner.com/projects/dockme",
     halves: [
       { tone: "slate", width: 100, height: 50, top: 90, left: 100, rotate: -14 },
       { tone: "navy", width: 80, height: 40, top: 190, left: 240, rotate: 22 },

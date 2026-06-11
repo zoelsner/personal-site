@@ -11,7 +11,7 @@ export default async function Image() {
     tagline: "helps me not suck at fantasy baseball.",
     accent: "#d44e2a",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work/sandlot",
+    url: "zachoelsner.com/projects/sandlot",
     halves: [
       { tone: "orange", width: 100, height: 50, top: 100, left: 110, rotate: -10 },
       { tone: "slate", width: 80, height: 40, top: 210, left: 240, rotate: 22 },

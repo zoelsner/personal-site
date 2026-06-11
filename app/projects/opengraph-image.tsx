@@ -1,17 +1,17 @@
 import { createOG, ogSize } from "@/lib/og-template"
 
-export const alt = "Work by Zach Oelsner"
+export const alt = "Projects by Zach Oelsner"
 export const size = ogSize
 export const contentType = "image/png"
 
 export default async function Image() {
   return createOG({
-    kicker: "selected work · 05 projects · updated june 2026",
-    title: "work",
+    kicker: "selected projects · 05 projects · updated june 2026",
+    title: "projects",
     tagline: "things I've built end-to-end.",
     accent: "#1B2A4D",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/work",
+    url: "zachoelsner.com/projects",
     halves: [
       { tone: "cream", width: 100, height: 50, top: 100, left: 110, rotate: -14 },
       { tone: "slate", width: 80, height: 40, top: 200, left: 240, rotate: 22 },

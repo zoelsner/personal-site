@@ -86,8 +86,8 @@ export function ProjectPage({
   halfCircles,
   thinkHeading = "the thinking",
   peekHeading = "a peek inside",
-  backHref = "/work",
-  backLabel = "back to work",
+  backHref = "/projects",
+  backLabel = "back to projects",
 }: ProjectPageProps) {
   const stageStyle = {
     "--accent": accent,
@@ -103,7 +103,7 @@ export function ProjectPage({
             Zach
           </Link>
           <nav className={styles.nav} aria-label="Primary">
-            <Link href="/work">work</Link>
+            <Link href="/projects">projects</Link>
             <Link href="/about">about</Link>
             <a
               className={`${styles.pill} ${styles.pillNav} ${styles.accent}`}
@@ -189,8 +189,8 @@ export function ProjectPage({
             </div>
           </div>
           <div className={styles.ctas}>
-            <Link className={styles.ghostLink} href="/work">
-              all work
+            <Link className={styles.ghostLink} href="/projects">
+              all projects
             </Link>
             {ctas.map((cta) =>
               cta.external ? (
