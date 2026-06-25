@@ -155,6 +155,7 @@ const SOCIALS = [
   { label: "github", href: "https://github.com/zoelsner" },
   { label: "linkedin", href: "https://www.linkedin.com/in/zacharyoelsner/" },
   { label: "tiktok", href: "https://tiktok.com/@builtwithzach" },
+  { label: "x", href: "https://x.com/zachoelsner" },
 ]
 
 function Letter({ ch, i }: { ch: string; i: number }) {
@@ -379,6 +380,13 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               Zach
             </Link>
             <nav className={styles.nav} aria-label="Primary">
+              <a
+                href="https://www.loom.com/share/3bba72893bb846ecab4279c597068d73"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                demo
+              </a>
               <Link href="/projects">projects</Link>
               <Link href="/about">about</Link>
               <a className={styles.sayhi} href="mailto:zachoelsner@gmail.com">
