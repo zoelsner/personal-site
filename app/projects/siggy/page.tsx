@@ -314,7 +314,7 @@ export default function SiggyPage() {
         "React",
         "Vercel",
         "Satori",
-        "Lemon Squeezy",
+        "Stripe",
         "Vercel Blob",
       ]}
       ctas={[
