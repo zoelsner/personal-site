@@ -61,8 +61,8 @@ export default function AboutPage() {
             about<span className={shell.dot}>.</span>
           </h1>
           <p className={shell.subtitle}>
-            I’m Zach. I find joy in building tools that help me through
-            everyday life.
+            I’m Zach. I build tools for the small, repetitive problems I keep
+            running into — then share them with people hitting the same thing.
           </p>
         </section>
 
@@ -101,15 +101,11 @@ export default function AboutPage() {
 
         <section className={styles.prose}>
           <p>
-            It usually starts from a small, repetitive task or problem I keep
-            running into. I see if I can put together a solution that’s easy
-            to use every day, and then I share it with people I know running
-            into the same thing.
-          </p>
-          <p>
-            I’ve come to love design. It’s something that can consume me, and
-            I look forward to learning and discovering more about my design
-            tastes.
+            Everything I make follows the same loop: find a problem in a messy
+            real-world system, prove it out with the data, ship a fix people
+            actually use, and stick around to see if it worked. Sometimes the
+            messy system is a bank’s APR logic. Sometimes it’s half a produce
+            box going in the trash.
           </p>
 
           <div className={styles.block}>
@@ -118,34 +114,23 @@ export default function AboutPage() {
               the day job (“client work”)
             </h2>
             <p>
-              During the day, I consult to a top-5 card issuer. Remediation
-              means finding issues across the common functions you’d think a
-              bank would have nailed down, like APR and rewards, and the list
-              goes on. We scope the issue, develop or validate that the data
-              behind the population is accurate so we’re not missing anyone,
-              and we deploy the code fix so it doesn’t happen again. We also
-              help the customers who were harmed before the fix. We make them
-              whole by sending them money and correcting anything that hit
-              their credit bureau reporting.
-            </p>
-            <p>
-              This takes a lot of analysis, which is something I enjoy. It
-              also takes a lot of stakeholder management: creating consensus,
-              and making complex processes and analytical ideas accessible to
-              people who may be less experienced with analytics but carry real
-              domain expertise. Bringing all those people together,
-              facilitating a productive discussion, and helping push the fix
-              along.
-            </p>
-            <p>
-              Right now we’re building custom Gems in Gemini for a client. I
-              spend a lot of my time in Google Workspace, Gemini, and
-              Snowflake.
+              By day I consult for a top-5 card issuer on remediation — finding
+              issues in the functions you’d assume a bank had nailed down: APR,
+              rewards, settlements, minimum payments. We scope the issue,
+              validate the affected population so no one gets missed, and deploy
+              the fix so it doesn’t happen again. Then we make the harmed
+              customers whole — money back, credit-bureau reporting corrected.
             </p>
             <p className={styles.impact}>
-              So far that work has turned up issues across millions of
-              accounts and hundreds of thousands of dollars owed back to
-              customers that wouldn’t have been found otherwise.
+              So far that work has turned up issues across millions of accounts,
+              including cost leakage in legacy payment logic I found by reading
+              the SQL directly.
+            </p>
+            <p>
+              It takes a lot of analysis, which I enjoy. It takes just as much
+              translation — making complex analytical ideas accessible to people
+              with real domain expertise but less analytics background, and
+              building consensus to push a fix through a bank.
             </p>
           </div>
 
@@ -155,19 +140,15 @@ export default function AboutPage() {
               building community wherever I work
             </h2>
             <p>
-              I equally enjoy being involved in the firm and building our
-              community. I’m chief of staff to our 70-person advanced
-              analytics group, and I run our AI training group in the New York
-              office.
+              I’m chief of staff to our 70-person advanced analytics group, and
+              I run our office’s training program — 500+ people trained,
+              increasingly on AI.
             </p>
             <p>
-              I enjoy hosting panels that help people understand what’s
-              happening across different parts of the firm and encourage
-              collaboration. Recently I instructed our firm’s AI crash course,
-              upskilling people on what AI can actually do within their
-              everyday workflows. My favorite moment is when the epiphany
-              lands, when someone who hadn’t touched AI suddenly sees what it
-              can do for them. It can be quite fun.
+              I taught our firm’s AI crash course during its national upskilling
+              push. My favorite moment is when the epiphany lands: someone who’d
+              never touched AI suddenly sees what it can do for their everyday
+              work.
             </p>
           </div>
         </section>
@@ -196,6 +177,14 @@ export default function AboutPage() {
               rel="noopener noreferrer"
             >
               tiktok
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://x.com/zachoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              x
             </a>
           </div>
           <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>
