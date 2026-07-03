@@ -320,7 +320,7 @@ export default function SiggyPage() {
       ctas={[
         {
           label: "try the builder →",
-          href: "https://siggy-orpin.vercel.app/editor",
+          href: "https://trysiggy.com/editor",
           external: true,
           accent: true,
         },
