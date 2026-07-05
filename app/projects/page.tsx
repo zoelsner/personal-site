@@ -68,7 +68,7 @@ const projects: Project[] = [
   },
   {
     href: "/projects/telestrations",
-    name: "Telestrations",
+    name: "Pass the Doodle",
     year: "2026",
     tag: "The drawing-telephone party game, now playable over a video call. Share a link, no install.",
     status: "Shipped · play with friends",

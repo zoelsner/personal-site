@@ -291,7 +291,9 @@ export default function SiggyPage() {
           An email signature builder for people who don&apos;t want to fight
           HTML. <b>Pick a template, fill in your details, paste into Gmail</b>.
           Done. Renders crisp in every client because the name is rendered as
-          an image. $19 lifetime, no subscriptions.
+          an image. There are dedicated landing pages by profession
+          (designers, freelancers, and more) that jump straight into a
+          matching template. $19 lifetime, no subscriptions.
         </>
       }
       think={[

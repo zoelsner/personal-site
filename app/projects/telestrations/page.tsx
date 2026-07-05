@@ -2,18 +2,18 @@ import type { Metadata } from "next"
 import { ProjectPage } from "@/components/project-page"
 
 export const metadata: Metadata = {
-  title: "Telestrations",
+  title: "Pass the Doodle",
   description:
-    "The cardboard party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
+    "The chain-of-doodles party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
   openGraph: {
-    title: "Telestrations · Zach Oelsner",
+    title: "Pass the Doodle · Zach Oelsner",
     description:
-      "The cardboard party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
+      "The chain-of-doodles party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
   },
   twitter: {
-    title: "Telestrations · Zach Oelsner",
+    title: "Pass the Doodle · Zach Oelsner",
     description:
-      "The cardboard party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
+      "The chain-of-doodles party game, now playable over a video call. Real-time, share-a-link rooms, no install.",
   },
 }
 
@@ -322,20 +322,21 @@ function TelestrationsPreview() {
 export default function TelestrationsPage() {
   return (
     <ProjectPage
-      name="Telestrations"
+      name="Pass the Doodle"
       accent="#E6B341"
       accentOn="#1a2a18"
       kicker={["shipped", "2026", "free", "play with friends"]}
-      tagline="the cardboard party game, now playable over a video call."
+      tagline="the chain-of-doodles party game, now playable over a video call."
       blurb={
         <>
-          A web version of the chain-of-doodles party game. One person
-          writes a prompt, the next draws it, the next describes the
-          drawing, and so on, until the end of the chain is hilariously far
-          from where it started.{" "}
+          A web version of the chain-of-doodles party game (formerly
+          Telestrations). One person writes a prompt, the next draws it, the
+          next describes the drawing, and so on, until the end of the chain
+          is hilariously far from where it started.{" "}
           <b>Real-time over the web, no install, share-a-link rooms.</b>{" "}
-          Built for friend groups on a video call and family game nights
-          when not everyone is in the same room.
+          Host-configurable turn timers pick up a stalled drawer
+          automatically, and the final reveal exports straight to PDF so the
+          chain lives on after the call ends.
         </>
       }
       think={[
@@ -349,15 +350,14 @@ export default function TelestrationsPage() {
         },
         {
           title: "Status",
-          body: "Shipped and live. No monetization, no auth, just a link you send to a group chat. Running on Vercel with a Socket.io room server and Postgres for finished-chain replays.",
+          body: "Shipped and live. No monetization, no auth, just a link you send to a group chat. Running on Vercel with Convex powering rooms, turn state, and prompt packs.",
         },
       ]}
       preview={<TelestrationsPreview />}
       stack={[
         "Next.js",
         "React",
-        "Socket.io",
-        "Postgres",
+        "Convex",
         "Vercel",
         "Tailwind",
       ]}

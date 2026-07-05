@@ -65,7 +65,7 @@ test.describe("homepage", () => {
     await expect(page.getByRole("link", { name: "DockMe" })).toBeVisible()
     await expect(page.getByRole("link", { name: "Siggy" })).toBeVisible()
     await expect(
-      page.getByRole("link", { name: "Telestrations" })
+      page.getByRole("link", { name: "Pass the Doodle" })
     ).toBeVisible()
     await expectSeparated(heading, chips)
     await expectNoHorizontalOverflow(page)
@@ -93,7 +93,7 @@ test.describe("homepage", () => {
       "/projects/siggy"
     )
     await expect(
-      page.getByRole("link", { name: "Telestrations" })
+      page.getByRole("link", { name: "Pass the Doodle" })
     ).toHaveAttribute("href", "/projects/telestrations")
 
     const internalRoutes = [

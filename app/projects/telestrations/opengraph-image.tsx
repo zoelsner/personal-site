@@ -1,14 +1,14 @@
 import { createOG, ogSize } from "@/lib/og-template"
 
-export const alt = "Telestrations by Zach Oelsner"
+export const alt = "Pass the Doodle by Zach Oelsner"
 export const size = ogSize
 export const contentType = "image/png"
 
 export default async function Image() {
   return createOG({
     kicker: "shipped · 2026 · free · play with friends",
-    title: "Telestrations",
-    tagline: "the cardboard party game, now playable over a video call.",
+    title: "Pass the Doodle",
+    tagline: "the chain-of-doodles party game, now playable over a video call.",
     accent: "#E6B341",
     accentOn: "#1a2a18",
     url: "zachoelsner.com/projects/telestrations",

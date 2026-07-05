@@ -148,7 +148,7 @@ const V3_CHIPS: { key: SceneKey; label: string; href: string }[] = [
   { key: "sandlot", label: "Sandlot", href: "/projects/sandlot" },
   { key: "dockme", label: "DockMe", href: "/projects/dockme" },
   { key: "siggy", label: "Siggy", href: "/projects/siggy" },
-  { key: "tele", label: "Telestrations", href: "/projects/telestrations" },
+  { key: "tele", label: "Pass the Doodle", href: "/projects/telestrations" },
 ]
 
 const SOCIALS = [

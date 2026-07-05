@@ -299,10 +299,14 @@ export default function DockMePage() {
       blurb={
         <>
           Citi Bike routing only matters if you can return the bike at the end.
-          DockMe is the app I&apos;m building that checks the destination dock,
-          sees the risk, and keeps a backup nearby. The current web analysis
-          uses captured station snapshots to turn return-room history into
-          something I can actually make a ride decision with.
+          DockMe is turning into a native iOS app, map-first, that compares
+          how you&apos;d actually get somewhere &mdash; e-bike, bike + subway,
+          subway, or rideshare &mdash; and shows dock confidence at your ETA
+          with a backup dock already picked, plus a trip watcher once
+          you&apos;re riding. The{" "}
+          <b>web analysis is the earlier exploration</b>: captured station
+          snapshots turned into return-room history by day and hour. The app
+          is in active development.
         </>
       }
       think={[
@@ -316,22 +320,21 @@ export default function DockMePage() {
         },
         {
           title: "Status",
-          body: "The web analysis is live with captured station snapshots. Next is the app: a quick destination-dock check before you ride.",
+          body: "The web analysis is live with captured station snapshots. Now building the native app: a map-first trip comparison with dock confidence, a backup dock, and a trip watcher, no public link yet.",
         },
       ]}
       preview={<DockMePreview />}
       stack={[
-        "Next.js",
-        "React",
+        "Expo",
+        "React Native",
+        "Convex",
         "GBFS",
         "Citi Bike data",
-        "Vercel",
         "TypeScript",
-        "Expo",
       ]}
       ctas={[
         {
-          label: "view live analysis →",
+          label: "view the early web analysis →",
           href: LIVE_ANALYSIS_URL,
           external: true,
           accent: true,
