@@ -52,8 +52,8 @@ const projects: Project[] = [
     href: "/projects/dockme",
     name: "DockMe",
     year: "2026",
-    tag: "Checks Citi Bike return-dock risk before the ride. Nearest dock, backup dock, and day-hour patterns.",
-    status: "In progress · live analysis",
+    tag: "Citi Bike trip planner going native. Dock confidence at your ETA, backup dock, and a trip watcher.",
+    status: "In progress · iOS app",
     c: "#146C7C",
     cTint: "#e5f0ef",
   },
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
             <span className={shell.sep}>·</span>
             <span>05 projects</span>
             <span className={shell.sep}>·</span>
-            <span>updated june 2026</span>
+            <span>updated july 2026</span>
           </div>
           <h1 className={shell.title}>
             projects<span className={shell.dot}>.</span>
