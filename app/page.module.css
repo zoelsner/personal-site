@@ -173,6 +173,15 @@
   animation: v3-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
+.tagline {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  animation: v3-kick 0.35s ease 0.9s both;
+}
+
 .jelly {
   animation: v3-jelly 0.5s ease both !important;
 }
@@ -345,6 +354,11 @@
   white-space: normal;
 }
 
+.isMobile .tagline {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
 .isMobile .dot {
   width: 18px;
   height: 18px;
@@ -439,7 +453,8 @@
 @media (prefers-reduced-motion: reduce) {
   .letter,
   .dot,
-  .kicker {
+  .kicker,
+  .tagline {
     animation: none !important;
   }
 

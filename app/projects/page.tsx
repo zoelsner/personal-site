@@ -58,6 +58,15 @@ const projects: Project[] = [
     cTint: "#e5f0ef",
   },
   {
+    href: "/projects/qook",
+    name: "Qook",
+    year: "2026",
+    tag: "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+    status: "In the kitchen · work in progress",
+    c: "#B85A3B",
+    cTint: "#f5e8de",
+  },
+  {
     href: "/projects/siggy",
     name: "Siggy",
     year: "2026",
@@ -111,9 +120,9 @@ export default function ProjectsPage() {
           <div className={shell.kicker}>
             <span>selected projects</span>
             <span className={shell.sep}>·</span>
-            <span>05 projects</span>
-            <span className={shell.sep}>·</span>
-            <span>updated july 2026</span>
+            <span>
+              {String(projects.length).padStart(2, "0")} projects
+            </span>
           </div>
           <h1 className={shell.title}>
             projects<span className={shell.dot}>.</span>
