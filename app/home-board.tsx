@@ -213,12 +213,11 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
     return () => window.removeEventListener("resize", fit)
   }, [])
 
-  // Telestrations ring slowly rotates while its scene is active.
+  // Telestrations ring slowly rotates while its scene is active. Theta is
+  // never reset — the ring just resumes from wherever it left off, which
+  // keeps this effect subscription-only (no synchronous setState).
   useEffect(() => {
-    if (scene !== "tele") {
-      setTheta(0)
-      return
-    }
+    if (scene !== "tele") return
     const id = setInterval(() => setTheta((t) => t + 0.035), 50)
     return () => clearInterval(id)
   }, [scene])
