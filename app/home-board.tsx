@@ -96,16 +96,17 @@ const V3_SCENES: Record<SceneKey, Scene> = {
     kicker: "three meals from your actual box",
     acc: V3.olive,
     halves: [
-      vH(430, 215, 50, 0, V3.cream),
-      vH(520, 170, 44, 30, V3.olive),
-      vH(760, 175, 40, -20, V3.gold),
-      vH(850, 312, 130, 180, V3.olive),
-      vH(640, 320, 150, 180, V3.cream),
-      vH(980, 210, 40, 45, V3.olive),
-      vH(430, 312, 130, 180, V3.olive),
-      vH(640, 212, 54, 0, V3.cream),
-      vH(850, 215, 50, 0, V3.cream),
-      vH(300, 210, 40, -40, V3.olive),
+      // three bowls, each with two food domes poking above the rim
+      vH(360, 285, 46, -12, V3.tomato),
+      vH(405, 278, 52, 10, V3.olive),
+      vH(385, 322, 145, 180, V3.cream),
+      vH(615, 275, 48, -10, V3.olive),
+      vH(662, 270, 54, 12, V3.gold),
+      vH(640, 318, 160, 180, V3.cream),
+      vH(872, 285, 46, -12, V3.plum),
+      vH(918, 278, 52, 10, V3.olive),
+      vH(895, 322, 145, 180, V3.cream),
+      vH(1105, 140, 110, 0, V3.gold), // sun
     ],
   },
   sandlot: {
