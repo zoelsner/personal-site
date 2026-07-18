@@ -363,8 +363,8 @@ export default function TelestrationsPage() {
       ]}
       ctas={[
         {
-          label: "play a round →",
-          href: "https://telestrations-gamma.vercel.app",
+          label: "play at passthedoodle.com →",
+          href: "https://passthedoodle.com",
           external: true,
           accent: true,
         },
