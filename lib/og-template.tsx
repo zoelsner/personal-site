@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og"
 
+import { loadOGFont } from "./og-fonts"
+
 export const ogSize = { width: 1200, height: 630 }
 
 // shared chill product-OG palette
@@ -67,22 +69,6 @@ interface OGProps {
   halves?: OGHalf[]
 }
 
-const PAYTONE_URL =
-  "https://cdn.jsdelivr.net/npm/@fontsource/paytone-one@5.2.8/files/paytone-one-latin-400-normal.woff"
-const OUTFIT_700_URL =
-  "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-700-normal.woff"
-const OUTFIT_600_URL =
-  "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-600-normal.woff"
-
-async function loadFont(url: string): Promise<ArrayBuffer | null> {
-  try {
-    const res = await fetch(url)
-    return res.ok ? await res.arrayBuffer() : null
-  } catch {
-    return null
-  }
-}
-
 export async function createOG({
   kicker,
   title,
@@ -93,9 +79,9 @@ export async function createOG({
   halves = [],
 }: OGProps) {
   const [paytone, outfit700, outfit600] = await Promise.all([
-    loadFont(PAYTONE_URL),
-    loadFont(OUTFIT_700_URL),
-    loadFont(OUTFIT_600_URL),
+    loadOGFont("paytone-one-latin-400-normal.woff"),
+    loadOGFont("outfit-latin-700-normal.woff"),
+    loadOGFont("outfit-latin-600-normal.woff"),
   ])
 
   const fonts: {

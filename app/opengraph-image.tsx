@@ -1,22 +1,10 @@
 import { ImageResponse } from "next/og"
 
+import { loadOGFont } from "@/lib/og-fonts"
+
 export const alt = "Zach Oelsner"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
-
-async function loadFont(url: string): Promise<ArrayBuffer | null> {
-  try {
-    const res = await fetch(url)
-    return res.ok ? await res.arrayBuffer() : null
-  } catch {
-    return null
-  }
-}
-
-const LILITA =
-  "https://cdn.jsdelivr.net/npm/@fontsource/lilita-one@5.2.8/files/lilita-one-latin-400-normal.woff"
-const OUTFIT_SEMI =
-  "https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.2.8/files/outfit-latin-700-normal.woff"
 
 // Same palette as the navy home page
 const NAVY = "#1a2540"
@@ -48,8 +36,8 @@ const halves: Half[] = [
 
 export default async function Image() {
   const [lilita, outfit] = await Promise.all([
-    loadFont(LILITA),
-    loadFont(OUTFIT_SEMI),
+    loadOGFont("lilita-one-latin-400-normal.woff"),
+    loadOGFont("outfit-latin-700-normal.woff"),
   ])
 
   return new ImageResponse(

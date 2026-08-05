@@ -1,21 +1,23 @@
-# Next.js template
+# zachoelsner.com
 
-This is a Next.js template with shadcn/ui.
+Personal site for Zach Oelsner — small tools for everyday problems, mostly food.
 
-## Adding components
+Built with Next.js (App Router), TypeScript, and CSS Modules. Deployed on Vercel.
 
-To add components to your app, run the following command:
+## Pages
+
+- `/` — interactive home board (hover the project chips, click the dot)
+- `/projects` — index of everything shipped or in progress
+- `/projects/*` — one page per project (Farm to People, Sandlot, DockMe, Qook, Siggy, Pass the Doodle)
+- `/about` — the longer story
+
+Open Graph images are generated per-page with `next/og`; the fonts they use are
+vendored in `assets/og-fonts` so builds don't depend on a CDN.
+
+## Development
 
 ```bash
-npx shadcn@latest add button
-```
-
-This will place the ui components in the `components` directory.
-
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
+npm install
+npm run dev        # local dev server
+npm run check      # lint + typecheck + build + Playwright e2e
 ```

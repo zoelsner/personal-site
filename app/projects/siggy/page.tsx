@@ -246,10 +246,10 @@ function SiggyPreview() {
         }}
       >
         {[
-          { label: "Edge", on: false },
           { label: "Bold", on: true },
+          { label: "Underline", on: false },
           { label: "Card", on: false },
-          { label: "Clean", on: false },
+          { label: "Minimal", on: false },
         ].map((tab) => (
           <span
             key={tab.label}
@@ -292,14 +292,14 @@ export default function SiggyPage() {
           HTML. <b>Pick a template, fill in your details, paste into Gmail</b>.
           Done. Renders crisp in every client because the name is rendered as
           an image. There are dedicated landing pages by profession
-          (designers, freelancers, and more) that jump straight into a
-          matching template. $19 lifetime, no subscriptions.
+          (realtors, lawyers, freelancers, and more) that jump straight into
+          a matching template. $19 lifetime, no subscriptions.
         </>
       }
       think={[
         {
           title: "Pick a template",
-          body: "Four layouts: Edge, Bold, Card, Clean. Each renders clean in every email client without fighting Outlook's HTML quirks.",
+          body: "Four layouts: Bold, Underline, Card, Minimal. Each renders clean in every email client without fighting Outlook's HTML quirks.",
         },
         {
           title: "Make it yours",
