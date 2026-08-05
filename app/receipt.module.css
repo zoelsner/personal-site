@@ -1,0 +1,212 @@
+.stage {
+  min-height: 100svh;
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgba(253, 235, 204, 0.06),
+      transparent 50%
+    ),
+    #232a38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-mono), monospace;
+  padding: 30px 16px 70px;
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.nav a {
+  color: #aab4c8;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #fdebcc;
+}
+
+.receiptWrap {
+  position: relative;
+  transform: rotate(0.8deg);
+}
+
+.receipt {
+  width: min(430px, 92vw);
+  background: #fbf7ee;
+  color: #2b2b26;
+  padding: 30px 26px 34px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.receipt::before,
+.receipt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background:
+    linear-gradient(-45deg, transparent 8.5px, #fbf7ee 0) 0 0 / 17px 17px
+      repeat-x,
+    linear-gradient(45deg, transparent 8.5px, #fbf7ee 0) 0 0 / 17px 17px
+      repeat-x;
+}
+
+.receipt::before {
+  top: -11px;
+  transform: scaleY(-1);
+}
+
+.receipt::after {
+  bottom: -11px;
+}
+
+.center {
+  text-align: center;
+}
+
+.shopName {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.shopSub {
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: #55524a;
+}
+
+.rule {
+  border: 0;
+  border-top: 1.5px dashed #8b8677;
+  margin: 14px 0;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: #55524a;
+}
+
+.item {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 7px 4px;
+  margin: 0 -4px;
+}
+
+.item:hover {
+  background: rgba(212, 78, 42, 0.09);
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.item:hover .itemRow {
+  color: #d44e2a;
+}
+
+.itemDesc {
+  color: #55524a;
+  font-size: 11.5px;
+  padding-left: 26px;
+}
+
+.totRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.totStrong {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+
+.small {
+  font-size: 11px;
+  color: #55524a;
+}
+
+.links {
+  text-align: center;
+  font-size: 12px;
+}
+
+.links a {
+  color: #2b2b26;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(212, 78, 42, 0.55);
+}
+
+.links a:hover {
+  color: #d44e2a;
+}
+
+.thanks {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.barcode {
+  margin: 14px auto 0;
+  width: 200px;
+  height: 44px;
+  background: repeating-linear-gradient(
+    90deg,
+    #2b2b26 0 2px,
+    transparent 2px 4px,
+    #2b2b26 4px 7px,
+    transparent 7px 9px,
+    #2b2b26 9px 10px,
+    transparent 10px 14px
+  );
+}
+
+.barcodeNum {
+  text-align: center;
+  font-size: 10.5px;
+  letter-spacing: 0.35em;
+  margin-top: 4px;
+  color: #55524a;
+}
+
+.stain {
+  position: absolute;
+  top: -34px;
+  right: -46px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 11px solid rgba(139, 94, 60, 0.24);
+  filter: blur(1px);
+  pointer-events: none;
+}
