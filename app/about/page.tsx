@@ -6,7 +6,7 @@ import shell from "@/components/site-page.module.css"
 import styles from "./page.module.css"
 
 const description =
-  "Zach Oelsner — I build tools to make everyday life easier. By day I consult to a top-5 US card issuer on credit-card remediation."
+  "Zach Oelsner — I build tools to make everyday life easier. By day I consult on credit-card analytics for a major US card issuer."
 
 export const metadata: Metadata = {
   title: "About",
@@ -114,7 +114,7 @@ export default function AboutPage() {
               the day job (“client work”)
             </h2>
             <p>
-              By day I consult for a top-5 card issuer on remediation — finding
+              By day I consult for a major card issuer on remediation — finding
               issues in the functions you’d assume a bank had nailed down: APR,
               rewards, settlements, minimum payments. We scope the issue,
               validate the affected population so no one gets missed, and deploy
@@ -122,9 +122,9 @@ export default function AboutPage() {
               customers whole — money back, credit-bureau reporting corrected.
             </p>
             <p className={styles.impact}>
-              So far that work has turned up issues across millions of accounts,
-              including cost leakage in legacy payment logic I found by reading
-              the SQL directly.
+              The issues worth finding are the ones nobody was looking for —
+              the kind you only catch by reading the code and the data
+              directly, not the dashboard.
             </p>
             <p>
               It takes a lot of analysis, which I enjoy. It takes just as much
