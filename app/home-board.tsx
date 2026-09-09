@@ -475,7 +475,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               </span>
             </h1>
             <p className={styles.tagline}>
-              I build useful tools for messy everyday problems. Often involving food.
+              building useful tools for messy everyday problems. often involving food.
             </p>
           </div>
 
