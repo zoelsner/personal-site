@@ -62,7 +62,7 @@ export default function AboutPage() {
           </h1>
           <p className={shell.subtitle}>
             I’m Zach. I build tools for the small, repetitive problems I keep
-            running into — then share them with people hitting the same thing.
+            running into — often somewhere between my grocery cart and dinner.
           </p>
         </section>
 
@@ -101,11 +101,13 @@ export default function AboutPage() {
 
         <section className={styles.prose}>
           <p>
-            Everything I make follows the same loop: find a problem in a messy
-            real-world system, prove it out with the data, ship a fix people
-            actually use, and stick around to see if it worked. Sometimes the
-            messy system is a bank’s APR logic. Sometimes it’s half a produce
-            box going in the trash.
+            My day job means digging into messy systems, checking what the data
+            actually says, and working with a team to get a fix through. I bring
+            that same curiosity to my own projects, where I choose the problem
+            and build the tool. The client work below is about bank remediation;
+            the projects on this site are independent builds, often starting
+            with something bothering me. Like half a produce box going in the
+            trash.
           </p>
 
           <div className={styles.block}>
