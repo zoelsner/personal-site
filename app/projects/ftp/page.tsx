@@ -269,11 +269,11 @@ export default function FTPPage() {
         },
         {
           title: "Under the hood",
-          body: "I keep cart extraction separate from AI generation: first read the items and available swaps into structured data, then pass that to Claude for meal ideas. That gives me a concrete cart to inspect when a suggestion looks off.",
+          body: "First I read the cart into structured data. Then Claude turns it into meal ideas. Keeping those steps separate helps me trace a weird suggestion back to the cart or the AI.",
         },
         {
           title: "Checking the output",
-          body: "The code checks suggested swaps against the cart’s available alternatives and filters out invalid ones. My automated tests cover cart parsing, malformed AI responses, and retries when fewer than three meal ideas come back. Those checks catch data and response problems; they don’t tell me whether dinner will taste good.",
+          body: "Suggested swaps get checked against what’s actually available. Tests cover cart parsing, malformed AI responses, and incomplete meal results. Whether dinner tastes good is a separate question.",
         },
         {
           title: "Status",
@@ -296,7 +296,7 @@ export default function FTPPage() {
       ]}
       ctas={[
         {
-          label: "join staging app →",
+          label: "try the preview →",
           href: STAGING_URL,
           external: true,
           accent: true,
