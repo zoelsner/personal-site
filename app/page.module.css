@@ -135,10 +135,10 @@
 
 .center {
   position: absolute;
-  top: 430px;
+  top: 380px;
   right: 48px;
   left: 48px;
-  z-index: 2;
+  z-index: 5;
   text-align: center;
 }
 
@@ -162,7 +162,8 @@
   font-family: var(--font-dugout-display), cursive;
   font-size: 196px;
   font-weight: 400;
-  line-height: 0.85;
+  line-height: 1;
+  overflow: clip;
   letter-spacing: -4px;
   white-space: nowrap;
 }
@@ -174,12 +175,16 @@
 }
 
 .tagline {
-  margin: 14px 0 0;
-  color: var(--muted);
+  position: relative;
+  max-width: 800px;
+  margin: 12px auto 0;
+  background: var(--navy);
+  color: var(--cream);
+  line-height: 1.55;
+  text-wrap: pretty;
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.2px;
-  animation: v3-kick 0.35s ease 0.9s both;
 }
 
 .jelly {
@@ -203,6 +208,7 @@
   top: 0;
   left: 0;
   z-index: 4;
+  pointer-events: none;
   width: 32px;
   height: 32px;
   border: 2.5px solid var(--cream);
@@ -283,7 +289,7 @@
   white-space: nowrap;
 }
 
-/* ── mobile layout (toggled via JS class at <680px) ───────────
+/* ── mobile layout (toggled via JS class at <1000px) ───────────
    The scaled 1280×820 canvas collapses to an unusable sliver on portrait
    phones, so the board reflows into a fluid full-height stack instead. */
 
@@ -350,13 +356,13 @@
 .isMobile .name {
   font-size: clamp(56px, 17.5vw, 80px);
   letter-spacing: -2px;
-  line-height: 0.92;
+  line-height: 1.05;
   white-space: normal;
 }
 
 .isMobile .tagline {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .isMobile .dot {
@@ -458,8 +464,10 @@
     animation: none !important;
   }
 
-  .wrap,
-  .half {
-    transition-duration: 0s;
+  .stage *,
+  .stage *::before,
+  .stage *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

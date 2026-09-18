@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og"
 
-export const alt = "Zach Oelsner"
+export const alt = "Zach Oelsner — independent builder · strategy, operations & analytics"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -158,6 +158,9 @@ export default async function Image() {
                 display: "flex",
               }}
             />
+          </div>
+          <div style={{ display: "flex", fontSize: 25, color: CREAM, marginTop: 10 }}>
+            independent builder · strategy, operations & analytics
           </div>
         </div>
       </div>

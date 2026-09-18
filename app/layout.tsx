@@ -49,24 +49,24 @@ const paytoneOne = Paytone_One({
 export const metadata: Metadata = {
   metadataBase: new URL("https://zachoelsner.com"),
   title: {
-    default: "Zach Oelsner",
+    default: "Zach Oelsner · Independent builder, strategy & analytics",
     template: "%s · Zach Oelsner",
   },
   description:
-    "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+    "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
   openGraph: {
-    title: "Zach Oelsner",
+    title: "Zach Oelsner · Independent builder, strategy & analytics",
     description:
-      "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+      "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
     url: "https://zachoelsner.com",
     siteName: "Zach Oelsner",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zach Oelsner",
+    title: "Zach Oelsner · Independent builder, strategy & analytics",
     description:
-      "I build software for the daily frictions I can't stop thinking about. Mostly food. Sometimes tools. Based out of the Lower East Side.",
+      "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
   },
 }
 

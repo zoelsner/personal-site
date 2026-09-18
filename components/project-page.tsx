@@ -1,3 +1,4 @@
+import { ContactCard } from "@/components/contact-card"
 import type { CSSProperties, ReactNode } from "react"
 import Link from "next/link"
 
@@ -105,12 +106,7 @@ export function ProjectPage({
           <nav className={styles.nav} aria-label="Primary">
             <Link href="/projects">projects</Link>
             <Link href="/about">about</Link>
-            <a
-              className={`${styles.pill} ${styles.pillNav} ${styles.accent}`}
-              href="mailto:zachoelsner@gmail.com"
-            >
-              say hi
-            </a>
+            <ContactCard className={`${styles.pill} ${styles.pillNav} ${styles.accent}`} />
           </nav>
         </header>
 

@@ -4,16 +4,16 @@ import { ProjectPage } from "@/components/project-page"
 export const metadata: Metadata = {
   title: "Qook",
   description:
-    "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+    "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
   openGraph: {
     title: "Qook · Zach Oelsner",
     description:
-      "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+      "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
   },
   twitter: {
     title: "Qook · Zach Oelsner",
     description:
-      "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
+      "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
   },
 }
 
@@ -106,7 +106,7 @@ function QookPreview() {
       >
         <span style={{ fontSize: 12, fontWeight: 700 }}>Today&apos;s cards</span>
         <span style={{ fontSize: 10, opacity: 0.6 }}>
-          Medium energy · 3 picks
+          A few meal ideas
         </span>
       </div>
 
@@ -158,7 +158,7 @@ function QookPreview() {
         }}
       >
         <span style={{ fontSize: 11, opacity: 0.6 }}>
-          14 ingredients · pre-filled cart
+          14 ingredients · shopping list
         </span>
         <span
           style={{
@@ -173,7 +173,7 @@ function QookPreview() {
             fontWeight: 600,
           }}
         >
-          Checkout with Instacart →
+          View shopping list →
         </span>
       </div>
     </div>
@@ -186,43 +186,46 @@ export default function QookPage() {
       name="Qook"
       accent="#B85A3B"
       accentOn="#fdebcc"
-      kicker={["in progress", "2026", "iOS first"]}
+      kicker={["iOS beta", "2026", "TestFlight"]}
       tagline="meal cards matched to your energy level."
       blurb={
         <>
           Generates meal cards matched to <b>how much cooking you have in
-          you today</b> and pulls the ingredients straight through Instacart.
+          you today</b>, with recipes, a meal plan, and a shopping list.
           Built around watercolor illustrations because the food should look
           like something you actually want to make.
         </>
       }
       think={[
         {
-          title: "Pick your energy",
-          body: "Tell it how much cooking you have in you today. Low, medium, or high. That's the whole filter. No preference grids that go stale.",
+          title: "Start with the problem",
+          body: "Tell it how much cooking you have in you today, from barely lifting a finger to a weekend project. Cooking preferences help shape the suggestions.",
         },
         {
-          title: "Get your cards",
-          body: "AI generates meal cards matched to the tier, illustrated in watercolor so you actually want to look at them. Three picks a day, not a wall of options.",
+          title: "The decision: a hand of five",
+          body: "AI generates meal cards matched to the tier, illustrated in watercolor so you actually want to look at them. A hand of five ideas gives you somewhere to start.",
         },
         {
-          title: "One-tap checkout",
-          body: "All ingredients pre-populated in an Instacart cart. One tap and they're on the way. Charm is in keeping the surface tiny and the loop tight.",
+          title: "Make a plan",
+          body: "Keep a meal, pick a day, and gather its ingredients in a shopping list you can check off, copy, or share. Dinner gets a little less scattered.",
+        },
+        {
+          title: "Try the beta",
+          body: "The iOS beta is available on TestFlight. Open the link on your iPhone, install Apple’s TestFlight app, and try Qook. Still a work in progress — feedback is welcome.",
         },
       ]}
       preview={<QookPreview />}
       stack={[
-        "Next.js",
-        "React",
-        "Claude AI",
-        "Instacart API",
-        "Vercel",
+        "Expo",
+        "React Native",
+        "Supabase",
+        "OpenRouter",
         "Watercolor",
       ]}
       ctas={[
         {
-          label: "get notified →",
-          href: "mailto:zachoelsner@gmail.com?subject=Qook%20waitlist",
+          label: "Try Qook on TestFlight →",
+          href: "https://testflight.apple.com/join/SBG1c5cD",
           external: true,
           accent: true,
         },

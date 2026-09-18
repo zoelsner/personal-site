@@ -1,5 +1,7 @@
 "use client"
 
+import { ContactCard } from "@/components/contact-card"
+
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 
@@ -200,7 +202,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
   // scaled-down canvas leaves an unusable sliver on portrait screens.
   useEffect(() => {
     const fit = () => {
-      const mobile = window.innerWidth < 680
+      const mobile = window.innerWidth < 1000
       setView({
         mobile,
         scale: mobile
@@ -218,8 +220,18 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
   // keeps this effect subscription-only (no synchronous setState).
   useEffect(() => {
     if (scene !== "tele") return
-    const id = setInterval(() => setTheta((t) => t + 0.035), 50)
-    return () => clearInterval(id)
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    let id: ReturnType<typeof setInterval> | undefined
+    const sync = () => {
+      clearInterval(id)
+      if (!motion.matches) id = setInterval(() => setTheta((t) => t + 0.035), 50)
+    }
+    sync()
+    motion.addEventListener("change", sync)
+    return () => {
+      clearInterval(id)
+      motion.removeEventListener("change", sync)
+    }
   }, [scene])
 
   const mobile = view?.mobile ?? false
@@ -297,6 +309,12 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
     }
 
     const tick = (now: number) => {
+      if (!stage.isConnected || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        ball.style.display = "none"
+        dot.style.opacity = "1"
+        busyRef.current = false
+        return
+      }
       const dt = Math.min(32, now - last) / 1000
       last = now
 
@@ -389,9 +407,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               </a>
               <Link href="/projects">projects</Link>
               <Link href="/about">about</Link>
-              <a className={styles.sayhi} href="mailto:zachoelsner@gmail.com">
-                say hi
-              </a>
+              <ContactCard className={styles.sayhi} />
             </nav>
           </header>
 
@@ -475,7 +491,7 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               </span>
             </h1>
             <p className={styles.tagline}>
-              building useful tools for messy everyday problems. often involving food.
+              strategy, operations & analytics by day. building useful tools on my own time, often involving food.
             </p>
           </div>
 
@@ -486,6 +502,9 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               className={styles.chips}
               aria-label="Featured links"
               onMouseLeave={() => setScene("home")}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setScene("home")
+              }}
             >
               {V3_CHIPS.map((c) => (
                 <Link

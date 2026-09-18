@@ -277,7 +277,7 @@ export default function FTPPage() {
         },
         {
           title: "Status",
-          body: "Live since 2025. Playwright reads the real cart on Railway, Claude turns it into three meals, and the chat handles the follow-up questions. There's a staging app if you want to poke around.",
+          body: "Live since 2025. Playwright reads the real cart on Railway, Claude turns it into three meals, and the chat handles the follow-up questions. Try the staging app by creating an account or signing in, or watch the short demo below for a look inside.",
         },
       ]}
       preview={

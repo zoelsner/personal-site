@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="22" fill="#bfdcc6"/>
-  <text x="64" y="92" font-family="Impact, 'Arial Black', 'Helvetica Neue', sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="#1a2a18">z</text>
+  <rect width="128" height="128" rx="22" fill="#1a2540"/>
+  <text x="64" y="92" font-family="Impact, 'Arial Black', 'Helvetica Neue', sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="#fdebcc">z</text>
   <circle cx="100" cy="86" r="7" fill="#d44e2a"/>
 </svg>

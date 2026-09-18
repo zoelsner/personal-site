@@ -47,7 +47,7 @@ export default function SandlotPage() {
         },
         {
           title: "Status",
-          body: "The Railway app reads the latest league state into queue views, then Skipper adds reasoning around player details, waiver swaps, and matchup context. Fantrax remains the system of record.",
+          body: "The Railway app reads the latest league state into queue views, then Skipper adds reasoning around player details, waiver swaps, and matchup context. Fantrax remains the system of record. Explore the screenshots here or the code on GitHub; this page doesn’t offer a public app demo.",
         },
       ]}
       preview={<SandlotPreview />}

@@ -1,3 +1,4 @@
+import { ContactCard } from "@/components/contact-card"
 import type { CSSProperties } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -61,8 +62,8 @@ const projects: Project[] = [
     href: "/projects/qook",
     name: "Qook",
     year: "2026",
-    tag: "Meal cards matched to your energy level. One-tap Instacart checkout. Illustrated in watercolor.",
-    status: "In the kitchen · work in progress",
+    tag: "Meal cards matched to your energy level, with recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
+    status: "iOS beta · try it on TestFlight",
     c: "#B85A3B",
     cTint: "#f5e8de",
   },
@@ -104,9 +105,7 @@ export default function ProjectsPage() {
               projects
             </Link>
             <Link href="/about">about</Link>
-            <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
-              say hi
-            </a>
+            <ContactCard className={shell.pill} />
           </nav>
         </header>
 

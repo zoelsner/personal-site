@@ -290,23 +290,23 @@ export default function SiggyPage() {
         <>
           An email signature builder for people who don&apos;t want to fight
           HTML. <b>Pick a template, fill in your details, paste into Gmail</b>.
-          Done. Renders crisp in every client because the name is rendered as
-          an image. There are dedicated landing pages by profession
+          Done. I render the name as an image to keep its typography
+          consistent when email clients strip styling. There are dedicated landing pages by profession
           (designers, freelancers, and more) that jump straight into a
           matching template. $19 lifetime, no subscriptions.
         </>
       }
       think={[
         {
-          title: "Pick a template",
-          body: "Four layouts: Edge, Bold, Card, Clean. Each renders clean in every email client without fighting Outlook's HTML quirks.",
+          title: "The problem",
+          body: "A polished email signature shouldn’t mean wrestling with HTML. I kept the starting point to four templates, with fonts and colors you can make your own.",
         },
         {
-          title: "Make it yours",
-          body: "Name, title, headshot, links. Choose fonts and colors. The name renders as a crisp Satori-generated image so it looks perfect even when Gmail strips half your CSS.",
+          title: "The decision",
+          body: "Name, title, headshot, links. Choose fonts and colors. The name renders as a crisp Satori-generated image to preserve the chosen typography when Gmail strips CSS.",
         },
         {
-          title: "Paste into Gmail",
+          title: "Status · try it",
           body: 'One click to copy. Paste into Gmail settings. No extensions, no fiddling. The whole transaction is "pay $19, customize, paste, gone."',
         },
       ]}

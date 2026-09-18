@@ -1,3 +1,4 @@
+import { ContactCard } from "@/components/contact-card"
 import type { CSSProperties } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -6,7 +7,7 @@ import shell from "@/components/site-page.module.css"
 import styles from "./page.module.css"
 
 const description =
-  "Zach Oelsner — I build tools to make everyday life easier. By day I consult to a top-5 US card issuer on credit-card remediation."
+  "Zach Oelsner — analytics consulting, shared Chief of Staff responsibilities at Protiviti, and independent tools for everyday problems. Often involving food."
 
 export const metadata: Metadata = {
   title: "About",
@@ -39,9 +40,7 @@ export default function AboutPage() {
             <Link className={shell.on} href="/about">
               about
             </Link>
-            <a className={shell.pill} href="mailto:zachoelsner@gmail.com">
-              say hi
-            </a>
+            <ContactCard className={shell.pill} />
           </nav>
         </header>
 
@@ -101,7 +100,7 @@ export default function AboutPage() {
 
         <section className={styles.prose}>
           <p>
-            My day job means digging into messy systems, checking what the data
+            At Protiviti, my work spans analytics, strategy, and operations: digging into messy systems, checking what the data
             actually says, and working with a team to get a fix through. I bring
             that same curiosity to my own projects, where I choose the problem
             and build the tool. The client work below is about bank remediation;
@@ -139,18 +138,42 @@ export default function AboutPage() {
           <div className={styles.block}>
             <h2 className={shell.sectionH}>
               <span className={shell.dotmark} aria-hidden="true" />
-              building community wherever I work
+              helping the practice work better
             </h2>
             <p>
-              I’m chief of staff to our 70-person advanced analytics group, and
-              I run our office’s training program — 500+ people trained,
-              increasingly on AI.
+              I share the Chief of Staff role for Protiviti’s approximately
+              70-person analytics practice with a colleague. Alongside client
+              work, I help with the day-to-day work of moving practice
+              priorities forward.
             </p>
             <p>
-              I taught our firm’s AI crash course during its national upskilling
+              I proposed and lead our monthly leadership forum, bringing
+              practice leaders together and inviting leaders from other groups
+              to develop partnerships. It’s a chance to connect people working
+              on related problems and figure out where we can work together.
+            </p>
+            <p>
+              I also help advance AI learning and adoption. I run our office’s
+              training program — 500+ people trained, increasingly on AI — and
+              taught our firm’s AI crash course during its national upskilling
               push. My favorite moment is when the epiphany lands: someone who’d
               never touched AI suddenly sees what it can do for their everyday
               work.
+            </p>
+          </div>
+
+          <div className={styles.block}>
+            <h2 className={shell.sectionH}>
+              <span className={shell.dotmark} aria-hidden="true" />
+              after hours, usually in the kitchen
+            </h2>
+            <p>
+              My <Link href="/projects">independent projects</Link> are where I
+              take a problem from “this is annoying” to something I can use.
+              Sometimes that means applying AI to a grocery cart; sometimes it’s
+              a simpler tool. I choose the problem, make the product decisions,
+              and keep refining the result. They’re personal builds, separate
+              from my work at Protiviti.
             </p>
           </div>
         </section>
