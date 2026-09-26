@@ -1,26 +1,11 @@
-import {
-  Geist_Mono,
-  DM_Sans,
-  DM_Serif_Display,
-  Instrument_Serif,
-  Outfit,
-  Paytone_One,
-} from "next/font/google"
+import { DM_Sans, DM_Serif_Display, Outfit, Paytone_One } from "next/font/google"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "./globals.css"
-import { cn } from "@/lib/utils"
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-serif",
-})
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
@@ -29,16 +14,8 @@ const dmSerifDisplay = DM_Serif_Display({
   variable: "--font-display",
 })
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-outfit",
-})
+// Variable font: one file covers every weight used on the site.
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" })
 
 const paytoneOne = Paytone_One({
   weight: "400",
@@ -78,15 +55,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
+      className={[
         "antialiased",
         dmSans.variable,
-        instrumentSerif.variable,
         dmSerifDisplay.variable,
-        geistMono.variable,
         outfit.variable,
         paytoneOne.variable,
-      )}
+      ].join(" ")}
     >
       <body>
         {children}
