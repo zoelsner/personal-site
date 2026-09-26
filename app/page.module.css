@@ -29,7 +29,7 @@
   overflow: hidden;
   background: var(--navy);
   color: var(--cream);
-  font-family: var(--font-dugout-sans), -apple-system, system-ui, sans-serif;
+  font-family: var(--font-outfit), -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
