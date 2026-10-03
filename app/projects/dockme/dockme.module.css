@@ -1,0 +1,264 @@
+.heroActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #146c7c;
+  color: #fdebcc;
+  box-shadow: 3px 3px 0 var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.primaryLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 0 var(--ink);
+}
+
+.primaryLink:active {
+  transform: scale(0.96);
+}
+
+.primaryLink:focus-visible {
+  outline: 3px solid #146c7c;
+  outline-offset: 5px;
+}
+
+.linkNote {
+  color: #536151;
+  font-size: 12px;
+  text-wrap: balance;
+}
+
+.example {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8f7f1;
+  color: #142c32;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.exampleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #e9efeb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wordmark > span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #146c7c;
+  color: #fff;
+}
+
+.sampleLabel,
+.eyebrow,
+.stationLabel {
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.sampleLabel {
+  color: #47605c;
+}
+
+.exampleBody {
+  padding: 22px 18px 18px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #5c716e;
+}
+
+.exampleTitle {
+  margin: 0;
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -1px;
+  text-wrap: balance;
+}
+
+.exampleIntro {
+  margin: 10px 0 20px;
+  color: #4f6665;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.stationCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stationCard {
+  --station-color: #996013;
+  padding: 16px 12px 12px;
+  border-radius: 9px;
+  background: #fffdf8;
+  box-shadow:
+    inset 0 3px 0 #ba7d29,
+    0 1px 4px rgba(0, 0, 0, 0.08);
+  font-variant-numeric: tabular-nums;
+}
+
+.backup {
+  --station-color: #146c7c;
+  background: #edf4f1;
+  box-shadow:
+    inset 0 3px 0 #146c7c,
+    0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.stationLabel {
+  color: var(--station-color);
+}
+
+.stationCard h5 {
+  min-height: 38px;
+  margin: 8px 0 4px;
+  font-size: 15px;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.distance {
+  min-height: 30px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #516764;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  color: var(--station-color);
+}
+
+.stat strong {
+  font-size: 38px;
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.stat strong span {
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.stat > span {
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.riskTrack {
+  height: 5px;
+  margin: 13px 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.riskTrack span {
+  display: block;
+  height: 100%;
+  background: var(--station-color);
+}
+
+.average {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #516764;
+}
+
+.takeaway {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.takeaway > span {
+  color: #146c7c;
+  font-size: 20px;
+}
+
+.caption {
+  padding: 14px 18px;
+  background: #eef0e9;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #51645e;
+}
+
+.caption p {
+  margin: 0;
+}
+
+.caption p + p {
+  margin-top: 6px;
+}
+
+@media (max-width: 380px) {
+  .stationCards {
+    grid-template-columns: 1fr;
+  }
+
+  .stationCard h5,
+  .distance {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryLink,
+  .primaryLink:hover,
+  .primaryLink:active {
+    transition: none;
+    transform: none;
+  }
+}

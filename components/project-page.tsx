@@ -42,6 +42,7 @@ export type ProjectPageProps = {
   kicker: string[]
   tagline: ReactNode
   blurb: ReactNode
+  heroActions?: ReactNode
   think: ProjectThink[]
   preview: ReactNode
   stack: string[]
@@ -80,6 +81,7 @@ export function ProjectPage({
   kicker,
   tagline,
   blurb,
+  heroActions,
   think,
   preview,
   stack,
@@ -131,6 +133,7 @@ export function ProjectPage({
           </h1>
           <h2 className={styles.tagline}>{tagline}</h2>
           <p className={styles.blurb}>{blurb}</p>
+          {heroActions}
         </section>
 
         <div className={styles.halves} aria-hidden="true">
