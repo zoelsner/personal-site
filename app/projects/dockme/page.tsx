@@ -57,21 +57,22 @@ export default function DockMePage() {
         </div>
       }
       thinkHeading="from a frustrating ride to an experiment"
-      peekHeading="what the history can show"
+      peekHeading="when to have a backup"
       think={[
         {
           title: "The problem is at the other end",
           body: "Finding a bike is only half the trip. Arriving at a full station means another detour when you thought you were done.",
         },
         {
-          title: "Compare the nearest dock with a backup",
-          body: "Enter a destination in the web experiment, compare three nearby stations, then select a station to inspect its day-by-day patterns. A short extra walk can be worth investigating when the closest station often runs out of room.",
+          title: "Start with when, then ask where",
+          body: "Pick a day and time in the example. Compare no open docks with almost full, then see what nearby stations offered at those same moments. A better overall average does not tell you whether a backup had room when you needed it.",
         },
         {
           title: "History is evidence, not a promise",
           body: "These are captured observations, not live availability or an arrival-time forecast. Weather, events, and rebalancing can change the pattern. The native app is a separate work in progress; the web link opens the research that came first.",
         },
       ]}
+      previewLayout="full-width"
       preview={<DockMePreview />}
       stack={[
         "Next.js · web",

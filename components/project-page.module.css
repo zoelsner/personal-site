@@ -319,6 +319,29 @@
   background: var(--accent);
 }
 
+.bodyWide {
+  grid-template-columns: 1fr;
+  gap: 42px;
+}
+.bodyWide > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 28px;
+}
+.bodyWide > div:first-child .sectionH {
+  grid-column: 1 / -1;
+}
+.bodyWide .thinkItem,
+.bodyWide .thinkItem:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 18px;
+}
+@media (max-width: 880px) {
+  .bodyWide > div:first-child {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── thinking list ──────────────────────────────────────── */
 .thinkItem {
   padding: 18px 0;

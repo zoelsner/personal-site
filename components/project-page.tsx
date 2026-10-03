@@ -45,6 +45,7 @@ export type ProjectPageProps = {
   heroActions?: ReactNode
   think: ProjectThink[]
   preview: ReactNode
+  previewLayout?: "side-by-side" | "full-width"
   stack: string[]
   ctas: ProjectCTA[]
   halfCircles: ProjectHalfCircle[]
@@ -84,6 +85,7 @@ export function ProjectPage({
   heroActions,
   think,
   preview,
+  previewLayout = "side-by-side",
   stack,
   ctas,
   halfCircles,
@@ -108,7 +110,9 @@ export function ProjectPage({
           <nav className={styles.nav} aria-label="Primary">
             <Link href="/projects">projects</Link>
             <Link href="/about">about</Link>
-            <ContactCard className={`${styles.pill} ${styles.pillNav} ${styles.accent}`} />
+            <ContactCard
+              className={`${styles.pill} ${styles.pillNav} ${styles.accent}`}
+            />
           </nav>
         </header>
 
@@ -152,7 +156,9 @@ export function ProjectPage({
           ))}
         </div>
 
-        <section className={styles.body}>
+        <section
+          className={`${styles.body} ${previewLayout === "full-width" ? styles.bodyWide : ""}`}
+        >
           <div>
             <h3 className={styles.sectionH}>
               <span className={styles.dotmark} aria-hidden="true" />
@@ -160,7 +166,9 @@ export function ProjectPage({
             </h3>
             {think.map((item, i) => (
               <div key={item.title} className={styles.thinkItem}>
-                <div className={styles.num}>{String(i + 1).padStart(2, "0")}</div>
+                <div className={styles.num}>
+                  {String(i + 1).padStart(2, "0")}
+                </div>
                 <div>
                   <div className={styles.itemH}>{item.title}</div>
                   <p className={styles.itemP}>{item.body}</p>

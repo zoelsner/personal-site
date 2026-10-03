@@ -99,7 +99,7 @@
 }
 
 .exampleBody {
-  padding: 22px 18px 18px;
+  padding: 24px;
 }
 
 .eyebrow {
@@ -122,111 +122,275 @@
   line-height: 1.5;
 }
 
-.stationCards {
+.explorerGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.explorerGrid > * {
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .explorerGrid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+/* The time map keeps native form controls and at least 44px tap targets. */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
   gap: 10px;
 }
-
-.stationCard {
-  --station-color: #996013;
-  padding: 16px 12px 12px;
-  border-radius: 9px;
-  background: #fffdf8;
-  box-shadow:
-    inset 0 3px 0 #ba7d29,
-    0 1px 4px rgba(0, 0, 0, 0.08);
-  font-variant-numeric: tabular-nums;
-}
-
-.backup {
-  --station-color: #146c7c;
-  background: #edf4f1;
-  box-shadow:
-    inset 0 3px 0 #146c7c,
-    0 1px 4px rgba(0, 0, 0, 0.08);
-}
-
-.stationLabel {
-  color: var(--station-color);
-}
-
-.stationCard h5 {
-  min-height: 38px;
-  margin: 8px 0 4px;
-  font-size: 15px;
-  line-height: 1.25;
-  text-wrap: balance;
-}
-
-.distance {
-  min-height: 30px;
-  margin: 0;
-  font-size: 10px;
-  line-height: 1.5;
-  color: #516764;
-}
-
-.stat {
+.controls label {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 0;
+}
+.controls select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid #849790;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #142c32;
+  font: inherit;
+  font-size: 12px;
+}
+.timeMap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
   margin-top: 12px;
-  color: var(--station-color);
 }
-
-.stat strong {
-  font-size: 38px;
-  letter-spacing: -1.5px;
+.timeCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-height: 59px;
+  padding: 6px 2px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.timeCell span {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.timeCell b {
+  font-size: 16px;
+}
+.timeCell[data-level="low"] {
+  background: #e3ece6;
+  color: #33594d;
+}
+.timeCell[data-level="medium"] {
+  background: #eed6a7;
+  color: #674613;
+}
+.timeCell[data-level="high"] {
+  background: #884322;
+  color: #fff9ee;
+}
+.timeCell[data-level="sparse"] {
+  background: repeating-linear-gradient(45deg, #eee 0 4px, #fff 4px 8px);
+  color: #495552;
+}
+.timeCell[aria-pressed="true"] {
+  border-color: #142c32;
+  box-shadow:
+    0 0 0 2px #f8f7f1,
+    0 0 0 3px #142c32;
+}
+.timeCell:hover {
+  border-color: #142c32;
+}
+.timeCell:focus-visible,
+.controls select:focus-visible,
+.caption summary:focus-visible {
+  outline: 3px solid #146c7c;
+  outline-offset: 3px;
+}
+.mapNote {
+  margin: 9px 0 22px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #51645e;
+}
+.selectionSummary h5,
+.alternatives > h5 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+}
+.selectionSummary p {
+  margin: 5px 0 12px;
+  font-size: 11px;
+  color: #51645e;
+}
+.primaryStation {
+  padding: 14px 12px;
+  border-radius: 8px;
+  background: #fffdf8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  font-variant-numeric: tabular-nums;
+}
+.stationLabel {
+  margin: 0 0 14px;
+  color: #674613;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.metrics > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.metrics strong {
+  font-size: 32px;
   line-height: 1;
+  letter-spacing: -1px;
+  color: #884322;
 }
-
-.stat strong span {
-  font-size: 20px;
+.metrics strong span {
+  font-size: 18px;
   margin-left: 2px;
 }
-
-.stat > span {
-  margin-top: 5px;
-  font-size: 11px;
-  font-weight: 700;
+.metrics b {
+  font-size: 10px;
 }
-
-.riskTrack {
-  height: 5px;
-  margin: 13px 0;
-  overflow: hidden;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.08);
+.metrics small {
+  font-size: 9px;
+  color: #51645e;
+  line-height: 1.4;
 }
-
-.riskTrack span {
-  display: block;
-  height: 100%;
-  background: var(--station-color);
-}
-
-.average {
-  margin: 0;
-  font-size: 11px;
-  line-height: 1.5;
-  color: #516764;
-}
-
-.takeaway {
+.distribution {
   display: flex;
-  gap: 8px;
-  align-items: baseline;
-  margin: 18px 0 0;
-  font-size: 13px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 14px 0 7px;
+}
+.zero {
+  background: #884322;
+}
+.tight {
+  background: #d5a947;
+}
+.room {
+  background: #78a79a;
+}
+.distributionLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
+.distributionLabels span {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.distributionLabels i {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.returnStatus {
+  font-size: 10px;
   line-height: 1.5;
-  font-weight: 600;
+  margin: 10px 0 0;
+  color: #51645e;
 }
-
-.takeaway > span {
+.alternatives {
+  margin-top: 0;
+}
+.matchExplanation {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 7px 0 12px;
+  color: #4f6665;
+}
+.backupCard {
+  padding: 14px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #edf4f1;
+  box-shadow:
+    inset 3px 0 0 #146c7c,
+    0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.backupCard h6 {
+  font-size: 14px;
+  margin: 0;
+}
+.distance {
+  font-size: 10px;
+  margin: 4px 0 13px;
+  color: #51645e;
+}
+.matchedMetrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.matchedMetrics > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.matchedMetrics strong {
   color: #146c7c;
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
-
+.matchedMetrics strong span {
+  color: #4f6665;
+  font-size: 13px;
+  font-weight: 500;
+}
+.matchedMetrics div > span {
+  font-size: 10px;
+  line-height: 1.4;
+}
+.windowContext {
+  margin: 14px 0 -7px;
+  font-size: 9px;
+  color: #51645e;
+}
+.takeaway,
+.caution {
+  margin: 14px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #e6eee7;
+  font-size: 12px;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.caution {
+  background: #f6e4bf;
+  margin-bottom: 12px;
+}
 .caption {
   padding: 14px 18px;
   background: #eef0e9;
@@ -234,27 +398,58 @@
   line-height: 1.55;
   color: #51645e;
 }
-
 .caption p {
   margin: 0;
 }
-
 .caption p + p {
-  margin-top: 6px;
+  margin-top: 8px;
 }
-
+.caption summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+.caption summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 18px;
+}
+.caption details[open] summary::after {
+  content: "−";
+}
+.caption details a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+}
 @media (max-width: 380px) {
-  .stationCards {
+  .exampleBody {
+    padding: 18px 12px;
+  }
+  .controls {
     grid-template-columns: 1fr;
   }
-
-  .stationCard h5,
-  .distance {
-    min-height: 0;
+  .timeMap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .distributionLabels {
+    font-size: 9px;
+    gap: 3px;
+  }
+  .distributionLabels b {
+    flex-basis: 100%;
+  }
+  .metrics strong {
+    font-size: 28px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .timeCell,
   .primaryLink,
   .primaryLink:hover,
   .primaryLink:active {

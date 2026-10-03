@@ -1,0 +1,3724 @@
+{
+  "sourceSha256": "537a268a8f7c2125484dc1e6dc5d2b6002bbbe9e147301c531c3e1db3635adeb",
+  "endpoint": "https://nyc-subway-map.vercel.app/api/citibike-analysis/data",
+  "reportGeneratedAt": "2026-10-03T09:42:01.458Z",
+  "timeZone": "America/New_York",
+  "primaryId": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+  "firstCapture": "2026-09-12T09:46:47.016Z",
+  "lastCapture": "2026-10-03T09:37:30.664Z",
+  "matchedCaptureCount": 5035,
+  "excludedUnmatchedCaptureCount": 0,
+  "configuredSampleMinutes": 5,
+  "medianCaptureGapMinutes": 6.00495,
+  "maximumCaptureGapMinutes": 8.006666666666666,
+  "maximumSourceAgeMinutes": 4.611983333333334,
+  "minimumWindowCount": 89,
+  "maximumWindowCount": 90,
+  "stations": [
+    {
+      "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+      "name": "Allen St & Stanton St",
+      "straightLineMeters": 0
+    },
+    {
+      "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+      "name": "Rivington St & Chrystie St",
+      "straightLineMeters": 260
+    },
+    {
+      "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+      "name": "Allen St & Rivington St",
+      "straightLineMeters": 219
+    }
+  ],
+  "defaultWindow": "4-18",
+  "overall": {
+    "n": 5035,
+    "dates": [
+      {
+        "date": "2026-09-12",
+        "n": 183,
+        "zero": 51
+      },
+      {
+        "date": "2026-09-13",
+        "n": 239,
+        "zero": 6
+      },
+      {
+        "date": "2026-09-14",
+        "n": 240,
+        "zero": 24
+      },
+      {
+        "date": "2026-09-15",
+        "n": 240,
+        "zero": 40
+      },
+      {
+        "date": "2026-09-16",
+        "n": 240,
+        "zero": 20
+      },
+      {
+        "date": "2026-09-17",
+        "n": 239,
+        "zero": 32
+      },
+      {
+        "date": "2026-09-18",
+        "n": 240,
+        "zero": 13
+      },
+      {
+        "date": "2026-09-19",
+        "n": 240,
+        "zero": 59
+      },
+      {
+        "date": "2026-09-20",
+        "n": 240,
+        "zero": 25
+      },
+      {
+        "date": "2026-09-21",
+        "n": 239,
+        "zero": 67
+      },
+      {
+        "date": "2026-09-22",
+        "n": 240,
+        "zero": 20
+      },
+      {
+        "date": "2026-09-23",
+        "n": 240,
+        "zero": 21
+      },
+      {
+        "date": "2026-09-24",
+        "n": 240,
+        "zero": 46
+      },
+      {
+        "date": "2026-09-25",
+        "n": 240,
+        "zero": 85
+      },
+      {
+        "date": "2026-09-26",
+        "n": 239,
+        "zero": 34
+      },
+      {
+        "date": "2026-09-27",
+        "n": 240,
+        "zero": 0
+      },
+      {
+        "date": "2026-09-28",
+        "n": 240,
+        "zero": 37
+      },
+      {
+        "date": "2026-09-29",
+        "n": 240,
+        "zero": 59
+      },
+      {
+        "date": "2026-09-30",
+        "n": 240,
+        "zero": 46
+      },
+      {
+        "date": "2026-10-01",
+        "n": 239,
+        "zero": 32
+      },
+      {
+        "date": "2026-10-02",
+        "n": 240,
+        "zero": 40
+      },
+      {
+        "date": "2026-10-03",
+        "n": 57,
+        "zero": 5
+      }
+    ],
+    "limited": false,
+    "primaryUnavailable": 818,
+    "allUnavailable": 40,
+    "anyBackupRoom": 451,
+    "stations": [
+      {
+        "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+        "zero": 762,
+        "oneTwo": 1013,
+        "threePlus": 3260,
+        "returnsDisabled": 71,
+        "unavailable": 818,
+        "baselineWarning": 1819,
+        "matchedOnePlus": 0,
+        "matchedThreePlus": 0
+      },
+      {
+        "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+        "zero": 619,
+        "oneTwo": 669,
+        "threePlus": 3747,
+        "returnsDisabled": 0,
+        "unavailable": 619,
+        "baselineWarning": 1288,
+        "matchedOnePlus": 566,
+        "matchedThreePlus": 338
+      },
+      {
+        "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+        "zero": 138,
+        "oneTwo": 989,
+        "threePlus": 3908,
+        "returnsDisabled": 4,
+        "unavailable": 142,
+        "baselineWarning": 1128,
+        "matchedOnePlus": 752,
+        "matchedThreePlus": 333
+      }
+    ]
+  },
+  "windows": [
+    {
+      "key": "0-0",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 22
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 22,
+      "allUnavailable": 0,
+      "anyBackupRoom": 22,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 22,
+          "oneTwo": 38,
+          "threePlus": 30,
+          "returnsDisabled": 0,
+          "unavailable": 22,
+          "baselineWarning": 60,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 22,
+          "matchedThreePlus": 22
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 20,
+          "threePlus": 70,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 20,
+          "matchedOnePlus": 22,
+          "matchedThreePlus": 4
+        }
+      ]
+    },
+    {
+      "key": "0-3",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 14
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 14,
+      "allUnavailable": 0,
+      "anyBackupRoom": 14,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 14,
+          "oneTwo": 44,
+          "threePlus": 32,
+          "returnsDisabled": 0,
+          "unavailable": 14,
+          "baselineWarning": 58,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 27,
+          "threePlus": 63,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 27,
+          "matchedOnePlus": 14,
+          "matchedThreePlus": 14
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 2,
+          "threePlus": 88,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 2,
+          "matchedOnePlus": 14,
+          "matchedThreePlus": 12
+        }
+      ]
+    },
+    {
+      "key": "0-6",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 5
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 3
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 9,
+      "allUnavailable": 0,
+      "anyBackupRoom": 9,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 8,
+          "oneTwo": 13,
+          "threePlus": 69,
+          "returnsDisabled": 1,
+          "unavailable": 9,
+          "baselineWarning": 22,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 3,
+          "oneTwo": 6,
+          "threePlus": 81,
+          "returnsDisabled": 0,
+          "unavailable": 3,
+          "baselineWarning": 9,
+          "matchedOnePlus": 8,
+          "matchedThreePlus": 6
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 9
+        }
+      ]
+    },
+    {
+      "key": "0-9",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 2,
+          "threePlus": 88,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 3,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "0-12",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 3
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 9,
+      "allUnavailable": 0,
+      "anyBackupRoom": 9,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 7,
+          "oneTwo": 23,
+          "threePlus": 60,
+          "returnsDisabled": 2,
+          "unavailable": 9,
+          "baselineWarning": 32,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 9
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 9
+        }
+      ]
+    },
+    {
+      "key": "0-15",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 15,
+      "n": 89,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-21",
+          "n": 29,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 8,
+      "allUnavailable": 0,
+      "anyBackupRoom": 8,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 8,
+          "oneTwo": 22,
+          "threePlus": 59,
+          "returnsDisabled": 1,
+          "unavailable": 8,
+          "baselineWarning": 30,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 88,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 8,
+          "matchedThreePlus": 8
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 88,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 8,
+          "matchedThreePlus": 7
+        }
+      ]
+    },
+    {
+      "key": "0-18",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 12
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 12
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 18
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 42,
+      "allUnavailable": 1,
+      "anyBackupRoom": 23,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 42,
+          "oneTwo": 21,
+          "threePlus": 27,
+          "returnsDisabled": 2,
+          "unavailable": 42,
+          "baselineWarning": 63,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 23,
+          "oneTwo": 30,
+          "threePlus": 37,
+          "returnsDisabled": 0,
+          "unavailable": 23,
+          "baselineWarning": 53,
+          "matchedOnePlus": 30,
+          "matchedThreePlus": 14
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 5,
+          "oneTwo": 52,
+          "threePlus": 33,
+          "returnsDisabled": 0,
+          "unavailable": 5,
+          "baselineWarning": 57,
+          "matchedOnePlus": 39,
+          "matchedThreePlus": 16
+        }
+      ]
+    },
+    {
+      "key": "0-21",
+      "day": "Mon",
+      "dayIndex": 0,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-14",
+          "n": 30,
+          "zero": 5
+        },
+        {
+          "date": "2026-09-21",
+          "n": 30,
+          "zero": 6
+        },
+        {
+          "date": "2026-09-28",
+          "n": 30,
+          "zero": 16
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 30,
+      "allUnavailable": 1,
+      "anyBackupRoom": 17,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 27,
+          "oneTwo": 37,
+          "threePlus": 26,
+          "returnsDisabled": 3,
+          "unavailable": 30,
+          "baselineWarning": 64,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 2,
+          "oneTwo": 26,
+          "threePlus": 62,
+          "returnsDisabled": 0,
+          "unavailable": 2,
+          "baselineWarning": 28,
+          "matchedOnePlus": 28,
+          "matchedThreePlus": 11
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 14,
+          "oneTwo": 38,
+          "threePlus": 38,
+          "returnsDisabled": 0,
+          "unavailable": 14,
+          "baselineWarning": 52,
+          "matchedOnePlus": 26,
+          "matchedThreePlus": 11
+        }
+      ]
+    },
+    {
+      "key": "1-0",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 7
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 19
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 27,
+      "allUnavailable": 0,
+      "anyBackupRoom": 16,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 26,
+          "oneTwo": 40,
+          "threePlus": 24,
+          "returnsDisabled": 2,
+          "unavailable": 27,
+          "baselineWarning": 66,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 20,
+          "threePlus": 70,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 20,
+          "matchedOnePlus": 27,
+          "matchedThreePlus": 15
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 28,
+          "threePlus": 61,
+          "returnsDisabled": 0,
+          "unavailable": 1,
+          "baselineWarning": 29,
+          "matchedOnePlus": 26,
+          "matchedThreePlus": 8
+        }
+      ]
+    },
+    {
+      "key": "1-3",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 22
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 23,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 23,
+          "oneTwo": 57,
+          "threePlus": 10,
+          "returnsDisabled": 0,
+          "unavailable": 23,
+          "baselineWarning": 80,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 30,
+          "threePlus": 60,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 30,
+          "matchedOnePlus": 23,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 23,
+          "threePlus": 67,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 23,
+          "matchedOnePlus": 23,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "1-6",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 2,
+          "oneTwo": 23,
+          "threePlus": 65,
+          "returnsDisabled": 0,
+          "unavailable": 2,
+          "baselineWarning": 25,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 20,
+          "threePlus": 69,
+          "returnsDisabled": 0,
+          "unavailable": 1,
+          "baselineWarning": 21,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 5,
+          "threePlus": 85,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 5,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "1-9",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 2,
+          "unavailable": 2,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 7,
+          "threePlus": 83,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 7,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "1-12",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 2,
+          "unavailable": 2,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "1-15",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "1-18",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 12
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 15
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 10
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 37,
+      "allUnavailable": 1,
+      "anyBackupRoom": 25,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 37,
+          "oneTwo": 34,
+          "threePlus": 19,
+          "returnsDisabled": 0,
+          "unavailable": 37,
+          "baselineWarning": 71,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 13,
+          "oneTwo": 19,
+          "threePlus": 58,
+          "returnsDisabled": 0,
+          "unavailable": 13,
+          "baselineWarning": 32,
+          "matchedOnePlus": 30,
+          "matchedThreePlus": 23
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 6,
+          "oneTwo": 44,
+          "threePlus": 40,
+          "returnsDisabled": 0,
+          "unavailable": 6,
+          "baselineWarning": 50,
+          "matchedOnePlus": 32,
+          "matchedThreePlus": 10
+        }
+      ]
+    },
+    {
+      "key": "1-21",
+      "day": "Tue",
+      "dayIndex": 1,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-15",
+          "n": 30,
+          "zero": 19
+        },
+        {
+          "date": "2026-09-22",
+          "n": 30,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-29",
+          "n": 30,
+          "zero": 8
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 32,
+      "allUnavailable": 0,
+      "anyBackupRoom": 23,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 31,
+          "oneTwo": 33,
+          "threePlus": 26,
+          "returnsDisabled": 3,
+          "unavailable": 32,
+          "baselineWarning": 64,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 16,
+          "oneTwo": 22,
+          "threePlus": 52,
+          "returnsDisabled": 0,
+          "unavailable": 16,
+          "baselineWarning": 38,
+          "matchedOnePlus": 27,
+          "matchedThreePlus": 18
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 3,
+          "oneTwo": 37,
+          "threePlus": 50,
+          "returnsDisabled": 0,
+          "unavailable": 3,
+          "baselineWarning": 40,
+          "matchedOnePlus": 31,
+          "matchedThreePlus": 14
+        }
+      ]
+    },
+    {
+      "key": "2-0",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 9
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 16
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 26,
+      "allUnavailable": 0,
+      "anyBackupRoom": 23,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 25,
+          "oneTwo": 18,
+          "threePlus": 47,
+          "returnsDisabled": 4,
+          "unavailable": 26,
+          "baselineWarning": 43,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 12,
+          "oneTwo": 12,
+          "threePlus": 66,
+          "returnsDisabled": 0,
+          "unavailable": 12,
+          "baselineWarning": 24,
+          "matchedOnePlus": 19,
+          "matchedThreePlus": 13
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 11,
+          "threePlus": 79,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 11,
+          "matchedOnePlus": 26,
+          "matchedThreePlus": 23
+        }
+      ]
+    },
+    {
+      "key": "2-3",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 0,
+      "allUnavailable": 0,
+      "anyBackupRoom": 0,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 27,
+          "threePlus": 63,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 27,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 25,
+          "threePlus": 65,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 25,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "2-6",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 1
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 11,
+          "threePlus": 78,
+          "returnsDisabled": 1,
+          "unavailable": 2,
+          "baselineWarning": 13,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 5,
+          "oneTwo": 7,
+          "threePlus": 78,
+          "returnsDisabled": 0,
+          "unavailable": 5,
+          "baselineWarning": 12,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 3,
+          "threePlus": 87,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 3,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "2-9",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 3,
+      "allUnavailable": 0,
+      "anyBackupRoom": 3,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 3,
+          "unavailable": 3,
+          "baselineWarning": 3,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        }
+      ]
+    },
+    {
+      "key": "2-12",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 3,
+      "allUnavailable": 0,
+      "anyBackupRoom": 3,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 3,
+          "unavailable": 3,
+          "baselineWarning": 3,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        }
+      ]
+    },
+    {
+      "key": "2-15",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 1
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 6,
+      "allUnavailable": 0,
+      "anyBackupRoom": 6,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 2,
+          "oneTwo": 2,
+          "threePlus": 86,
+          "returnsDisabled": 4,
+          "unavailable": 6,
+          "baselineWarning": 7,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 3,
+          "oneTwo": 0,
+          "threePlus": 87,
+          "returnsDisabled": 0,
+          "unavailable": 3,
+          "baselineWarning": 3,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 6
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 5
+        }
+      ]
+    },
+    {
+      "key": "2-18",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 10
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 15
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 14
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 41,
+      "allUnavailable": 6,
+      "anyBackupRoom": 27,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 39,
+          "oneTwo": 29,
+          "threePlus": 22,
+          "returnsDisabled": 2,
+          "unavailable": 41,
+          "baselineWarning": 70,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 26,
+          "oneTwo": 28,
+          "threePlus": 36,
+          "returnsDisabled": 0,
+          "unavailable": 26,
+          "baselineWarning": 54,
+          "matchedOnePlus": 28,
+          "matchedThreePlus": 15
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 13,
+          "oneTwo": 22,
+          "threePlus": 55,
+          "returnsDisabled": 0,
+          "unavailable": 13,
+          "baselineWarning": 35,
+          "matchedOnePlus": 33,
+          "matchedThreePlus": 23
+        }
+      ]
+    },
+    {
+      "key": "2-21",
+      "day": "Wed",
+      "dayIndex": 2,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-16",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-23",
+          "n": 30,
+          "zero": 5
+        },
+        {
+          "date": "2026-09-30",
+          "n": 30,
+          "zero": 14
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 21,
+      "allUnavailable": 1,
+      "anyBackupRoom": 15,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 20,
+          "oneTwo": 18,
+          "threePlus": 52,
+          "returnsDisabled": 2,
+          "unavailable": 21,
+          "baselineWarning": 39,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 2,
+          "oneTwo": 7,
+          "threePlus": 81,
+          "returnsDisabled": 0,
+          "unavailable": 2,
+          "baselineWarning": 9,
+          "matchedOnePlus": 19,
+          "matchedThreePlus": 12
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 5,
+          "oneTwo": 13,
+          "threePlus": 72,
+          "returnsDisabled": 0,
+          "unavailable": 5,
+          "baselineWarning": 18,
+          "matchedOnePlus": 20,
+          "matchedThreePlus": 12
+        }
+      ]
+    },
+    {
+      "key": "3-0",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 7
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 9,
+      "allUnavailable": 0,
+      "anyBackupRoom": 9,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 7,
+          "oneTwo": 29,
+          "threePlus": 54,
+          "returnsDisabled": 2,
+          "unavailable": 9,
+          "baselineWarning": 38,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 9
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 15,
+          "oneTwo": 15,
+          "threePlus": 60,
+          "returnsDisabled": 0,
+          "unavailable": 15,
+          "baselineWarning": 30,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 9
+        }
+      ]
+    },
+    {
+      "key": "3-3",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 16
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 16,
+      "allUnavailable": 0,
+      "anyBackupRoom": 16,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 16,
+          "oneTwo": 44,
+          "threePlus": 30,
+          "returnsDisabled": 0,
+          "unavailable": 16,
+          "baselineWarning": 60,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 16,
+          "matchedThreePlus": 16
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 16,
+          "matchedThreePlus": 16
+        }
+      ]
+    },
+    {
+      "key": "3-6",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 9,
+          "threePlus": 81,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 10,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 4,
+          "oneTwo": 5,
+          "threePlus": 81,
+          "returnsDisabled": 0,
+          "unavailable": 4,
+          "baselineWarning": 9,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "3-9",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 3,
+          "threePlus": 87,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 4,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "3-12",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 12,
+      "n": 89,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 29,
+          "zero": 10
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 13,
+      "allUnavailable": 0,
+      "anyBackupRoom": 13,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 10,
+          "oneTwo": 13,
+          "threePlus": 66,
+          "returnsDisabled": 3,
+          "unavailable": 13,
+          "baselineWarning": 26,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 13,
+          "matchedThreePlus": 13
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 13,
+          "matchedThreePlus": 13
+        }
+      ]
+    },
+    {
+      "key": "3-15",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 5
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 1
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 6,
+      "allUnavailable": 0,
+      "anyBackupRoom": 6,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 6,
+          "oneTwo": 12,
+          "threePlus": 72,
+          "returnsDisabled": 0,
+          "unavailable": 6,
+          "baselineWarning": 18,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 6
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 8,
+          "threePlus": 82,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 8,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 4
+        }
+      ]
+    },
+    {
+      "key": "3-18",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 13
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 14
+        },
+        {
+          "date": "2026-10-01",
+          "n": 30,
+          "zero": 15
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 42,
+      "allUnavailable": 3,
+      "anyBackupRoom": 14,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 42,
+          "oneTwo": 36,
+          "threePlus": 12,
+          "returnsDisabled": 0,
+          "unavailable": 42,
+          "baselineWarning": 78,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 41,
+          "oneTwo": 19,
+          "threePlus": 30,
+          "returnsDisabled": 0,
+          "unavailable": 41,
+          "baselineWarning": 60,
+          "matchedOnePlus": 23,
+          "matchedThreePlus": 12
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 15,
+          "oneTwo": 58,
+          "threePlus": 17,
+          "returnsDisabled": 0,
+          "unavailable": 15,
+          "baselineWarning": 73,
+          "matchedOnePlus": 35,
+          "matchedThreePlus": 5
+        }
+      ]
+    },
+    {
+      "key": "3-21",
+      "day": "Thu",
+      "dayIndex": 3,
+      "startHour": 21,
+      "n": 89,
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "n": 30,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-24",
+          "n": 30,
+          "zero": 9
+        },
+        {
+          "date": "2026-10-01",
+          "n": 29,
+          "zero": 16
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 29,
+      "allUnavailable": 2,
+      "anyBackupRoom": 13,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 29,
+          "oneTwo": 34,
+          "threePlus": 26,
+          "returnsDisabled": 0,
+          "unavailable": 29,
+          "baselineWarning": 63,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 17,
+          "oneTwo": 27,
+          "threePlus": 45,
+          "returnsDisabled": 0,
+          "unavailable": 17,
+          "baselineWarning": 44,
+          "matchedOnePlus": 17,
+          "matchedThreePlus": 6
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 9,
+          "oneTwo": 29,
+          "threePlus": 51,
+          "returnsDisabled": 0,
+          "unavailable": 9,
+          "baselineWarning": 38,
+          "matchedOnePlus": 26,
+          "matchedThreePlus": 11
+        }
+      ]
+    },
+    {
+      "key": "4-0",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 9
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 4
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 14,
+      "allUnavailable": 0,
+      "anyBackupRoom": 14,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 13,
+          "oneTwo": 22,
+          "threePlus": 55,
+          "returnsDisabled": 1,
+          "unavailable": 14,
+          "baselineWarning": 35,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 14,
+          "matchedThreePlus": 14
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 4,
+          "oneTwo": 23,
+          "threePlus": 63,
+          "returnsDisabled": 0,
+          "unavailable": 4,
+          "baselineWarning": 27,
+          "matchedOnePlus": 13,
+          "matchedThreePlus": 5
+        }
+      ]
+    },
+    {
+      "key": "4-3",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 0,
+      "allUnavailable": 0,
+      "anyBackupRoom": 0,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 9,
+          "threePlus": 81,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 9,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 8,
+          "threePlus": 82,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 8,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "4-6",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 7,
+          "threePlus": 82,
+          "returnsDisabled": 1,
+          "unavailable": 2,
+          "baselineWarning": 9,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "4-9",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 11,
+          "threePlus": 78,
+          "returnsDisabled": 1,
+          "unavailable": 2,
+          "baselineWarning": 12,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 7,
+          "oneTwo": 11,
+          "threePlus": 72,
+          "returnsDisabled": 0,
+          "unavailable": 7,
+          "baselineWarning": 18,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "4-12",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 9
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 10,
+      "allUnavailable": 0,
+      "anyBackupRoom": 10,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 9,
+          "oneTwo": 17,
+          "threePlus": 64,
+          "returnsDisabled": 1,
+          "unavailable": 10,
+          "baselineWarning": 26,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 20,
+          "oneTwo": 13,
+          "threePlus": 57,
+          "returnsDisabled": 0,
+          "unavailable": 20,
+          "baselineWarning": 33,
+          "matchedOnePlus": 7,
+          "matchedThreePlus": 3
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 10,
+          "matchedThreePlus": 10
+        }
+      ]
+    },
+    {
+      "key": "4-15",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 3
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 18
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 2
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 23,
+      "allUnavailable": 8,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 23,
+          "oneTwo": 18,
+          "threePlus": 49,
+          "returnsDisabled": 0,
+          "unavailable": 23,
+          "baselineWarning": 41,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 36,
+          "oneTwo": 29,
+          "threePlus": 25,
+          "returnsDisabled": 0,
+          "unavailable": 36,
+          "baselineWarning": 65,
+          "matchedOnePlus": 9,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 14,
+          "oneTwo": 24,
+          "threePlus": 52,
+          "returnsDisabled": 0,
+          "unavailable": 14,
+          "baselineWarning": 38,
+          "matchedOnePlus": 13,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "4-18",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 8
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 27
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 18
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 53,
+      "allUnavailable": 13,
+      "anyBackupRoom": 8,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 53,
+          "oneTwo": 34,
+          "threePlus": 3,
+          "returnsDisabled": 3,
+          "unavailable": 53,
+          "baselineWarning": 87,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 58,
+          "oneTwo": 26,
+          "threePlus": 6,
+          "returnsDisabled": 0,
+          "unavailable": 58,
+          "baselineWarning": 84,
+          "matchedOnePlus": 19,
+          "matchedThreePlus": 4
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 23,
+          "oneTwo": 60,
+          "threePlus": 7,
+          "returnsDisabled": 0,
+          "unavailable": 23,
+          "baselineWarning": 83,
+          "matchedOnePlus": 37,
+          "matchedThreePlus": 4
+        }
+      ]
+    },
+    {
+      "key": "4-21",
+      "day": "Fri",
+      "dayIndex": 4,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-18",
+          "n": 30,
+          "zero": 2
+        },
+        {
+          "date": "2026-09-25",
+          "n": 30,
+          "zero": 20
+        },
+        {
+          "date": "2026-10-02",
+          "n": 30,
+          "zero": 16
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 38,
+      "allUnavailable": 2,
+      "anyBackupRoom": 6,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 38,
+          "oneTwo": 43,
+          "threePlus": 9,
+          "returnsDisabled": 0,
+          "unavailable": 38,
+          "baselineWarning": 81,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 55,
+          "oneTwo": 26,
+          "threePlus": 9,
+          "returnsDisabled": 0,
+          "unavailable": 55,
+          "baselineWarning": 81,
+          "matchedOnePlus": 14,
+          "matchedThreePlus": 3
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 3,
+          "oneTwo": 79,
+          "threePlus": 8,
+          "returnsDisabled": 0,
+          "unavailable": 3,
+          "baselineWarning": 82,
+          "matchedOnePlus": 36,
+          "matchedThreePlus": 4
+        }
+      ]
+    },
+    {
+      "key": "5-0",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-10-03",
+          "n": 30,
+          "zero": 5
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 6,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 6,
+          "oneTwo": 12,
+          "threePlus": 72,
+          "returnsDisabled": 0,
+          "unavailable": 6,
+          "baselineWarning": 18,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 23,
+          "oneTwo": 24,
+          "threePlus": 43,
+          "returnsDisabled": 0,
+          "unavailable": 23,
+          "baselineWarning": 47,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 2,
+          "oneTwo": 30,
+          "threePlus": 58,
+          "returnsDisabled": 2,
+          "unavailable": 4,
+          "baselineWarning": 32,
+          "matchedOnePlus": 5,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "5-3",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 3,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-10-03",
+          "n": 27,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 0,
+      "allUnavailable": 0,
+      "anyBackupRoom": 0,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 11,
+          "oneTwo": 16,
+          "threePlus": 63,
+          "returnsDisabled": 0,
+          "unavailable": 11,
+          "baselineWarning": 27,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "5-6",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 6,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 1,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "5-9",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 0,
+      "allUnavailable": 0,
+      "anyBackupRoom": 0,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 10,
+          "oneTwo": 7,
+          "threePlus": 73,
+          "returnsDisabled": 0,
+          "unavailable": 10,
+          "baselineWarning": 17,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 2,
+          "threePlus": 88,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "5-12",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 10
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 4
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 14,
+      "allUnavailable": 0,
+      "anyBackupRoom": 4,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 14,
+          "oneTwo": 20,
+          "threePlus": 56,
+          "returnsDisabled": 0,
+          "unavailable": 14,
+          "baselineWarning": 34,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 38,
+          "oneTwo": 22,
+          "threePlus": 30,
+          "returnsDisabled": 0,
+          "unavailable": 38,
+          "baselineWarning": 60,
+          "matchedOnePlus": 5,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 28,
+          "threePlus": 61,
+          "returnsDisabled": 0,
+          "unavailable": 1,
+          "baselineWarning": 29,
+          "matchedOnePlus": 14,
+          "matchedThreePlus": 4
+        }
+      ]
+    },
+    {
+      "key": "5-15",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 17
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 20
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 7
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 44,
+      "allUnavailable": 2,
+      "anyBackupRoom": 16,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 44,
+          "oneTwo": 24,
+          "threePlus": 22,
+          "returnsDisabled": 0,
+          "unavailable": 44,
+          "baselineWarning": 68,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 47,
+          "oneTwo": 31,
+          "threePlus": 12,
+          "returnsDisabled": 0,
+          "unavailable": 47,
+          "baselineWarning": 78,
+          "matchedOnePlus": 18,
+          "matchedThreePlus": 5
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 5,
+          "oneTwo": 57,
+          "threePlus": 28,
+          "returnsDisabled": 0,
+          "unavailable": 5,
+          "baselineWarning": 62,
+          "matchedOnePlus": 41,
+          "matchedThreePlus": 13
+        }
+      ]
+    },
+    {
+      "key": "5-18",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 18,
+      "n": 89,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 12
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 18
+        },
+        {
+          "date": "2026-09-26",
+          "n": 29,
+          "zero": 13
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 43,
+      "allUnavailable": 0,
+      "anyBackupRoom": 9,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 43,
+          "oneTwo": 36,
+          "threePlus": 10,
+          "returnsDisabled": 0,
+          "unavailable": 43,
+          "baselineWarning": 79,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 51,
+          "oneTwo": 34,
+          "threePlus": 4,
+          "returnsDisabled": 0,
+          "unavailable": 51,
+          "baselineWarning": 85,
+          "matchedOnePlus": 12,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 71,
+          "threePlus": 18,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 71,
+          "matchedOnePlus": 43,
+          "matchedThreePlus": 7
+        }
+      ]
+    },
+    {
+      "key": "5-21",
+      "day": "Sat",
+      "dayIndex": 5,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-12",
+          "n": 30,
+          "zero": 12
+        },
+        {
+          "date": "2026-09-19",
+          "n": 30,
+          "zero": 17
+        },
+        {
+          "date": "2026-09-26",
+          "n": 30,
+          "zero": 13
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 42,
+      "allUnavailable": 0,
+      "anyBackupRoom": 8,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 42,
+          "oneTwo": 46,
+          "threePlus": 2,
+          "returnsDisabled": 1,
+          "unavailable": 42,
+          "baselineWarning": 88,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 41,
+          "oneTwo": 41,
+          "threePlus": 8,
+          "returnsDisabled": 0,
+          "unavailable": 41,
+          "baselineWarning": 82,
+          "matchedOnePlus": 22,
+          "matchedThreePlus": 4
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 78,
+          "threePlus": 12,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 78,
+          "matchedOnePlus": 42,
+          "matchedThreePlus": 5
+        }
+      ]
+    },
+    {
+      "key": "6-0",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 0,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 3
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 2
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 6,
+      "allUnavailable": 0,
+      "anyBackupRoom": 5,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 5,
+          "oneTwo": 8,
+          "threePlus": 77,
+          "returnsDisabled": 1,
+          "unavailable": 6,
+          "baselineWarning": 14,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 3,
+          "oneTwo": 21,
+          "threePlus": 66,
+          "returnsDisabled": 0,
+          "unavailable": 3,
+          "baselineWarning": 24,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 5
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 42,
+          "threePlus": 48,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 43,
+          "matchedOnePlus": 6,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "6-3",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 3,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 2,
+          "unavailable": 2,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 1,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 1,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "6-6",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 6,
+      "n": 89,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 29,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 0,
+      "allUnavailable": 0,
+      "anyBackupRoom": 0,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 89,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        }
+      ]
+    },
+    {
+      "key": "6-9",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 9,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 3,
+      "allUnavailable": 0,
+      "anyBackupRoom": 3,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 3,
+          "unavailable": 3,
+          "baselineWarning": 3,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 0,
+          "matchedOnePlus": 3,
+          "matchedThreePlus": 3
+        }
+      ]
+    },
+    {
+      "key": "6-12",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 12,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 1,
+      "allUnavailable": 0,
+      "anyBackupRoom": 1,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 1,
+          "unavailable": 1,
+          "baselineWarning": 1,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 1,
+          "oneTwo": 2,
+          "threePlus": 87,
+          "returnsDisabled": 0,
+          "unavailable": 1,
+          "baselineWarning": 3,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 9,
+          "threePlus": 81,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 9,
+          "matchedOnePlus": 1,
+          "matchedThreePlus": 1
+        }
+      ]
+    },
+    {
+      "key": "6-15",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 15,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 0
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 2,
+      "allUnavailable": 0,
+      "anyBackupRoom": 2,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 0,
+          "threePlus": 90,
+          "returnsDisabled": 2,
+          "unavailable": 2,
+          "baselineWarning": 2,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 24,
+          "oneTwo": 14,
+          "threePlus": 52,
+          "returnsDisabled": 0,
+          "unavailable": 24,
+          "baselineWarning": 38,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 17,
+          "threePlus": 73,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 17,
+          "matchedOnePlus": 2,
+          "matchedThreePlus": 2
+        }
+      ]
+    },
+    {
+      "key": "6-18",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 18,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 2
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 17
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 24,
+      "allUnavailable": 0,
+      "anyBackupRoom": 20,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 19,
+          "oneTwo": 10,
+          "threePlus": 61,
+          "returnsDisabled": 5,
+          "unavailable": 24,
+          "baselineWarning": 33,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 26,
+          "oneTwo": 31,
+          "threePlus": 33,
+          "returnsDisabled": 0,
+          "unavailable": 26,
+          "baselineWarning": 57,
+          "matchedOnePlus": 19,
+          "matchedThreePlus": 12
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 17,
+          "threePlus": 73,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 17,
+          "matchedOnePlus": 24,
+          "matchedThreePlus": 17
+        }
+      ]
+    },
+    {
+      "key": "6-21",
+      "day": "Sun",
+      "dayIndex": 6,
+      "startHour": 21,
+      "n": 90,
+      "dates": [
+        {
+          "date": "2026-09-13",
+          "n": 30,
+          "zero": 1
+        },
+        {
+          "date": "2026-09-20",
+          "n": 30,
+          "zero": 6
+        },
+        {
+          "date": "2026-09-27",
+          "n": 30,
+          "zero": 0
+        }
+      ],
+      "limited": false,
+      "primaryUnavailable": 8,
+      "allUnavailable": 0,
+      "anyBackupRoom": 8,
+      "stations": [
+        {
+          "id": "66db72f1-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 7,
+          "oneTwo": 23,
+          "threePlus": 60,
+          "returnsDisabled": 2,
+          "unavailable": 8,
+          "baselineWarning": 30,
+          "matchedOnePlus": 0,
+          "matchedThreePlus": 0
+        },
+        {
+          "id": "66dc3ab9-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 6,
+          "threePlus": 84,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 6,
+          "matchedOnePlus": 8,
+          "matchedThreePlus": 8
+        },
+        {
+          "id": "66dbf062-0aca-11e7-82f6-3863bb44ef7c",
+          "zero": 0,
+          "oneTwo": 7,
+          "threePlus": 83,
+          "returnsDisabled": 0,
+          "unavailable": 0,
+          "baselineWarning": 7,
+          "matchedOnePlus": 8,
+          "matchedThreePlus": 7
+        }
+      ]
+    }
+  ]
+}
