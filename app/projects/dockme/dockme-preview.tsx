@@ -215,7 +215,7 @@ export function DockMePreview() {
                   </strong>
                   <b>No open docks</b>
                   <small>
-                    {primary.zero} / {selected.n} checks
+                    {primary.zero} of {selected.n} total checks
                   </small>
                 </div>
                 <div>
@@ -231,7 +231,7 @@ export function DockMePreview() {
               <p className={styles.returnStatus}>
                 Returns paused:{" "}
                 <b>
-                  {primary.returnsDisabled} / {selected.n} checks
+                  {primary.returnsDisabled} of {selected.n} checks
                 </b>
                 . Separate status; may overlap the dock counts above.
               </p>
@@ -245,8 +245,14 @@ export function DockMePreview() {
             <p className={styles.matchExplanation}>
               {selected.primaryUnavailable > 0 ? (
                 <>
-                  At the <b>same {selected.primaryUnavailable} moments</b> the
-                  destination had no docks or paused returns:
+                  During <b>{windowLabel}</b>, Allen &amp; Stanton was
+                  unavailable for returns in{" "}
+                  <b>
+                    {selected.primaryUnavailable} of {selected.n} checks
+                  </b>
+                  . Unavailable means zero open docks or paused returns. The
+                  backup percentages below use only those{" "}
+                  {selected.primaryUnavailable} checks.
                 </>
               ) : (
                 <>
@@ -272,20 +278,41 @@ export function DockMePreview() {
                   </p>
                   {selected.primaryUnavailable > 0 && (
                     <div className={styles.matchedMetrics}>
-                      <div>
+                      <p className={styles.conditionalLabel}>
+                        When the destination was unavailable for returns:
+                      </p>
+                      <p className={styles.conditionalFinding}>
                         <strong>
-                          {counts.matchedOnePlus}
-                          <span> / {selected.primaryUnavailable}</span>
+                          {Math.round(
+                            (counts.matchedOnePlus /
+                              selected.primaryUnavailable) *
+                              100
+                          )}
+                          %
                         </strong>
-                        <span>1+ dock &amp; accepting returns</span>
-                      </div>
-                      <div>
-                        <strong>
-                          {counts.matchedThreePlus}
-                          <span> / {selected.primaryUnavailable}</span>
-                        </strong>
-                        <span>3+ docks &amp; accepting returns</span>
-                      </div>
+                        <span>of those checks had space here</span>
+                      </p>
+                      <p className={styles.countDetail}>
+                        {counts.matchedOnePlus} of {selected.primaryUnavailable}{" "}
+                        destination-unavailable checks: at least one open dock
+                        and accepting returns.
+                      </p>
+                      <p className={styles.marginDetail}>
+                        <b>
+                          {Math.round(
+                            (counts.matchedThreePlus /
+                              selected.primaryUnavailable) *
+                              100
+                          )}
+                          %
+                        </b>{" "}
+                        had 3+ open docks and accepted returns{" "}
+                        <span>
+                          ({counts.matchedThreePlus} of the same{" "}
+                          {selected.primaryUnavailable} checks)
+                        </span>
+                        .
+                      </p>
                     </div>
                   )}
                   <p className={styles.windowContext}>
@@ -293,7 +320,7 @@ export function DockMePreview() {
                   </p>
                   <DockDistribution counts={counts} n={selected.n} />
                   <p className={styles.returnStatus}>
-                    Returns paused: {counts.returnsDisabled} / {selected.n}{" "}
+                    Returns paused: {counts.returnsDisabled} of {selected.n}{" "}
                     checks
                   </p>
                 </article>
@@ -304,9 +331,18 @@ export function DockMePreview() {
                 {best.matchedOnePlus > 0 ? (
                   <>
                     Check <b>{stationName(best.id)}</b> live first. It offered a
-                    return in {best.matchedOnePlus} of the{" "}
-                    {selected.primaryUnavailable} blocked-destination checks;
-                    only {best.matchedThreePlus} had three or more docks.
+                    return in{" "}
+                    {Math.round(
+                      (best.matchedOnePlus / selected.primaryUnavailable) * 100
+                    )}
+                    % of checks when the destination was unavailable. It had
+                    three or more docks in{" "}
+                    {Math.round(
+                      (best.matchedThreePlus / selected.primaryUnavailable) *
+                        100
+                    )}
+                    % of those same checks. Check current availability before
+                    riding.
                   </>
                 ) : (
                   <>
@@ -372,6 +408,11 @@ export function DockMePreview() {
             overlap any category. A backup offers a return only when it has at
             least one dock and accepts returns; three or more indicates
             additional room, not a guarantee.
+          </p>
+          <p>
+            Backup percentages are rounded to whole percentages and use only the
+            destination-unavailable checks, not every check in the time window.
+            Exact counts are shown beside each result.
           </p>
           <p>
             The older dashboard combines 0–2 docks OR paused returns in one

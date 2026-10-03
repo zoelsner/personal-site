@@ -348,29 +348,53 @@
   color: #51645e;
 }
 .matchedMetrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.matchedMetrics > div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.matchedMetrics strong {
-  color: #146c7c;
-  font-size: 25px;
-  line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-.matchedMetrics strong span {
+.conditionalLabel {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 1.5;
   color: #4f6665;
-  font-size: 13px;
-  font-weight: 500;
 }
-.matchedMetrics div > span {
-  font-size: 10px;
+.conditionalFinding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+.conditionalFinding strong {
+  flex-shrink: 0;
+  color: #146c7c;
+  font-size: 38px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.conditionalFinding span {
+  max-width: 160px;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1.4;
+  text-wrap: pretty;
+}
+.countDetail {
+  margin: 9px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4f6665;
+}
+.marginDetail {
+  margin: 11px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4f6665;
+}
+.marginDetail b {
+  color: #146c7c;
+}
+.marginDetail span {
+  white-space: normal;
 }
 .windowContext {
   margin: 14px 0 -7px;

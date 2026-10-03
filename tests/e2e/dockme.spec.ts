@@ -32,10 +32,23 @@ for (const width of [320, 390, 1280]) {
     ).toContainText("96.7%")
     await expect(
       page.getByRole("region", { name: "Destination station" })
-    ).toContainText("Returns paused: 3 / 90 checks")
+    ).toContainText("Returns paused: 3 of 90 checks")
     await expect(
       page.getByRole("article", { name: "Allen St & Rivington St" })
-    ).toContainText("37 / 53")
+    ).toContainText("37 of 53 destination-unavailable checks")
+    await expect(
+      page.getByRole("article", { name: "Allen St & Rivington St" })
+    ).toContainText("70%")
+    await expect(
+      page.getByRole("article", { name: "Allen St & Rivington St" })
+    ).toContainText("of those checks had space here")
+    await expect(
+      page.getByRole("region", { name: "Where else could I dock?" })
+    ).toContainText("53 of 90 checks")
+    await expect(
+      page.getByRole("region", { name: "Where else could I dock?" })
+    ).toContainText("Unavailable means zero open docks or paused returns")
+    await expect(page.locator("figure")).not.toContainText(/\d+ \/ \d+/)
     await expect(
       page.getByRole("article", { name: "Allen St & Rivington St" })
     ).toContainText("219 m straight-line")
@@ -73,10 +86,10 @@ test("time windows update matched alternatives and expose the coverage behind a 
   ).toBeVisible()
   await expect(
     page.getByRole("article", { name: "Allen St & Rivington St" })
-  ).toContainText("43 / 43")
+  ).toContainText("43 of 43 destination-unavailable checks")
   await expect(
     page.getByRole("article", { name: "Allen St & Rivington St" })
-  ).toContainText("7 / 43")
+  ).toContainText("7 of the same 43 checks")
   await expect(
     page.getByRole("region", { name: "Destination station" })
   ).toContainText("48.3%")
@@ -104,6 +117,28 @@ test("time windows update matched alternatives and expose the coverage behind a 
   await expect(
     page.getByRole("button", { name: /^Saturday, 6–9 am,/ })
   ).toHaveAttribute("aria-pressed", "true")
+})
+
+test("the backup denominator includes paused returns even when docks are open", async ({
+  page,
+}) => {
+  await page.goto("/projects/dockme")
+  await page.getByLabel("Day of week").selectOption("2")
+  await expect(
+    page.getByRole("heading", { name: "Wednesday · 6–9 pm" })
+  ).toBeVisible()
+  await expect(
+    page.getByRole("region", { name: "Destination station" })
+  ).toContainText("39 of 90 total checks")
+  await expect(
+    page.getByRole("region", { name: "Where else could I dock?" })
+  ).toContainText("41 of 90 checks")
+  await expect(
+    page.getByRole("article", { name: "Allen St & Rivington St" })
+  ).toContainText("33 of 41 destination-unavailable checks")
+  await expect(
+    page.getByRole("article", { name: "Allen St & Rivington St" })
+  ).toContainText("80%")
 })
 
 test("all 56 windows have valid categories, matched denominators and visible coverage", async ({
