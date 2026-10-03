@@ -24,6 +24,15 @@ for (const width of [320, 390, 1280]) {
     await expect(page.locator("figcaption")).toContainText(
       "does not describe availability now"
     )
+    await expect(
+      page.getByText("of checks had limited docking", { exact: true })
+    ).toHaveCount(2)
+    await expect(page.locator("figcaption")).toContainText(
+      "0–2 open docks, or the station wasn’t accepting returns"
+    )
+    await expect(page.locator("figcaption")).toContainText(
+      "Each percentage describes that station alone"
+    )
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth - innerWidth

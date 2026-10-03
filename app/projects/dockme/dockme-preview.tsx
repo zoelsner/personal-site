@@ -33,12 +33,11 @@ export function DockMePreview() {
       <div className={styles.exampleBody}>
         <p className={styles.eyebrow}>Allen &amp; Stanton · Lower East Side</p>
         <h4 id="dock-example-title" className={styles.exampleTitle}>
-          Same destination.
-          <br />
-          Different margin.
+          When a backup matters.
         </h4>
         <p className={styles.exampleIntro}>
-          The nearest station wasn’t always the one with room.
+          Very little room at the destination can turn the last block into
+          another detour.
         </p>
         <div className={styles.stationCards}>
           {stations.map((station) => (
@@ -54,7 +53,7 @@ export function DockMePreview() {
                   {station.risk}
                   <span>%</span>
                 </strong>
-                <span>2-dock risk</span>
+                <span>of checks had limited docking</span>
               </div>
               <div className={styles.riskTrack} aria-hidden="true">
                 <span style={{ width: `${station.risk}%` }} />
@@ -66,18 +65,23 @@ export function DockMePreview() {
           ))}
         </div>
         <p className={styles.takeaway}>
-          <span aria-hidden="true">↳</span> A backup only 150 m away had more
-          return room in this sample.
+          <span aria-hidden="true">↳</span> The backup 150 m away had limited
+          docking less often in this sample. Check current availability at both
+          before riding.
         </p>
       </div>
       <figcaption className={styles.caption}>
         <p>
-          <b>1,277 snapshots per station</b> · report generated June 8, 2026.
+          <b>1,277 snapshots per station</b> · report generated June 8, 2026
+          (UTC). Capture date range not supplied.
         </p>
         <p>
-          “2-dock risk” is the share of observations with two or fewer open
-          docks, or returns unavailable. This example does not describe
-          availability now.
+          Limited docking means 0–2 open docks, or the station wasn’t accepting
+          returns. One or two open docks may still let you return a bike.
+        </p>
+        <p>
+          Each percentage describes that station alone, not both stations being
+          unavailable together. This example does not describe availability now.
         </p>
       </figcaption>
     </figure>
