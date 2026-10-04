@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { ProjectPage } from "@/components/project-page"
+import { DockMeAppDemo } from "./dockme-app-demo"
 import { DockMePreview } from "./dockme-preview"
 import styles from "./dockme.module.css"
 
@@ -54,6 +55,9 @@ export default function DockMePage() {
           <span className={styles.linkNote}>
             Historical patterns · opens the web experiment
           </span>
+          <a className={styles.demoJump} href="#native-app-demo">
+            watch the app demo <span aria-hidden="true">↓</span>
+          </a>
         </div>
       }
       thinkHeading="from a frustrating ride to an experiment"
@@ -73,6 +77,7 @@ export default function DockMePage() {
         },
       ]}
       previewLayout="full-width"
+      beforePreview={<DockMeAppDemo />}
       preview={<DockMePreview />}
       stack={[
         "Next.js · web",

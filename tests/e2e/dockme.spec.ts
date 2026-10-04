@@ -18,12 +18,16 @@ for (const width of [320, 390, 1280]) {
     await expect(
       page.getByText("Historical example", { exact: true })
     ).toBeVisible()
-    await expect(page.locator("figcaption")).toContainText(
-      "September 12–October 3, 2026"
-    )
-    await expect(page.locator("figcaption")).toContainText(
-      "Historical frequency, not a prediction for your arrival"
-    )
+    await expect(
+      page
+        .getByRole("figure", { name: "Plan the last block." })
+        .locator("figcaption")
+    ).toContainText("September 12–October 3, 2026")
+    await expect(
+      page
+        .getByRole("figure", { name: "Plan the last block." })
+        .locator("figcaption")
+    ).toContainText("Historical frequency, not a prediction for your arrival")
     await expect(
       page.getByRole("region", { name: "Destination station" })
     ).toContainText("58.9%")
@@ -48,12 +52,45 @@ for (const width of [320, 390, 1280]) {
     await expect(
       page.getByRole("region", { name: "Where else could I dock?" })
     ).toContainText("Unavailable means zero open docks or paused returns")
-    await expect(page.locator("figure")).not.toContainText(/\d+ \/ \d+/)
+    await expect(
+      page.getByRole("figure", { name: "Plan the last block." })
+    ).not.toContainText(/\d+ \/ \d+/)
     await expect(
       page.getByRole("article", { name: "Allen St & Rivington St" })
     ).toContainText("219 m straight-line")
     await expect(page.getByText(/All three were unable/)).toContainText(
       "13 of 90"
+    )
+    const nativeDemo = page.getByRole("region", { name: "Inside the app." })
+    await expect(
+      nativeDemo.getByText("iOS app · in development", { exact: true })
+    ).toBeVisible()
+    await expect(
+      nativeDemo.getByText(
+        "DockMe native app demo · synthetic dock/trip data · manual arrival.",
+        { exact: true }
+      )
+    ).toBeVisible()
+    const video = nativeDemo.locator("video")
+    await expect(video).toHaveAttribute("controls", "")
+    await expect(video).toHaveAttribute("playsinline", "")
+    await expect(video).not.toHaveAttribute("autoplay")
+    await expect(video).not.toHaveAttribute("loop")
+    for (const image of await nativeDemo.getByRole("img").all()) {
+      await image.scrollIntoViewIfNeeded()
+      await expect
+        .poll(() =>
+          image.evaluate((node) => (node as HTMLImageElement).naturalWidth)
+        )
+        .toBeGreaterThan(0)
+    }
+    await expect(
+      nativeDemo.getByRole("link", {
+        name: "Open full-size screenshot: A separate finish capture",
+      })
+    ).toHaveAttribute("href", "/projects/dockme/native/summary.png")
+    await expect(nativeDemo).toContainText(
+      "The recording ends at the arrival and finish controls"
     )
     expect(
       await page.evaluate(
@@ -101,13 +138,21 @@ test("time windows update matched alternatives and expose the coverage behind a 
     })
   ).toHaveAttribute("aria-pressed", "true")
   await page.getByText("Coverage, dates & definitions", { exact: true }).click()
-  await expect(page.locator("figcaption")).toContainText(
-    "Sep 26 (29 checks; 13 with zero docks"
-  )
-  await expect(page.locator("figcaption")).toContainText(
-    "not independent trips"
-  )
-  await expect(page.locator("figcaption")).toContainText(
+  await expect(
+    page
+      .getByRole("figure", { name: "Plan the last block." })
+      .locator("figcaption")
+  ).toContainText("Sep 26 (29 checks; 13 with zero docks")
+  await expect(
+    page
+      .getByRole("figure", { name: "Plan the last block." })
+      .locator("figcaption")
+  ).toContainText("not independent trips")
+  await expect(
+    page
+      .getByRole("figure", { name: "Plan the last block." })
+      .locator("figcaption")
+  ).toContainText(
     "walking routes and extra walking time have not been verified"
   )
   await page.getByRole("button", { name: /^Saturday, 6–9 am,/ }).click()
@@ -156,8 +201,12 @@ test("all 56 windows have valid categories, matched denominators and visible cov
       await expect(page.getByText(/matched checks across/)).toContainText(
         /8[9]|90/
       )
-      await expect(page.locator("figure")).not.toContainText("NaN")
-      await expect(page.locator("figure")).not.toContainText("undefined")
+      await expect(
+        page.getByRole("figure", { name: "Plan the last block." })
+      ).not.toContainText("NaN")
+      await expect(
+        page.getByRole("figure", { name: "Plan the last block." })
+      ).not.toContainText("undefined")
     }
   }
 })
@@ -181,4 +230,49 @@ test("DockMe retains visible keyboard controls and respects reduced motion", asy
   await expect(
     page.getByRole("heading", { name: "Friday · 6–9 am" })
   ).toBeVisible()
+})
+
+test("native recording plays and pauses through keyboard controls without autoplay", async ({
+  page,
+}) => {
+  await page.goto("/projects/dockme")
+  const video = page
+    .getByRole("region", { name: "Inside the app." })
+    .locator("video")
+  await video.scrollIntoViewIfNeeded()
+  await expect
+    .poll(() => video.evaluate((node) => (node as HTMLVideoElement).readyState))
+    .toBeGreaterThanOrEqual(1)
+  const metadata = await video.evaluate((node) => {
+    const v = node as HTMLVideoElement
+    return {
+      duration: v.duration,
+      width: v.videoWidth,
+      height: v.videoHeight,
+      paused: v.paused,
+      currentTime: v.currentTime,
+    }
+  })
+  expect(metadata.duration).toBeGreaterThan(28)
+  expect(metadata.duration).toBeLessThan(31)
+  expect(metadata.width).toBe(444)
+  expect(metadata.height).toBe(960)
+  expect(metadata.paused).toBe(true)
+  expect(metadata.currentTime).toBe(0)
+  await page.emulateMedia({ reducedMotion: "reduce" })
+  expect(
+    await video.evaluate((node) => (node as HTMLVideoElement).paused)
+  ).toBe(true)
+  await video.focus()
+  await expect(video).toHaveCSS("outline-style", "solid")
+  await page.keyboard.press("Space")
+  await expect
+    .poll(() =>
+      video.evaluate((node) => (node as HTMLVideoElement).currentTime)
+    )
+    .toBeGreaterThan(0.1)
+  await page.keyboard.press("Space")
+  await expect
+    .poll(() => video.evaluate((node) => (node as HTMLVideoElement).paused))
+    .toBe(true)
 })

@@ -45,6 +45,7 @@ export type ProjectPageProps = {
   heroActions?: ReactNode
   think: ProjectThink[]
   preview: ReactNode
+  beforePreview?: ReactNode
   previewLayout?: "side-by-side" | "full-width"
   stack: string[]
   ctas: ProjectCTA[]
@@ -85,6 +86,7 @@ export function ProjectPage({
   heroActions,
   think,
   preview,
+  beforePreview,
   previewLayout = "side-by-side",
   stack,
   ctas,
@@ -177,6 +179,7 @@ export function ProjectPage({
             ))}
           </div>
 
+          {beforePreview}
           <div>
             <h3 className={styles.sectionH}>
               <span className={styles.dotmark} aria-hidden="true" />
