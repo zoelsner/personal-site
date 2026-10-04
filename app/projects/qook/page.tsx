@@ -63,6 +63,8 @@ function QookWalkthrough() {
         Native iPhone simulator captures · synthetic demo meals.
         <br />
         Current development build; the TestFlight beta may differ.
+        <br />
+        Tap a screen to enlarge.
       </p>
       <ol className={styles.screens}>
         {screens.map((screen, index) => (
