@@ -1,0 +1,101 @@
+.heroActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 26px;
+}
+.betaLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #b85a3b;
+  color: #fff8ed;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: background-color 120ms ease, scale 120ms ease;
+}
+.betaLink:hover { background: #9e472d; }
+.betaLink:active { scale: 0.96; }
+.flowLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+.betaNote {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.walkthrough { scroll-margin-top: 24px; padding: 10px; }
+.demoNote {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.screens {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.captureLink { display: block; border-radius: 22px; }
+.capture {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.screenTitle {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 20px 0 8px;
+  text-wrap: balance;
+}
+.screenTitle span {
+  display: block;
+  color: #9e472d;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 8px;
+}
+.screenBody {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  text-wrap: pretty;
+}
+.betaLink:focus-visible, .flowLink:focus-visible, .captureLink:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 5px;
+}
+@media (max-width: 1000px) {
+  .screens { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 20px; }
+}
+@media (max-width: 600px) {
+  .walkthrough { padding: 6px 2px; }
+  .screens { grid-template-columns: minmax(0, 260px); justify-content: center; gap: 36px; }
+  .screenTitle { font-size: 17px; }
+  .screenBody { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .betaLink { transition: none; }
+  .betaLink:active { scale: none; }
+}

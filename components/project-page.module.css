@@ -323,12 +323,12 @@
   grid-template-columns: 1fr;
   gap: 42px;
 }
-.bodyWide > div:first-child {
+.bodyWide > .thinking {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0 28px;
 }
-.bodyWide > div:first-child .sectionH {
+.bodyWide > .thinking .sectionH {
   grid-column: 1 / -1;
 }
 .bodyWide .thinkItem,
@@ -337,7 +337,7 @@
   padding-top: 18px;
 }
 @media (max-width: 880px) {
-  .bodyWide > div:first-child {
+  .bodyWide > .thinking {
     grid-template-columns: 1fr;
   }
 }

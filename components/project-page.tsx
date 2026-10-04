@@ -47,6 +47,7 @@ export type ProjectPageProps = {
   preview: ReactNode
   beforePreview?: ReactNode
   previewLayout?: "side-by-side" | "full-width"
+  previewFirst?: boolean
   stack: string[]
   ctas: ProjectCTA[]
   halfCircles: ProjectHalfCircle[]
@@ -88,6 +89,7 @@ export function ProjectPage({
   preview,
   beforePreview,
   previewLayout = "side-by-side",
+  previewFirst = false,
   stack,
   ctas,
   halfCircles,
@@ -101,6 +103,33 @@ export function ProjectPage({
     "--accent-on": accentOn,
     ...(ink ? { "--ink": ink } : {}),
   } as CSSProperties
+
+  const thinkingContent = (
+    <div className={styles.thinking}>
+      <h3 className={styles.sectionH}>
+        <span className={styles.dotmark} aria-hidden="true" />
+        {thinkHeading}
+      </h3>
+      {think.map((item, i) => (
+        <div key={item.title} className={styles.thinkItem}>
+          <div className={styles.num}>{String(i + 1).padStart(2, "0")}</div>
+          <div>
+            <div className={styles.itemH}>{item.title}</div>
+            <p className={styles.itemP}>{item.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+  const previewContent = (
+    <div className={styles.preview}>
+      <h3 className={styles.sectionH}>
+        <span className={styles.dotmark} aria-hidden="true" />
+        {peekHeading}
+      </h3>
+      <div className={styles.peekCard}>{preview}</div>
+    </div>
+  )
 
   return (
     <main className={styles.stage} style={stageStyle}>
@@ -161,32 +190,19 @@ export function ProjectPage({
         <section
           className={`${styles.body} ${previewLayout === "full-width" ? styles.bodyWide : ""}`}
         >
-          <div>
-            <h3 className={styles.sectionH}>
-              <span className={styles.dotmark} aria-hidden="true" />
-              {thinkHeading}
-            </h3>
-            {think.map((item, i) => (
-              <div key={item.title} className={styles.thinkItem}>
-                <div className={styles.num}>
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <div>
-                  <div className={styles.itemH}>{item.title}</div>
-                  <p className={styles.itemP}>{item.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {beforePreview}
-          <div>
-            <h3 className={styles.sectionH}>
-              <span className={styles.dotmark} aria-hidden="true" />
-              {peekHeading}
-            </h3>
-            <div className={styles.peekCard}>{preview}</div>
-          </div>
+          {previewFirst ? (
+            <>
+              {beforePreview}
+              {previewContent}
+              {thinkingContent}
+            </>
+          ) : (
+            <>
+              {thinkingContent}
+              {beforePreview}
+              {previewContent}
+            </>
+          )}
         </section>
 
         <section className={styles.footer}>

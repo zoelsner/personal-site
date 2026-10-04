@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import Image from "next/image"
+import styles from "./qook.module.css"
 import { ProjectPage } from "@/components/project-page"
 
 export const metadata: Metadata = {
@@ -17,166 +19,79 @@ export const metadata: Metadata = {
   },
 }
 
-const meals = [
-  { name: "Butternut Soup", time: "25 min", color: "#C07A5A" },
-  { name: "Miso Cod", time: "20 min", color: "#5A7A8C" },
-  { name: "Grain Bowl", time: "15 min", color: "#8A9A5A" },
+const screens = [
+  {
+    file: "energy",
+    title: "Choose your energy",
+    body: "A quick dinner or a kitchen project? Start with what you have in you.",
+    alt: "Qook energy picker with 15, 30, 45 and 60-plus minute choices; 30-minute after-work selected.",
+  },
+  {
+    file: "cards",
+    title: "A hand of five",
+    body: "Swipe through five ideas, one at a time. Keep what looks good; toss the rest.",
+    alt: "First of five Qook dinner cards: a watercolor Steak and Eggs Rice Bowl with Toss, Keep and Cook this tonight actions.",
+  },
+  {
+    file: "recipe",
+    title: "Open the recipe",
+    body: "Check the ingredients and method, and adjust how many you’re cooking for.",
+    alt: "Steak and Eggs Rice Bowl recipe with watercolor artwork, estimated time, two servings and ingredient-list controls.",
+  },
+  {
+    file: "plan",
+    title: "Give it a night",
+    body: "Make it tonight’s dinner or place your keeps on the nights you’ll cook.",
+    alt: "Qook weekly plan with Steak and Eggs Rice Bowl selected for tonight and time choices for upcoming days.",
+  },
+  {
+    file: "shop",
+    title: "Gather the ingredients",
+    body: "The plan becomes a shopping list you can check off, copy or share.",
+    alt: "Qook shopping list with ten ingredients for one recipe, grouped into produce, protein, dairy and pantry.",
+  },
 ]
 
-function QookPreview() {
+function QookWalkthrough() {
   return (
-    <div
-      style={{
-        fontFamily: "var(--font-outfit), sans-serif",
-        background: "#fff",
-        borderRadius: 10,
-        overflow: "hidden",
-        border: "1px solid rgba(0,0,0,0.10)",
-      }}
+    <section
+      id="qook-walkthrough"
+      aria-label="Qook iPhone walkthrough"
+      className={styles.walkthrough}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "10px 14px",
-          borderBottom: "1px solid rgba(0,0,0,0.08)",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            fontSize: 13,
-            fontWeight: 600,
-          }}
-        >
-          <div
-            style={{
-              width: 22,
-              height: 22,
-              borderRadius: 6,
-              background: "#B85A3B",
-            }}
-          />
-          <span>Qook</span>
-        </div>
-        <div style={{ display: "flex", gap: 6, fontSize: 10, fontWeight: 600 }}>
-          <span
-            style={{
-              padding: "3px 8px",
-              borderRadius: 999,
-              border: "1px solid rgba(0,0,0,0.10)",
-              opacity: 0.6,
-            }}
-          >
-            Low
-          </span>
-          <span
-            style={{
-              padding: "3px 8px",
-              borderRadius: 999,
-              background: "#B85A3B",
-              color: "#fff",
-            }}
-          >
-            Medium
-          </span>
-          <span
-            style={{
-              padding: "3px 8px",
-              borderRadius: 999,
-              border: "1px solid rgba(0,0,0,0.10)",
-              opacity: 0.6,
-            }}
-          >
-            High
-          </span>
-        </div>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "14px 14px 6px",
-        }}
-      >
-        <span style={{ fontSize: 12, fontWeight: 700 }}>Today&apos;s cards</span>
-        <span style={{ fontSize: 10, opacity: 0.6 }}>
-          A few meal ideas
-        </span>
-      </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: 10,
-          padding: "0 14px 12px",
-        }}
-      >
-        {meals.map((meal) => (
-          <div
-            key={meal.name}
-            style={{
-              overflow: "hidden",
-              borderRadius: 8,
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#FAFAF5",
-            }}
-          >
-            <div
-              style={{
-                position: "relative",
-                height: 72,
-                background: `radial-gradient(ellipse at 40% 55%, ${meal.color}99, ${meal.color}33 55%, transparent 85%), radial-gradient(circle at 72% 28%, ${meal.color}66, transparent 45%), radial-gradient(circle at 20% 75%, ${meal.color}44, transparent 35%)`,
-              }}
-            />
-            <div style={{ padding: 8 }}>
-              <div style={{ fontSize: 11, fontWeight: 600, lineHeight: 1.2 }}>
-                {meal.name}
-              </div>
-              <div style={{ fontSize: 10, opacity: 0.6, marginTop: 2 }}>
-                {meal.time}
-              </div>
-            </div>
-          </div>
+      <p className={styles.demoNote}>
+        Native iPhone simulator captures · synthetic demo meals.
+        <br />
+        Current development build; the TestFlight beta may differ.
+      </p>
+      <ol className={styles.screens}>
+        {screens.map((screen, index) => (
+          <li key={screen.file}>
+            <a
+              className={styles.captureLink}
+              href={`/projects/qook/native/${screen.file}.jpg`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open full screenshot: ${screen.title} (new tab)`}
+            >
+              <Image
+                className={styles.capture}
+                src={`/projects/qook/native/${screen.file}.jpg`}
+                width={368}
+                height={800}
+                sizes="(max-width: 600px) 260px, (max-width: 1000px) 30vw, 200px"
+                alt={screen.alt}
+              />
+            </a>
+            <h4 className={styles.screenTitle}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {screen.title}
+            </h4>
+            <p className={styles.screenBody}>{screen.body}</p>
+          </li>
         ))}
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "10px 14px",
-          background: "#FAFAF5",
-          borderTop: "1px solid rgba(0,0,0,0.08)",
-        }}
-      >
-        <span style={{ fontSize: 11, opacity: 0.6 }}>
-          14 ingredients · shopping list
-        </span>
-        <span
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            padding: "5px 12px",
-            borderRadius: 999,
-            background: "#003D29",
-            color: "#fff",
-            fontSize: 11,
-            fontWeight: 600,
-          }}
-        >
-          View shopping list →
-        </span>
-      </div>
-    </div>
+      </ol>
+    </section>
   )
 }
 
@@ -190,38 +105,49 @@ export default function QookPage() {
       tagline="meal cards matched to your energy level."
       blurb={
         <>
-          Generates meal cards matched to <b>how much cooking you have in
-          you today</b>, with recipes, a meal plan, and a shopping list.
-          Built around watercolor illustrations because the food should look
-          like something you actually want to make.
+          Generates meal cards matched to{" "}
+          <b>how much cooking you have in you today</b>, with recipes, a meal
+          plan, and a shopping list. Built around watercolor illustrations
+          because the food should look like something you actually want to make.
         </>
+      }
+      heroActions={
+        <div className={styles.heroActions}>
+          <a
+            className={styles.betaLink}
+            href="https://testflight.apple.com/join/SBG1c5cD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Try Qook on TestFlight →
+          </a>
+          <a className={styles.flowLink} href="#qook-walkthrough">
+            See how dinner comes together ↓
+          </a>
+          <p className={styles.betaNote}>
+            iOS beta · Open on your iPhone with Apple’s TestFlight app.
+          </p>
+        </div>
       }
       think={[
         {
-          title: "Start with the problem",
-          body: "Tell it how much cooking you have in you today, from barely lifting a finger to a weekend project. Cooking preferences help shape the suggestions.",
+          title: "A small decision to start with",
+          body: "Dinner starts with how much cooking I have in me, not a search box. Energy comes first; preferences and whatever’s in the fridge can narrow the ideas from there.",
         },
         {
-          title: "The decision: a hand of five",
-          body: "AI generates meal cards matched to the tier, illustrated in watercolor so you actually want to look at them. A hand of five ideas gives you somewhere to start.",
+          title: "Five ideas, then dinner",
+          body: "I chose a hand of five instead of an endless feed. There’s a stopping point: keep a few, give them a night, and move on. Watercolor makes the choosing part feel like looking at a menu.",
         },
         {
-          title: "Make a plan",
-          body: "Keep a meal, pick a day, and gather its ingredients in a shopping list you can check off, copy, or share. Dinner gets a little less scattered.",
-        },
-        {
-          title: "Try the beta",
-          body: "The iOS beta is available on TestFlight. Open the link on your iPhone, install Apple’s TestFlight app, and try Qook. Still a work in progress — feedback is welcome.",
+          title: "Test the whole trip to the grocery list",
+          body: "In testing, I changed a recipe to three servings, but Tonight and the shopping list still used two. The fix keeps portions with the chosen day. I now check that the recipe, plan and groceries agree after details finish loading and after reopening the app.",
         },
       ]}
-      preview={<QookPreview />}
-      stack={[
-        "Expo",
-        "React Native",
-        "Supabase",
-        "OpenRouter",
-        "Watercolor",
-      ]}
+      preview={<QookWalkthrough />}
+      previewLayout="full-width"
+      previewFirst
+      peekHeading="from energy to dinner"
+      stack={["Expo", "React Native", "Supabase", "OpenRouter", "Watercolor"]}
       ctas={[
         {
           label: "Try Qook on TestFlight →",
