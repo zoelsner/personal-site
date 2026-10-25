@@ -41,13 +41,13 @@ const projects: Project[] = [
     cTint: "#e8efe6",
   },
   {
-    href: "/projects/sandlot",
-    name: "Sandlot",
+    href: "/projects/qook",
+    name: "Qook",
     year: "2026",
-    tag: "Helps me not suck at fantasy baseball. Daily audit, Sunday brief, sources cited.",
-    status: "Shipped · runs daily",
-    c: "#b25a3c",
-    cTint: "#f3e6dd",
+    tag: "Meal cards matched to your energy level, with recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
+    status: "iOS beta · try it on TestFlight",
+    c: "#B85A3B",
+    cTint: "#f5e8de",
   },
   {
     href: "/projects/dockme",
@@ -59,13 +59,13 @@ const projects: Project[] = [
     cTint: "#e5f0ef",
   },
   {
-    href: "/projects/qook",
-    name: "Qook",
+    href: "/projects/sandlot",
+    name: "Sandlot",
     year: "2026",
-    tag: "Meal cards matched to your energy level, with recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
-    status: "iOS beta · try it on TestFlight",
-    c: "#B85A3B",
-    cTint: "#f5e8de",
+    tag: "Helps me not suck at fantasy baseball. Daily audit, Sunday brief, sources cited.",
+    status: "Shipped · runs daily",
+    c: "#b25a3c",
+    cTint: "#f3e6dd",
   },
   {
     href: "/projects/siggy",
@@ -119,9 +119,7 @@ export default function ProjectsPage() {
           <div className={shell.kicker}>
             <span>selected projects</span>
             <span className={shell.sep}>·</span>
-            <span>
-              {String(projects.length).padStart(2, "0")} projects
-            </span>
+            <span>{String(projects.length).padStart(2, "0")} projects</span>
           </div>
           <h1 className={shell.title}>
             projects<span className={shell.dot}>.</span>
@@ -165,10 +163,7 @@ export default function ProjectsPage() {
           />
         </div>
 
-        <section
-          className={styles.list}
-          aria-labelledby="work-list-heading"
-        >
+        <section className={styles.list} aria-labelledby="work-list-heading">
           <h2 id="work-list-heading" className={styles.srOnly}>
             Selected projects
           </h2>
@@ -246,6 +241,14 @@ export default function ProjectsPage() {
               rel="noopener noreferrer"
             >
               tiktok
+            </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://x.com/zachoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              x
             </a>
           </div>
           <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>

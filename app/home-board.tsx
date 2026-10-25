@@ -19,7 +19,7 @@ const V3 = {
 }
 
 type Half = { cx: number; cy: number; w: number; rot: number; bg: string }
-type SceneKey = "home" | "ftp" | "sandlot" | "dockme" | "siggy" | "tele"
+type SceneKey = "home" | "ftp" | "qook" | "sandlot" | "dockme" | "siggy" | "tele"
 
 const vH = (cx: number, cy: number, w: number, rot: number, bg: string): Half => ({
   cx,
@@ -111,6 +111,23 @@ const V3_SCENES: Record<SceneKey, Scene> = {
       vH(1105, 140, 110, 0, V3.gold), // sun
     ],
   },
+  qook: {
+    kicker: "meal cards matched to your energy",
+    acc: V3.tomato,
+    halves: [
+      // the Qook bowl: a deep cream bowl, a leafy sprig rising out of it, and the orange
+      vH(640, 318, 230, 180, V3.cream), // bowl
+      vH(612, 236, 70, -62, V3.olive), // leaf, left
+      vH(668, 214, 82, 52, V3.olive), // leaf, right
+      vH(540, 208, 58, 0, V3.tomato), // the orange (two halves)
+      vH(540, 237, 58, 180, V3.tomato),
+      // a hand of cards fanned beside it
+      vH(330, 300, 86, -24, V3.gold),
+      vH(405, 282, 86, -8, V3.cream),
+      vH(890, 282, 86, 8, V3.cream),
+      vH(965, 300, 86, 24, V3.gold),
+    ],
+  },
   sandlot: {
     kicker: "helps me not suck at fantasy baseball",
     acc: V3.tomato,
@@ -148,6 +165,7 @@ const V3_SCENES: Record<SceneKey, Scene> = {
 
 const V3_CHIPS: { key: SceneKey; label: string; href: string }[] = [
   { key: "ftp", label: "Farm to People", href: "/projects/ftp" },
+  { key: "qook", label: "Qook", href: "/projects/qook" },
   { key: "sandlot", label: "Sandlot", href: "/projects/sandlot" },
   { key: "dockme", label: "DockMe", href: "/projects/dockme" },
   { key: "siggy", label: "Siggy", href: "/projects/siggy" },
@@ -398,13 +416,6 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
               Zach
             </Link>
             <nav className={styles.nav} aria-label="Primary">
-              <a
-                href="https://www.loom.com/share/3bba72893bb846ecab4279c597068d73"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                demo
-              </a>
               <Link href="/projects">projects</Link>
               <Link href="/about">about</Link>
               <ContactCard className={styles.sayhi} />
@@ -455,7 +466,12 @@ export default function HomeBoard({ fontClassName }: { fontClassName: string }) 
 
           <div className={styles.center}>
             <div className={styles.kickwrap}>
-              <div key={scene} className={styles.kicker} style={{ color: s.acc }}>
+              <div
+                key={scene}
+                className={styles.kicker}
+                // Lightened toward cream so every scene's kicker clears WCAG AA on navy.
+                style={{ color: `color-mix(in srgb, ${s.acc} 62%, ${V3.cream})` }}
+              >
                 {s.kicker}
               </div>
             </div>

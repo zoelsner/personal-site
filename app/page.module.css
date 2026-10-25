@@ -87,7 +87,7 @@
   padding: 8px 18px;
   border: 2px solid var(--cream);
   border-radius: 999px;
-  background: var(--tomato);
+  background: #b8401f; /* deeper tomato: 4.7:1 with cream text (AA) */
   box-shadow: 3.5px 3.5px 0 0 var(--cream);
   color: var(--cream) !important;
   cursor: pointer;
