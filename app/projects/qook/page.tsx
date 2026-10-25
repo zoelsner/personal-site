@@ -60,7 +60,6 @@ function QookWalkthrough() {
       aria-label="Qook iPhone walkthrough"
       className={styles.walkthrough}
     >
-      <QookFilm />
       <p className={styles.demoNote}>
         Native iPhone simulator captures · synthetic demo meals.
         <br />
@@ -131,6 +130,7 @@ export default function QookPage() {
           <p className={styles.betaNote}>
             iOS beta · Open on your iPhone with Apple’s TestFlight app.
           </p>
+          <QookFilm />
         </div>
       }
       think={[

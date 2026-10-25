@@ -20,6 +20,7 @@ function getSnapshot() {
   )
 }
 
+/** The 10-second "Dinner, dealt." cut, embedded under the hero actions. */
 export function QookFilm() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const reducedMotion = useSyncExternalStore(subscribe, getSnapshot, () => true)
@@ -38,36 +39,19 @@ export function QookFilm() {
   }, [reducedMotion])
 
   return (
-    <figure className={styles.film} aria-labelledby="qook-film-title">
-      <video
-        ref={videoRef}
-        className={styles.filmVideo}
-        src="/projects/qook/film/dinner-dealt.mp4"
-        poster="/projects/qook/film/dinner-dealt-poster.jpg"
-        width={720}
-        height={900}
-        muted
-        loop
-        playsInline
-        controls
-        preload="metadata"
-        aria-describedby="qook-film-caption"
-      />
-      <figcaption className={styles.filmCopy}>
-        <span className={styles.filmKicker}>10-second cut</span>
-        <h4 id="qook-film-title" className={styles.filmTitle}>
-          Dinner, dealt.
-        </h4>
-        <p id="qook-film-caption" className={styles.filmBody}>
-          What’s for dinner, a pick of your energy, a hand of dinners, and one
-          planned for Monday, made from Qook’s own watercolor meal art and app
-          screens.
-        </p>
-        <p className={styles.filmNote}>
-          Sound effects only; unmute with the player controls. Screens are from
-          an earlier development build and may differ from the beta.
-        </p>
-      </figcaption>
-    </figure>
+    <video
+      ref={videoRef}
+      className={styles.film}
+      src="/projects/qook/film/dinner-dealt.mp4"
+      poster="/projects/qook/film/dinner-dealt-poster.jpg"
+      width={720}
+      height={900}
+      muted
+      loop
+      playsInline
+      controls
+      preload="metadata"
+      aria-label="Ten-second Qook film: what's for dinner, pick your energy, a hand of dinners, and one planned for Monday."
+    />
   )
 }
