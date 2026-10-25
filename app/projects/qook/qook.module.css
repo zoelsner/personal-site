@@ -39,6 +39,17 @@
   line-height: 1.5;
 }
 .walkthrough { scroll-margin-top: 24px; padding: 10px; }
+.film {
+  display: block;
+  width: min(340px, 82vw);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  margin: 18px auto 0;
+  border-radius: 24px;
+  background: #fbf7ee;
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 14px 34px rgba(0, 0, 0, 0.1);
+}
 .demoNote {
   margin: 0 0 24px;
   color: var(--muted);

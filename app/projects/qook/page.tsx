@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import styles from "./qook.module.css"
 import { ProjectPage } from "@/components/project-page"
+import { QookFilm } from "./qook-film"
 
 export const metadata: Metadata = {
   title: "Qook",
@@ -129,6 +130,7 @@ export default function QookPage() {
           <p className={styles.betaNote}>
             iOS beta · Open on your iPhone with Apple’s TestFlight app.
           </p>
+          <QookFilm />
         </div>
       }
       think={[
