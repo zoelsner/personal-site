@@ -39,6 +39,52 @@
   line-height: 1.5;
 }
 .walkthrough { scroll-margin-top: 24px; padding: 10px; }
+.film {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 360px);
+  align-items: center;
+  justify-content: center;
+  gap: 32px 40px;
+  margin: 0 0 44px;
+}
+.filmVideo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  background: #fbf7ee;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.filmKicker {
+  display: block;
+  color: #9e472d;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.filmTitle {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+.filmBody {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+.filmNote {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .demoNote {
   margin: 0 0 24px;
   color: var(--muted);
@@ -91,6 +137,7 @@
 }
 @media (max-width: 600px) {
   .walkthrough { padding: 6px 2px; }
+  .film { grid-template-columns: minmax(0, 300px); justify-items: center; text-align: center; gap: 22px; }
   .screens { grid-template-columns: minmax(0, 260px); justify-content: center; gap: 36px; }
   .screenTitle { font-size: 17px; }
   .screenBody { font-size: 14px; }

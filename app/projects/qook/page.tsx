@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import styles from "./qook.module.css"
 import { ProjectPage } from "@/components/project-page"
+import { QookFilm } from "./qook-film"
 
 export const metadata: Metadata = {
   title: "Qook",
@@ -59,6 +60,7 @@ function QookWalkthrough() {
       aria-label="Qook iPhone walkthrough"
       className={styles.walkthrough}
     >
+      <QookFilm />
       <p className={styles.demoNote}>
         Native iPhone simulator captures · synthetic demo meals.
         <br />
