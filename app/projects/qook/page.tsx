@@ -118,11 +118,11 @@ export default function QookPage() {
         <div className={styles.heroActions}>
           <a
             className={styles.betaLink}
-            href="https://testflight.apple.com/join/SBG1c5cD"
+            href="https://x.com/zachoelsner"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Try Qook on TestFlight →
+            Beta reopening soon · follow on X →
           </a>
           <a className={styles.flowLink} href="#qook-walkthrough">
             See how dinner comes together ↓
@@ -154,8 +154,8 @@ export default function QookPage() {
       stack={["Expo", "React Native", "Supabase", "OpenRouter", "Watercolor"]}
       ctas={[
         {
-          label: "Try Qook on TestFlight →",
-          href: "https://testflight.apple.com/join/SBG1c5cD",
+          label: "Beta reopening soon · follow on X →",
+          href: "https://x.com/zachoelsner",
           external: true,
           accent: true,
         },

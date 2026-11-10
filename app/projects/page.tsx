@@ -63,7 +63,7 @@ const projects: Project[] = [
     name: "Qook",
     year: "2026",
     tag: "Meal cards matched to your energy level, with recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
-    status: "iOS beta · try it on TestFlight",
+    status: "iOS beta · reopening soon",
     c: "#B85A3B",
     cTint: "#f5e8de",
   },
