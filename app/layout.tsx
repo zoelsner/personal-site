@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     template: "%s · Zach Oelsner",
   },
   description:
-    "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
+    "Independent tools for messy everyday problems, often involving food: Qook, DockMe, Siggy, Pass the Doodle. Strategy, operations & analytics by day. Based in NYC.",
   openGraph: {
     title: "Zach Oelsner · Independent builder, strategy & analytics",
     description:
-      "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
+      "Independent tools for messy everyday problems, often involving food: Qook, DockMe, Siggy, Pass the Doodle. Strategy, operations & analytics by day. Based in NYC.",
     url: "https://zachoelsner.com",
     siteName: "Zach Oelsner",
     type: "website",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zach Oelsner · Independent builder, strategy & analytics",
     description:
-      "Strategy, operations & analytics at Protiviti. Independent tools for messy everyday problems, often involving food. Based in NYC.",
+      "Independent tools for messy everyday problems, often involving food: Qook, DockMe, Siggy, Pass the Doodle. Strategy, operations & analytics by day. Based in NYC.",
   },
 }
 

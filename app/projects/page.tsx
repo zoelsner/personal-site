@@ -247,6 +247,14 @@ export default function ProjectsPage() {
             >
               tiktok
             </a>
+            <span style={{ opacity: 0.3 }}>·</span>
+            <a
+              href="https://x.com/zachoelsner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              x
+            </a>
           </div>
           <div className={shell.copy}>© Zach Oelsner · LES, NYC</div>
         </section>
