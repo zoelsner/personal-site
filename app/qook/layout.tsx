@@ -3,7 +3,10 @@ import Link from "next/link"
 import styles from "./qook.module.css"
 
 export const metadata: Metadata = {
-  title: "Qook help",
+  title: { default: "Qook help", template: "%s · Zach Oelsner" },
+  description: "Support, privacy and terms for Qook, the iPhone app for meal cards matched to your energy level.",
+  openGraph: { url: "./", images: "/projects/qook/opengraph-image" },
+  twitter: { card: "summary_large_image" },
   robots: { index: false, follow: false },
 }
 
