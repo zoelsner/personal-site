@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
   },
   twitter: {
+    card: "summary_large_image",
     title: "Qook · Zach Oelsner",
     description:
       "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
@@ -63,7 +64,7 @@ function QookWalkthrough() {
       <p className={styles.demoNote}>
         Native iPhone simulator captures · synthetic demo meals.
         <br />
-        Current development build; the TestFlight beta may differ.
+        Current development build; the beta build may differ.
         <br />
         Tap a screen to enlarge.
       </p>
@@ -104,7 +105,7 @@ export default function QookPage() {
       name="Qook"
       accent="#B85A3B"
       accentOn="#fdebcc"
-      kicker={["iOS beta", "2026", "TestFlight"]}
+      kicker={["iOS beta", "2026", "reopening soon"]}
       tagline="meal cards matched to your energy level."
       blurb={
         <>
@@ -118,17 +119,17 @@ export default function QookPage() {
         <div className={styles.heroActions}>
           <a
             className={styles.betaLink}
-            href="https://testflight.apple.com/join/SBG1c5cD"
+            href="https://x.com/zachoelsner"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Try Qook on TestFlight →
+            Beta reopening soon · follow on X →
           </a>
           <a className={styles.flowLink} href="#qook-walkthrough">
             See how dinner comes together ↓
           </a>
           <p className={styles.betaNote}>
-            iOS beta · Open on your iPhone with Apple’s TestFlight app.
+            iOS beta · Closed to new testers for now.
           </p>
           <QookFilm />
         </div>
@@ -154,8 +155,8 @@ export default function QookPage() {
       stack={["Expo", "React Native", "Supabase", "OpenRouter", "Watercolor"]}
       ctas={[
         {
-          label: "Try Qook on TestFlight →",
-          href: "https://testflight.apple.com/join/SBG1c5cD",
+          label: "Beta reopening soon · follow on X →",
+          href: "https://x.com/zachoelsner",
           external: true,
           accent: true,
         },
