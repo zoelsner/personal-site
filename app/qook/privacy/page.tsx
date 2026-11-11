@@ -10,8 +10,6 @@ export default function PrivacyPage() {
     <p>Qook uses an account identifier, the sign-in information you provide, cooking preferences, and your requests for meal ideas. Guest use also creates an account identifier. Saved recipes, meal plans, and grocery information are stored by the app; some state is stored on your device.</p>
     <h2>Generating meals and illustrations</h2>
     <p>Qook uses Supabase for accounts, database records, and meal-image storage. Relevant cooking preferences and request content are sent through OpenRouter to AI providers to generate meal ideas and artwork. The implementation uses OpenAI text models and Google image models.</p>
-    <h2>Sharing a shopping list</h2>
-    <p>If you use the shopping-list share feature, the items on your list are sent to Instacart to create a shopping link. Qook does not place orders or handle payment.</p>
     <h2>The shared recipe library</h2>
     <p>Generated recipes and illustrations may be stored in Qook’s shared library and reused for other cooks. Account details and the original request context are stored separately. We are reviewing how to prevent personal information from appearing in reusable generated content before expanding this library.</p>
     <h2>Deletion and retention</h2>
