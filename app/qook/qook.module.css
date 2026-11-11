@@ -1,0 +1,14 @@
+.page { min-height: 100svh; background: #fbf7ee; color: #2a3a26; padding: 32px 24px 48px; }
+.inner { max-width: 720px; margin: 0 auto; }
+.header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid #2a3a2630; }
+.brand { font-family: var(--font-display), serif; font-size: 32px; text-decoration: none; }
+.header span { font-size: 14px; }
+.article { padding: 40px 0; font-size: 17px; line-height: 1.75; overflow-wrap: anywhere; }
+.article h1 { font-family: var(--font-display), serif; font-size: clamp(36px, 8vw, 52px); line-height: 1.12; margin: 0 0 24px; font-weight: 400; }
+.article h2 { font-size: 21px; line-height: 1.35; margin: 30px 0 12px; }
+.article p { margin: 0 0 18px; }
+.article a, .footer a { text-decoration: underline; text-underline-offset: 4px; }
+.article aside { padding: 16px 20px; border-left: 3px solid #c36a48; background: #f1e9d9; margin-bottom: 28px; font-size: 15px; }
+.footer { display: flex; flex-wrap: wrap; gap: 16px 24px; padding-top: 24px; border-top: 1px solid #2a3a2630; font-size: 15px; }
+.page a:focus-visible { outline: 2px solid #c36a48; outline-offset: 5px; border-radius: 2px; }
+@media (max-width: 480px) { .header { align-items: flex-start; flex-direction: column; gap: 4px; } .page { padding: 24px 20px 40px; } .article { padding: 32px 0; } }
