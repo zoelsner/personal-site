@@ -152,7 +152,7 @@ test("reduced motion disables name, dot, and project-scene movement", async ({ p
 test("home sharing metadata includes a working preview image", async ({ page, request }) => {
   await page.goto("/")
   await expect(page).toHaveTitle(/Zach Oelsner.*Independent builder/)
-  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /Strategy, operations & analytics at Protiviti/)
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /^Independent tools for messy everyday problems/)
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute("content", /Zach Oelsner/)
   const image = await page.locator('meta[property="og:image"]').getAttribute("content")
   expect(image).toBeTruthy()
