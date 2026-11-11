@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
   },
   twitter: {
+    card: "summary_large_image",
     title: "Qook · Zach Oelsner",
     description:
       "Meal cards matched to your energy level. Recipes, a meal plan, and a shopping list. Illustrated in watercolor.",
@@ -63,7 +64,7 @@ function QookWalkthrough() {
       <p className={styles.demoNote}>
         Native iPhone simulator captures · synthetic demo meals.
         <br />
-        Current development build; the TestFlight beta may differ.
+        Current development build; the beta build may differ.
         <br />
         Tap a screen to enlarge.
       </p>
@@ -104,7 +105,7 @@ export default function QookPage() {
       name="Qook"
       accent="#B85A3B"
       accentOn="#fdebcc"
-      kicker={["iOS beta", "2026", "TestFlight"]}
+      kicker={["iOS beta", "2026", "reopening soon"]}
       tagline="meal cards matched to your energy level."
       blurb={
         <>
@@ -128,7 +129,7 @@ export default function QookPage() {
             See how dinner comes together ↓
           </a>
           <p className={styles.betaNote}>
-            iOS beta · Open on your iPhone with Apple’s TestFlight app.
+            iOS beta · Closed to new testers for now.
           </p>
           <QookFilm />
         </div>
