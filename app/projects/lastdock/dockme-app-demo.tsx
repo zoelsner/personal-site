@@ -3,7 +3,7 @@ import styles from "./dockme-app-demo.module.css"
 
 const mediaPath = "/projects/dockme/native"
 const demoCaption =
-  "DockMe native app demo · synthetic dock/trip data · manual arrival."
+  "LastDock native app demo · synthetic dock/trip data · manual arrival."
 
 const screenshots = [
   {
@@ -11,14 +11,14 @@ const screenshots = [
     title: "A backup during the ride",
     description:
       "The ride screen keeps the selected dock, a swap control, and manual arrival together.",
-    alt: "DockMe demo ride to DUMBO, showing a selected dock, a backup dock with a Swap button, and manual arrival because location is unavailable.",
+    alt: "LastDock demo ride to DUMBO, showing a selected dock, a backup dock with a Swap button, and manual arrival because location is unavailable.",
   },
   {
     file: "summary.png",
     title: "A separate finish capture",
     description:
       "The verified summary after finishing. The recording ends at the arrival and finish controls.",
-    alt: "DockMe demo trip summary showing Trip finished and explaining that a mid-ride dock swap leaves no prediction to score.",
+    alt: "LastDock demo trip summary showing Trip finished and explaining that a mid-ride dock swap leaves no prediction to score.",
   },
 ]
 
@@ -55,7 +55,7 @@ export function DockMeAppDemo() {
               poster={`${mediaPath}/dock-comparison.png`}
               width={444}
               height={960}
-              aria-label="Play the DockMe native app demo"
+              aria-label="Play the LastDock native app demo"
               aria-describedby="native-demo-caption"
             >
               <source src={`${mediaPath}/demo.mp4`} type="video/mp4" />

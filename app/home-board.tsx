@@ -149,7 +149,7 @@ const V3_SCENES: Record<SceneKey, Scene> = {
 const V3_CHIPS: { key: SceneKey; label: string; href: string }[] = [
   { key: "ftp", label: "Farm to People", href: "/projects/ftp" },
   { key: "sandlot", label: "Sandlot", href: "/projects/sandlot" },
-  { key: "dockme", label: "DockMe", href: "/projects/dockme" },
+  { key: "dockme", label: "LastDock", href: "/projects/lastdock" },
   { key: "siggy", label: "Siggy", href: "/projects/siggy" },
   { key: "tele", label: "Pass the Doodle", href: "/projects/telestrations" },
 ]

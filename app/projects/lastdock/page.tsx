@@ -7,25 +7,25 @@ import styles from "./dockme.module.css"
 const LIVE_ANALYSIS_URL = "https://nyc-subway-map.vercel.app/citibike-analysis"
 
 export const metadata: Metadata = {
-  title: "DockMe",
+  title: "LastDock",
   description:
-    "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow DockMe’s development.",
+    "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow LastDock’s development.",
   openGraph: {
-    title: "DockMe · Zach Oelsner",
+    title: "LastDock · Zach Oelsner",
     description:
-      "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow DockMe’s development.",
+      "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow LastDock’s development.",
   },
   twitter: {
-    title: "DockMe · Zach Oelsner",
+    title: "LastDock · Zach Oelsner",
     description:
-      "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow DockMe’s development.",
+      "Exploring the last block of a Citi Bike trip: compare historical dock availability, find a nearby backup, and follow LastDock’s development.",
   },
 }
 
-export default function DockMePage() {
+export default function LastDockPage() {
   return (
     <ProjectPage
-      name="DockMe"
+      name="LastDock"
       accent="#146C7C"
       accentOn="#fdebcc"
       kicker={["independent project", "web experiment", "iOS in development"]}
@@ -39,7 +39,7 @@ export default function DockMePage() {
             bike?
           </b>{" "}
           The web experiment compares captured dock history. It&apos;s the
-          starting point for DockMe, an iOS app in development.
+          starting point for LastDock, an iOS app in development.
         </>
       }
       heroActions={

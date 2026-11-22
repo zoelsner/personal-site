@@ -8,7 +8,7 @@ const paths = [
   "/about",
   "/projects/ftp",
   "/projects/sandlot",
-  "/projects/dockme",
+  "/projects/lastdock",
   "/projects/qook",
   "/projects/siggy",
   "/projects/telestrations",

@@ -50,8 +50,8 @@ const projects: Project[] = [
     cTint: "#f3e6dd",
   },
   {
-    href: "/projects/dockme",
-    name: "DockMe",
+    href: "/projects/lastdock",
+    name: "LastDock",
     year: "2026",
     tag: "A better end to a Citi Bike trip. Historical dock patterns, nearby backups, and an iOS app in development.",
     status: "Web experiment · iOS in progress",
