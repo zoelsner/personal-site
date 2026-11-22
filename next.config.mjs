@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/projects/:path*",
         permanent: true,
       },
+      {
+        source: "/projects/dockme",
+        destination: "/projects/lastdock",
+        permanent: true,
+      },
     ]
   },
   images: {

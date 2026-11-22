@@ -62,7 +62,7 @@ test.describe("homepage", () => {
       page.getByRole("link", { name: "Farm to People" })
     ).toBeVisible()
     await expect(page.getByRole("link", { name: "Sandlot" })).toBeVisible()
-    await expect(page.getByRole("link", { name: "DockMe" })).toBeVisible()
+    await expect(page.getByRole("link", { name: "LastDock" })).toBeVisible()
     await expect(page.getByRole("link", { name: "Siggy" })).toBeVisible()
     await expect(
       page.getByRole("link", { name: "Pass the Doodle" })
@@ -84,9 +84,9 @@ test.describe("homepage", () => {
       "href",
       "/projects/sandlot"
     )
-    await expect(page.getByRole("link", { name: "DockMe" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "LastDock" })).toHaveAttribute(
       "href",
-      "/projects/dockme"
+      "/projects/lastdock"
     )
     await expect(page.getByRole("link", { name: "Siggy" })).toHaveAttribute(
       "href",
@@ -101,7 +101,7 @@ test.describe("homepage", () => {
       "/about",
       "/projects/ftp",
       "/projects/sandlot",
-      "/projects/dockme",
+      "/projects/lastdock",
       "/projects/siggy",
       "/projects/telestrations",
     ]

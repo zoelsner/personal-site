@@ -3,12 +3,12 @@ import { expect, test } from "@playwright/test"
 const dashboardURL = "https://nyc-subway-map.vercel.app/citibike-analysis"
 
 for (const width of [320, 390, 1280]) {
-  test(`DockMe explains the evidence and opens the dashboard at ${width}px`, async ({
+  test(`LastDock explains the evidence and opens the dashboard at ${width}px`, async ({
     page,
     context,
   }) => {
     await page.setViewportSize({ width, height: 844 })
-    await page.goto("/projects/dockme")
+    await page.goto("/projects/lastdock")
     await expect(
       page.getByRole("heading", { name: "the last block matters." })
     ).toBeVisible()
@@ -67,7 +67,7 @@ for (const width of [320, 390, 1280]) {
     ).toBeVisible()
     await expect(
       nativeDemo.getByText(
-        "DockMe native app demo · synthetic dock/trip data · manual arrival.",
+        "LastDock native app demo · synthetic dock/trip data · manual arrival.",
         { exact: true }
       )
     ).toBeVisible()
@@ -108,7 +108,7 @@ for (const width of [320, 390, 1280]) {
     await action.click()
     const popup = await popupPromise
     await expect(popup).toHaveURL(dashboardURL)
-    await expect(page).toHaveURL(/\/projects\/dockme$/)
+    await expect(page).toHaveURL(/\/projects\/lastdock$/)
     await popup.close()
   })
 }
@@ -116,7 +116,7 @@ for (const width of [320, 390, 1280]) {
 test("time windows update matched alternatives and expose the coverage behind a strong-looking result", async ({
   page,
 }) => {
-  await page.goto("/projects/dockme")
+  await page.goto("/projects/lastdock")
   await page.getByLabel("Day of week").selectOption("5")
   await expect(
     page.getByRole("heading", { name: "Saturday · 6–9 pm" })
@@ -167,7 +167,7 @@ test("time windows update matched alternatives and expose the coverage behind a 
 test("the backup denominator includes paused returns even when docks are open", async ({
   page,
 }) => {
-  await page.goto("/projects/dockme")
+  await page.goto("/projects/lastdock")
   await page.getByLabel("Day of week").selectOption("2")
   await expect(
     page.getByRole("heading", { name: "Wednesday · 6–9 pm" })
@@ -189,7 +189,7 @@ test("the backup denominator includes paused returns even when docks are open", 
 test("all 56 windows have valid categories, matched denominators and visible coverage", async ({
   page,
 }) => {
-  await page.goto("/projects/dockme")
+  await page.goto("/projects/lastdock")
   for (let day = 0; day < 7; day++) {
     await page.getByLabel("Day of week").selectOption(String(day))
     const windows = page
@@ -211,11 +211,11 @@ test("all 56 windows have valid categories, matched denominators and visible cov
   }
 })
 
-test("DockMe retains visible keyboard controls and respects reduced motion", async ({
+test("LastDock retains visible keyboard controls and respects reduced motion", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" })
-  await page.goto("/projects/dockme")
+  await page.goto("/projects/lastdock")
   const action = page.getByRole("link", { name: "explore dock history" })
   await action.focus()
   await expect(action).toBeFocused()
@@ -235,7 +235,7 @@ test("DockMe retains visible keyboard controls and respects reduced motion", asy
 test("native recording plays and pauses through keyboard controls without autoplay", async ({
   page,
 }) => {
-  await page.goto("/projects/dockme")
+  await page.goto("/projects/lastdock")
   const video = page
     .getByRole("region", { name: "Inside the app." })
     .locator("video")

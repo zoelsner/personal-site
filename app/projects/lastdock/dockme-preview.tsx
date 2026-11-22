@@ -95,7 +95,7 @@ export function DockMePreview() {
     <figure className={styles.example} aria-labelledby="dock-example-title">
       <div className={styles.exampleHeader}>
         <span className={styles.wordmark}>
-          <span aria-hidden="true">D</span> DockMe / field notes
+          <span aria-hidden="true">L</span> LastDock / field notes
         </span>
         <span className={styles.sampleLabel}>Historical example</span>
       </div>

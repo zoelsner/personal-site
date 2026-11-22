@@ -1,17 +1,17 @@
 import { createOG, ogSize } from "@/lib/og-template"
 
-export const alt = "DockMe by Zach Oelsner"
+export const alt = "LastDock by Zach Oelsner"
 export const size = ogSize
 export const contentType = "image/png"
 
 export default async function Image() {
   return createOG({
     kicker: "web experiment · iOS in development",
-    title: "DockMe",
+    title: "LastDock",
     tagline: "the last block matters.",
     accent: "#146C7C",
     accentOn: "#fdebcc",
-    url: "zachoelsner.com/projects/dockme",
+    url: "zachoelsner.com/projects/lastdock",
     halves: [
       {
         tone: "slate",
