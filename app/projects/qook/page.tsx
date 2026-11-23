@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import styles from "./qook.module.css"
 import { ProjectPage } from "@/components/project-page"
+import { QookFieldNotes } from "./qook-field-notes"
 import { QookFilm } from "./qook-film"
 
 export const metadata: Metadata = {
@@ -148,6 +149,7 @@ export default function QookPage() {
           body: "In testing, I changed a recipe to three servings, but Tonight and the shopping list still used two. The fix keeps portions with the chosen day. I now check that the recipe, plan and groceries agree after details finish loading and after reopening the app.",
         },
       ]}
+      afterThinking={<QookFieldNotes />}
       preview={<QookWalkthrough />}
       previewLayout="full-width"
       previewFirst
