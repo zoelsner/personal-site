@@ -44,6 +44,7 @@ export type ProjectPageProps = {
   blurb: ReactNode
   heroActions?: ReactNode
   think: ProjectThink[]
+  afterThinking?: ReactNode
   preview: ReactNode
   beforePreview?: ReactNode
   previewLayout?: "side-by-side" | "full-width"
@@ -86,6 +87,7 @@ export function ProjectPage({
   blurb,
   heroActions,
   think,
+  afterThinking,
   preview,
   beforePreview,
   previewLayout = "side-by-side",
@@ -195,10 +197,12 @@ export function ProjectPage({
               {beforePreview}
               {previewContent}
               {thinkingContent}
+              {afterThinking}
             </>
           ) : (
             <>
               {thinkingContent}
+              {afterThinking}
               {beforePreview}
               {previewContent}
             </>
